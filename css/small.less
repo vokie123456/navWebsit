@@ -1,0 +1,3094 @@
+/* 公共样式 */
+
+@main_bg: #fff;
+@main_color: #333;
+@screen-lg-min: 1300px;
+@screen-md-min: 992px;
+@screen-sm-min: 767px;
+.line-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* 页脚 */
+
+@media (max-width: @screen-sm-min) {
+    .footer {
+        margin-top: 5px;
+        background-color: #fff;
+        .footer-list-box {
+            margin: 0 auto;
+            padding: 12px 0;
+            .footer-list {
+                font-size: 0;
+                .footer-item {
+                    .footer-link {
+                        display: inline-block;
+                        padding-left: 22px;
+                        text-align: left;
+                        font-size: 12px;
+                        line-height: 2;
+                        text-decoration: none;
+                        color: #333;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 移动端 顶部导航栏 */
+
+@media (max-width: @screen-sm-min) {
+    .m-header-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 9999999;
+        .m-nav-panel {
+            position: relative;
+            height: 44px;
+            border-bottom: 1px solid #e3e2e2;
+            background-color: #ffffff;
+            .m-nav-btn {
+                width: 88px;
+                height: 44px;
+                text-align: center;
+                line-height: 44px;
+                border-right: 1px solid #eee;
+                cursor: pointer;
+                .m-icon-btn {
+                    display: inline-block;
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+            .m-nav-logo {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                z-index: 999;
+                margin: 0;
+                margin-left: -60px;
+                transform: translateY(-50%);
+                .logo-img {
+                    display: block;
+                    height: auto;
+                    width: 120px;
+                }
+            }
+            .m-back-btn {
+                display: inline-block;
+                position: absolute;
+                top: 50%;
+                right: 25px;
+                margin-top: -11px;
+                font-size: 0;
+                display: none;
+                .m-icon-back {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                }
+            }
+        }
+        .m-nav-hid {
+            position: fixed;
+            top: 44px;
+            left: 0;
+            bottom: 0;
+            z-index: 9999;
+            width: 100vw;
+            display: none;
+            .m-hid-list {
+                display: block; // width: 87px;
+                width: 0;
+                height: 100vh;
+                transition: width 200ms ease;
+                background-color: #fff;
+                .m-hid-item {
+                    height: 44px;
+                    width: 87px;
+                    line-height: 44px;
+                    text-align: center;
+                    cursor: pointer;
+                    .hid-item-link {
+                        display: block;
+                        text-decoration: none;
+                        font-size: 16px;
+                        color: #333;
+                    }
+                }
+                .m-hid-bottom {
+                    position: absolute;
+                    bottom: 10px;
+                    left: 0;
+                    .m-bottom {
+                        height: 30px;
+                        width: 87px;
+                        line-height: 30px;
+                        text-align: center;
+                        .hid-item-link {
+                            display: block;
+                            text-decoration: none;
+                            font-size: 15px;
+                            color: #333;
+                            .m-hid-btn {
+                                display: inline-block;
+                                width: 30px;
+                                height: 30px;
+                            }
+                        }
+                    }
+                }
+                .hid-item-cur {
+                    background-color: rgba(0, 0, 0, 0.1);
+                } // .m-s-item {
+                //     height: 44px;
+                //     width: 87px;
+                //     line-height: 44px;
+                //     text-align: center;
+                //     cursor: pointer;
+                //     .hid-item-link {
+                //         display: block;
+                //         text-decoration: none;
+                //         font-size: 16px;
+                //         color: #333;
+                //     }
+                // }
+            }
+        }
+    }
+}
+
+/* 屏幕宽度小于768px */
+
+@media (max-width: @screen-sm-min) {
+    #indexWrap {
+        position: relative;
+        background-color: #f5f5f5;
+        .search-header {
+            display: none !important;
+        }
+        .search-header::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 998;
+            background-color: #ffffff;
+            box-shadow: 3px 0px 7px 0px rgba(0, 0, 0, 0.2);
+            opacity: 0.8;
+        }
+        .head-bg {
+            position: relative;
+            padding-top: 44px;
+            margin: 0 auto;
+            .swiper-container {
+                position: relative;
+                .swiper-wrapper {
+                    .swiper-slide {
+                        position: relative;
+                        width: 100vw;
+                        .bg-pic {
+                            width: 100%;
+                            height: 0;
+                            padding-bottom: 224px;
+                            background-size: cover;
+                            background-position: 50% 0;
+                            background-repeat: no-repeat;
+                            .h-arrow-panel {
+                                position: absolute;
+                                top: 46px;
+                                left: 50%;
+                                z-index: 999;
+                                margin-left: -200px;
+                                width: 400px;
+                                height: 40px;
+                                line-height: 40px;
+                                background-color: #000000;
+                                border-radius: 20px;
+                                opacity: 0.5;
+                                cursor: pointer;
+                                display: none;
+                                .des-box {
+                                    opacity: 1;
+                                    height: 40px;
+                                    text-align: center;
+                                    cursor: pointer;
+                                    font-size: 0;
+                                    .bg-des {
+                                        display: inline-block;
+                                        font-size: 16px;
+                                        line-height: 40px;
+                                        vertical-align: middle;
+                                        text-decoration: none;
+                                        color: #fff;
+                                    }
+                                    .words-break {
+                                        overflow: hidden;
+                                        max-width: 200px;
+                                        text-overflow: ellipsis;
+                                        white-space: nowrap;
+                                    }
+                                    .suo-box {
+                                        display: inline-block;
+                                        margin-left: 10px;
+                                        width: 40px;
+                                        height: 40px;
+                                        line-height: 40px;
+                                        vertical-align: middle;
+                                        .icon-suo {
+                                            margin: 0 auto;
+                                            display: inline-block;
+                                            line-height: 40px;
+                                            width: 18px;
+                                            height: 18px;
+                                        }
+                                    }
+                                }
+                                .swiper-button-next {
+                                    display: inline-block;
+                                    right: 8px;
+                                    top: 50%;
+                                    margin-top: -15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    background-image: url(../img/web/right.png);
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                }
+                                .swiper-button-prev {
+                                    display: inline-block;
+                                    left: 8px;
+                                    top: 50%;
+                                    margin-top: -15px;
+                                    width: 30px;
+                                    height: 30px;
+                                    background-image: url(../img/web/left.png);
+                                    background-size: 100% 100%;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                        }
+                    }
+                }
+                .m-controler {
+                    position: absolute;
+                    right: 20px;
+                    top: 20px;
+                    z-index: 9999;
+                    width: 36px;
+                    height: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    border-radius: 50%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    font-size: 0;
+                    cursor: pointer;
+                    .con-btn {
+                        display: inline-block;
+                        width: 18px;
+                        height: 18px;
+                    }
+                }
+                .m-day-night {
+                    position: absolute;
+                    top: 20px;
+                    left: 20px;
+                    z-index: 9999;
+                    width: 36px;
+                    height: 36px;
+                    line-height: 36px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 0;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    cursor: pointer;
+                    .m-swift {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px; // margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+        .s-inner {
+            display: none !important;
+        }
+        .m-search {
+            position: absolute;
+            width: 100%;
+            z-index: 192999;
+            top: 200px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            .m-search-container {
+                display: block;
+                display: flex;
+                justify-content: center;
+                .s-tab {
+                    position: absolute;
+                    width: 100%;
+                    z-index: 192999;
+                    top: -65px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    text-align: center;
+                    border-radius: 3px;
+                    background-color: rgba(255, 255, 255, .8);
+                    display: none;
+                    >li {
+                        float: left;
+                        width: 25%;
+                        padding: 8px 0;
+                        line-height: 1;
+                        text-align: center;
+                        color: #333;
+                        cursor: pointer;
+                    }
+                    >li:first-child {
+                        display: none;
+                    }
+                    >li:last-child {
+                        margin-right: 0;
+                    }
+                }
+                .m-select-category {
+                    position: relative;
+                    float: left;
+                    width: 60px;
+                    height: 40px;
+                    margin-right: 5px;
+                    line-height: 40px;
+                    background-color: #ffffff;
+                    border-radius: 3px;
+                    opacity: 0.8;
+                    cursor: pointer;
+                    .m-c-tag {
+                        margin-left: -12px;
+                        font-size: 12px;
+                        color: #2abaca;
+                    }
+                    .toggle {
+                        position: absolute;
+                        right: 6px;
+                        top: 50%;
+                        z-index: 999;
+                        margin-top: -7px;
+                        display: inline-block;
+                        width: 12px;
+                        height: 12px;
+                        background-image: url(../img/web/angle2.png);
+                        background-position: 50%;
+                        background-size: 100% auto;
+                        background-repeat: no-repeat;
+                        transition: all 500ms ease;
+                    }
+                    .open {
+                        transform: rotateX(180deg);
+                    }
+                }
+                .s-panel {
+                    float: left;
+                    width: 77%;
+                    margin-bottom: 0;
+                    >li {
+                        display: none;
+                        .s-form {
+                            position: relative;
+                            font-size: 0;
+                            display: flex;
+                            width: 100%;
+                            .opt-wr {
+                                float: left;
+                                position: relative;
+                                display: block;
+                                .s-opt-container {
+                                    display: none;
+                                    position: absolute;
+                                    bottom: 42px;
+                                    left: 0;
+                                    font-size: 0;
+                                    border: 1px solid #d2d2d2;
+                                    border-bottom: none;
+                                    .opt-img {
+                                        display: inline-block;
+                                        position: relative;
+                                        width: 90px;
+                                        height: 32px;
+                                        font-size: 0;
+                                        border-bottom: 1px solid #eaeaea;
+                                        background-color: rgba(255, 255, 255, .8);
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        background-repeat: no-repeat;
+                                        cursor: pointer;
+                                    }
+                                }
+                                .s-opt-logo {
+                                    display: inline-block;
+                                    width: 50px;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    vertical-align: middle;
+                                    border-top-left-radius: 3px;
+                                    border-bottom-left-radius: 3px;
+                                    opacity: 0.8;
+                                    background-color: #fff;
+                                    >a {
+                                        display: inline-block;
+                                        text-align: center;
+                                        text-indent: -1000px;
+                                        font-size: 0;
+                                        color: #333;
+                                    }
+                                    .logo-show {
+                                        width: 28px;
+                                        height: 28px;
+                                        margin-left: 8px;
+                                        margin-top: 3px;
+                                        vertical-align: middle;
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                                .toggle {
+                                    position: absolute;
+                                    right: -15px;
+                                    top: 50%;
+                                    z-index: 999;
+                                    margin-top: -7px;
+                                    display: inline-block;
+                                    width: 12px;
+                                    height: 12px;
+                                    background-image: url(../img/web/angle2.png);
+                                    background-position: 50%;
+                                    background-size: 100% auto;
+                                    background-repeat: no-repeat;
+                                    transition: all 500ms ease;
+                                    cursor: pointer;
+                                }
+                                .open {
+                                    transform: rotateX(180deg);
+                                }
+                            }
+                            .ipt-wr {
+                                float: left;
+                                display: block;
+                                -webkit-appearance: none;
+                                width: 50%;
+                                height: 40px;
+                                opacity: 0.8;
+                                flex: 1;
+                                background-color: #fff;
+                                .keyword {
+                                    -webkit-appearance: none !important;
+                                    display: inline-block;
+                                    margin-top: 10px;
+                                    margin-left: 30px;
+                                    width: 100%;
+                                    border: none;
+                                    outline: none;
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                    height: 20px;
+                                    background-color: transparent;
+                                    color: #333;
+                                }
+                                .keyword:placeholder {
+                                    color: #666;
+                                }
+                            }
+                            .ipt-wr::before {
+                                content: '';
+                                position: absolute;
+                                z-index: 999;
+                                width: 1px;
+                                left: 72px;
+                                top: 5px;
+                                height: 30px;
+                                background-color: rgba(0, 0, 0, 0.5);
+                            }
+                            .btn-wr {
+                                float: left;
+                                position: relative;
+                                width: 50px;
+                                opacity: 0.8;
+                                border-top-right-radius: 3px;
+                                border-bottom-right-radius: 3px;
+                                background-image: url(../img/mob/sousuo.png);
+                                background-repeat: no-repeat;
+                                background-size: 20px 20px;
+                                background-position: 50%;
+                                background-color: #fff;
+                                .m-search {
+                                    position: absolute;
+                                    top: 0;
+                                    -webkit-appearance: none;
+                                    width: 50px;
+                                    height: 40px;
+                                    border: none;
+                                    outline: none;
+                                    background-color: transparent;
+                                }
+                            }
+                        }
+                    }
+                    .active {
+                        display: block;
+                    }
+                }
+            }
+        }
+        .nav-icon-wrap {
+            position: relative;
+            overflow: hidden; // padding-bottom: 30px;
+            box-sizing: content-box;
+            max-width: 1300px;
+            margin: 0 auto;
+            z-index: 9999;
+            border-radius: 3px;
+            .nav-icon-shade {
+                border-radius: 3px;
+                opacity: .8;
+                background-color: #fcfcfc;
+            }
+            .icon-box {
+                height: 100px;
+                overflow: hidden;
+                padding-bottom: 30px;
+                box-sizing: content-box;
+                transition: height 300ms ease-out;
+                color: #333;
+                .icon-content {
+                    background-color: #fff;
+                    .icon-list {
+                        overflow: hidden;
+                        width: 100vw;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        font-size: 0;
+                        .icon-item {
+                            display: block;
+                            width: 71px;
+                            position: relative;
+                            margin-top: 15px;
+                            margin-bottom: 33px; // padding-left: 8px;
+                            // padding-right: 8px;
+                            font-size: 14px;
+                            transition: 0.3s;
+                            .icon-pic-wrp {
+                                position: relative;
+                                width: 50px;
+                                height: 50px;
+                                margin: 0 auto;
+                                border-radius: 6px;
+                                overflow: hidden;
+                                cursor: pointer;
+                                transition: 200ms all ease-out;
+                                .icon-pic {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    z-index: 999;
+                                    background-size: cover;
+                                    background-position: 50%;
+                                    background-repeat: no-repeat;
+                                    background-color: #fff;
+                                }
+                            }
+                            .ico-des {
+                                position: absolute;
+                                width: 100%;
+                                text-align: center;
+                                bottom: -30px;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                cursor: pointer;
+                                color: #333; // display: none;
+                            }
+                        }
+                    }
+                    .icon_fix {
+                        display: none;
+                    }
+                }
+                .icon-tag-panel {
+                    width: 100%;
+                    overflow: hidden;
+                    display: none;
+                    .left-tag {
+                        .tag-list {
+                            font-size: 0;
+                            .tag-item {
+                                display: inline-block;
+                                font-size: 18px;
+                                line-height: 1;
+                                width: 124px;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                margin-right: 2px;
+                                margin-top: 10px;
+                                background-color: #fcfcfc;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .right-shouqi {
+                    position: absolute;
+                    right: 30px;
+                    line-height: 22px;
+                    cursor: pointer;
+                    display: none;
+                    .icon-shouqi {
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        vertical-align: sub;
+                        background-size: 100% 100%;
+                        background-repeat: no-repeat;
+                        transition: transform 400ms ease-out;
+                    }
+                    .shouqi-text {
+                        margin-left: 12px;
+                        font-size: 18px;
+                        color: #666;
+                    }
+                }
+                .down {
+                    bottom: 10px;
+                    .icon-shouqi {
+                        background-image: url(../img/web/jiantou1.png);
+                    }
+                }
+                .up {
+                    top: 0px;
+                    .icon-shouqi {
+                        background-image: url(../img/web/jiantou2.png);
+                    }
+                }
+            }
+            .m-icon-show {
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 88888;
+                height: 30px;
+                line-height: 30px;
+                text-align: center;
+                border-top: 1px solid #e3e2e2;
+                background-color: #ffffff;
+                cursor: pointer;
+                .m-btn-img {
+                    display: inline-block;
+                    width: 14px;
+                    height: auto;
+                }
+            }
+        }
+        .left-fix-bar{
+            display: none!important;
+        }
+        .container-fluid {
+            max-width: 1300px;
+            padding-left: 0;
+            padding-right: 0;
+            .main-screen-box {
+                padding-top: 26px;
+                .main-screen-title {
+                    .title-text {
+                        float: left;
+                        line-height: 26px;
+                        font-size: 18px;
+                    }
+                    .title-text::before {
+                        height: 18px;
+                        left: 8px;
+                        width: 4px;
+                        top: 5px;
+                    }
+                    .zixun-more {
+                        float: right;
+                        text-align: center;
+                        width: 50px;
+                        height: 26px;
+                        padding: 6px 0;
+                        margin-right: 8px;
+                        background-color: #fff;
+                        border-radius: 3px;
+                        border: solid 1px #dfdfdf;
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: #999;
+                    }
+                }
+                .m-s-zixun {
+                    .zixun-box {
+                        padding-top: 15px;
+                        .zixun-left {
+                            .zx-l-list {
+                                position: relative;
+                                width: 100%;
+                                font-size: 0;
+                                .zx-l-item {
+                                    display: inline-block;
+                                    width: 100%;
+                                    padding: 0 5px;
+                                    margin-bottom: 15px;
+                                    border-radius: 5px;
+                                    .l-item-box {
+                                        float: left;
+                                        position: relative;
+                                        width: 100%;
+                                        padding: 5px;
+                                        display: flex;
+                                        align-items: center;
+                                        background-color: #ffffff;
+                                        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+                                        .zx-l-img {
+                                            position: relative;
+                                            float: left;
+                                            width: 34.78%;
+                                            margin-right: 10px;
+                                            height: 0;
+                                            padding-bottom: 28.26%;
+                                            transition: all 300ms ease;
+                                            .img-show {
+                                                position: absolute;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-size: cover;
+                                                background-position: 50%;
+                                                background-repeat: no-repeat;
+                                                background-color: #ccc;
+                                            }
+                                        }
+                                        .zx-r-content {
+                                            float: left;
+                                            width: 60.30%;
+                                            .r-c-title {
+                                                display: inline-block;
+                                                font-size: 16px;
+                                                line-height: 1.5;
+                                                margin-bottom: 18px;
+                                                word-break: break-all;
+                                                color: #333;
+                                            }
+                                            .line-ellipsis {
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                            }
+                                            .bot-item {
+                                                .zx-author {
+                                                    float: left;
+                                                    display: block;
+                                                    width: 50%;
+                                                    padding-top: 2px;
+                                                    font-size: 12px;
+                                                    line-height: 1;
+                                                    color: #999;
+                                                }
+                                                .zx-time {
+                                                    float: right;
+                                                    display: block;
+                                                    width: 50%;
+                                                    .icon-time {
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        display: inline-block;
+                                                        line-height: 16px;
+                                                        vertical-align: middle;
+                                                    }
+                                                    .time-text {
+                                                        display: inline-block;
+                                                        width: 92px;
+                                                        margin-left: 6px;
+                                                        font-size: 12px;
+                                                        line-height: 1;
+                                                        vertical-align: middle;
+                                                        font-style: normal;
+                                                        color: #999;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                .zx-l-item:nth-of-type(3) {
+                                    display: none;
+                                }
+                                .zx-l-item:nth-of-type(4) {
+                                    display: none;
+                                }
+                            }
+                        }
+                        .zixun-right {
+                            .zixun-r-top {
+                                overflow: hidden;
+                                .swiper-container-zixun {
+                                    padding: 0 10px;
+                                    .swiper-wrapper {
+                                        margin-bottom: 0;
+                                        .swiper-slide {
+                                            position: relative;
+                                            height: 100px;
+                                            .zixun-slide-show {
+                                                display: block;
+                                                position: relative;
+                                                height: 100%;
+                                                .slide-bg {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-size: cover;
+                                                    background-position: 50%;
+                                                    background-repeat: no-repeat;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .zx-next {
+                                        position: absolute;
+                                        width: 8%;
+                                        top: 0;
+                                        right: 0;
+                                        height: 100px;
+                                        line-height: 100px;
+                                        z-index: 99;
+                                        background-color: rgba(0, 0, 0, 0.4);
+                                        display: none;
+                                        .arrow-left {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            width: 100%;
+                                            height: 0;
+                                            padding-bottom: 100%;
+                                            background-image: url(../img/web/zuo2.png);
+                                            background-position: 50%;
+                                            background-size: cover;
+                                        }
+                                    }
+                                    .zx-prev {
+                                        position: absolute;
+                                        width: 8%;
+                                        top: 0;
+                                        left: 0;
+                                        height: 100px;
+                                        line-height: 100px;
+                                        z-index: 99;
+                                        background-color: rgba(0, 0, 0, 0.4);
+                                        display: none;
+                                        .arrow-right {
+                                            position: absolute;
+                                            right: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            width: 100%;
+                                            height: 0;
+                                            padding-bottom: 100%;
+                                            background-image: url(../img/web/zuo1.png);
+                                            background-position: 50%;
+                                            background-size: cover;
+                                        }
+                                    }
+                                }
+                            }
+                            .zixun-r-bot {
+                                .r-bot-box {
+                                    margin-top: 6px;
+                                    .r-bot-list {
+                                        margin-top: 18px;
+                                        font-size: 0;
+                                        .r-bot-item {
+                                            padding: 0 10px;
+                                            cursor: pointer;
+                                            margin-top: 15px;
+                                            display: none;
+                                            .r-bot-link {
+                                                display: block;
+                                                line-height: 16px;
+                                                text-decoration: none;
+                                                .icon-logo {
+                                                    display: inline-block;
+                                                    width: 16px;
+                                                    height: 16px;
+                                                    background-size: cover;
+                                                    background-position: 50%;
+                                                    background-repeat: no-repeat;
+                                                    transition: all 100ms ease;
+                                                }
+                                                .r-link-text {
+                                                    display: inline-block;
+                                                    width: 94%;
+                                                    margin-left: 3px;
+                                                    vertical-align: top;
+                                                    font-size: 16px;
+                                                    line-height: 1;
+                                                    color: #666;
+                                                }
+                                            }
+                                        }
+                                        .r-bot-item:nth-of-type(1) {
+                                            display: block;
+                                        }
+                                        .r-bot-item:nth-of-type(2) {
+                                            display: block;
+                                        }
+                                        .r-bot-item:nth-of-type(3) {
+                                            display: block;
+                                        }
+                                        .r-bot-item:nth-of-type(4) {
+                                            display: block;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .banner-swiper-wrap {
+                    overflow: hidden;
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    .swiper-container-banner {
+                        position: relative;
+                        margin-top: 17px;
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                .banner-link {
+                                    display: block;
+                                    width: 100%;
+                                    height: 90px;
+                                    .banner-img {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                        .banner-next {
+                            position: absolute;
+                            width: 8%;
+                            top: 0;
+                            right: 0;
+                            height: 90px;
+                            line-height: 90px;
+                            z-index: 99;
+                            background-color: rgba(0, 0, 0, 0.4);
+                            .arrow-left {
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 100%;
+                                height: 0;
+                                padding-bottom: 100%;
+                                background-image: url(../img/web/zuo2.png);
+                                background-position: 50%;
+                                background-size: cover;
+                            }
+                        }
+                        .banner-prev {
+                            position: absolute;
+                            width: 8%;
+                            top: 0;
+                            left: 0;
+                            height: 90px;
+                            line-height: 90px;
+                            z-index: 99;
+                            background-color: rgba(0, 0, 0, 0.4);
+                            .arrow-right {
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 100%;
+                                height: 0;
+                                padding-bottom: 100%;
+                                background-image: url(../img/web/zuo1.png);
+                                background-position: 50%;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+                .banner2-swiper-wrap {
+                    overflow: hidden;
+                    max-width: 1300px;
+                    margin: 0 auto;
+                    .swiper-container-banner2 {
+                        position: relative;
+                        margin-top: 17px;
+                        .swiper-wrapper {
+                            .swiper-slide {
+                                .banner-link {
+                                    display: block;
+                                    width: 100%;
+                                    height: 90px;
+                                    .banner-img {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        background-repeat: no-repeat;
+                                    }
+                                }
+                            }
+                        }
+                        .banner-next {
+                            position: absolute;
+                            width: 8%;
+                            top: 0;
+                            right: 0;
+                            height: 90px;
+                            line-height: 90px;
+                            z-index: 99;
+                            background-color: rgba(0, 0, 0, 0.4);
+                            .arrow-left {
+                                position: absolute;
+                                left: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 100%;
+                                height: 0;
+                                padding-bottom: 100%;
+                                background-image: url(../img/web/zuo2.png);
+                                background-position: 50%;
+                                background-size: cover;
+                            }
+                        }
+                        .banner-prev {
+                            position: absolute;
+                            width: 8%;
+                            top: 0;
+                            left: 0;
+                            height: 90px;
+                            line-height: 90px;
+                            z-index: 99;
+                            background-color: rgba(0, 0, 0, 0.4);
+                            .arrow-right {
+                                position: absolute;
+                                right: 0;
+                                top: 50%;
+                                transform: translateY(-50%);
+                                width: 100%;
+                                height: 0;
+                                padding-bottom: 100%;
+                                background-image: url(../img/web/zuo1.png);
+                                background-position: 50%;
+                                background-size: cover;
+                            }
+                        }
+                    }
+                }
+                .main-section {
+                    .m-section-left {
+                        padding-top: 35px;
+                        .m-s-tubang {
+                            position: relative;
+                            overflow: hidden;
+                            .tubang-more {
+                                float: right;
+                                text-align: center;
+                                width: 50px;
+                                height: 26px;
+                                padding: 6px 0;
+                                margin-right: 8px;
+                                background-color: #fff;
+                                border-radius: 3px;
+                                border: solid 1px #dfdfdf;
+                                font-size: 12px;
+                                text-decoration: none;
+                                color: #999;
+                                cursor: pointer;
+                            }
+                            .main-screen-title {
+                                padding-bottom: 20px;
+                            }
+                            .tubang-swiper {
+                                .swiper-container-tubang {
+                                    position: relative;
+                                    .swiper-wrapper {
+                                        width: 100%;
+                                        -webkit-overflow-scrolling: touch;
+                                        .swiper-slide {
+                                            width: 50%;
+                                            padding-right: 18px;
+                                            .tubang-link {
+                                                display: block;
+                                                width: 100%;
+                                                height: 170px;
+                                                .tubang-show {
+                                                    position: absolute;
+                                                    height: 100%;
+                                                    width: 100%;
+                                                    background-size: cover;
+                                                    background-position: 50% 0;
+                                                    background-repeat: no-repeat;
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .tubang-next {
+                                        position: absolute;
+                                        width: 8%;
+                                        top: 0;
+                                        right: 0;
+                                        height: 170px;
+                                        line-height: 170px;
+                                        z-index: 99;
+                                        background-color: rgba(0, 0, 0, 0.4);
+                                        .arrow-left {
+                                            position: absolute;
+                                            left: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            width: 100%;
+                                            height: 0;
+                                            padding-bottom: 100%;
+                                            background-image: url(../img/web/zuo2.png);
+                                            background-position: 50%;
+                                            background-size: cover;
+                                        }
+                                    }
+                                    .tubang-prev {
+                                        position: absolute;
+                                        width: 8%;
+                                        top: 0;
+                                        left: 0;
+                                        height: 170px;
+                                        line-height: 170px;
+                                        z-index: 99;
+                                        background-color: rgba(0, 0, 0, 0.4);
+                                        .arrow-right {
+                                            position: absolute;
+                                            right: 0;
+                                            top: 50%;
+                                            transform: translateY(-50%);
+                                            width: 100%;
+                                            height: 0;
+                                            padding-bottom: 100%;
+                                            background-image: url(../img/web/zuo1.png);
+                                            background-position: 50%;
+                                            background-size: cover;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .m-s-shipin {
+                            .main-screen-title {
+                                padding-top: 35px;
+                                padding-bottom: 10px; // .title-text {}
+                            }
+                            .shipin-list {
+                                width: 100%;
+                                font-size: 0;
+                                padding: 0 6px;
+                                .shipin-item {
+                                    display: inline-block;
+                                    width: 50%;
+                                    margin-top: 8px;
+                                    padding: 0 2px;
+                                    cursor: pointer;
+                                    .video-box {
+                                        display: inline-block;
+                                        position: relative;
+                                        width: 100%;
+                                        border-radius: 2px;
+                                        overflow: hidden;
+                                        box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+                                        border-radius: 3px;
+                                        text-decoration: none;
+                                        font-size: 18px;
+                                        color: #333;
+                                        background-color: #ffffff;
+                                        .video-btn {
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            right: 0;
+                                            bottom: 0;
+                                            width: 100%;
+                                            height: 120px;
+                                            background: rgba(0, 0, 0, 0.4); // display: none;
+                                            .bofang-btn {
+                                                position: absolute;
+                                                top: 50%;
+                                                left: 50%;
+                                                margin-left: -18px;
+                                                margin-top: -18px;
+                                                display: block;
+                                                width: 36px;
+                                                height: 36px;
+                                            }
+                                        }
+                                        .pic-show {
+                                            width: 100%;
+                                            height: 120px;
+                                            background-size: cover;
+                                            background-position: 50%;
+                                            background-repeat: no-repeat;
+                                            background-color: #ccc;
+                                        }
+                                        .video-des {
+                                            .video-text {
+                                                padding: 0 10px;
+                                                margin: 10px 0;
+                                                font-size: 14px;
+                                                line-height: 1.5;
+                                            }
+                                            .line-ellipsis {
+                                                overflow: hidden;
+                                                text-overflow: ellipsis;
+                                                display: -webkit-box;
+                                                -webkit-line-clamp: 2;
+                                                -webkit-box-orient: vertical;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .m-r-box {
+                        padding-left: 0;
+                        .m-s-fashou {
+                            padding: 0 8px;
+                            .small-screen-title {
+                                padding-top: 30px; // .title-text {}
+                                .title-text {
+                                    float: left;
+                                    padding-left: 12px;
+                                    line-height: 26px;
+                                    font-size: 18px;
+                                }
+                                .title-text::before {
+                                    height: 18px;
+                                    left: 0;
+                                    width: 4px;
+                                    top: 5px;
+                                }
+                            }
+                            .fashou-list {
+                                padding-top: 30px;
+                                font-size: 0;
+                                white-space: nowrap;
+                                overflow-x: auto;
+                                overflow-y: hidden;
+                                box-sizing: content-box;
+                                -webkit-overflow-scrolling: touch;
+                                .fashou-item {
+                                    display: inline-block;
+                                    width: 138px;
+                                    margin-bottom: 4px;
+                                    .fashou-link {
+                                        display: block;
+                                        color: #333;
+                                        text-decoration: none;
+                                        .fashou-img {
+                                            position: relative;
+                                            width: 100px;
+                                            height: 80px;
+                                            .img-show {
+                                                position: absolute;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-size: cover;
+                                                background-position: 50%;
+                                                background-repeat: no-repeat;
+                                                transition: all 300ms ease;
+                                                background-color: #ccc;
+                                            }
+                                        }
+                                        .fashou-des {
+                                            max-width: 120px;
+                                            margin-top: 8px;
+                                            .des-title {
+                                                font-size: 16px;
+                                                line-height: 1; // text-overflow: inherit;
+                                                color: #333;
+                                            }
+                                            .des-time {
+                                                margin-top: 8px;
+                                                font-size: 14px;
+                                                line-height: 1; // text-overflow: inherit;
+                                                color: #666;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            .fashou-list::-webkit-scrollbar-thumb {
+                                border-radius: 2px;
+                                background-color: #ddd;
+                            }
+                            .fashou-list::-webkit-scrollbar {
+                                height: 4px;
+                                border-radius: 2px;
+                                background-color: #f5f5f5;
+                            }
+                        }
+                        .m-s-zhuanji {
+                            padding: 0 8px;
+                            .small-screen-title {
+                                padding-top: 20px; // .title-text {}
+                                .title-text {
+                                    float: left;
+                                    padding-left: 12px;
+                                    line-height: 26px;
+                                    font-size: 18px;
+                                }
+                                .title-text::before {
+                                    height: 18px;
+                                    left: 0;
+                                    width: 4px;
+                                    top: 5px;
+                                }
+                            }
+                            .zhuanji-list {
+                                padding-top: 10px;
+                                font-size: 0;
+                                white-space: nowrap;
+                                overflow-x: auto;
+                                overflow-y: hidden;
+                                box-sizing: content-box;
+                                white-space: nowrap;
+                                -webkit-overflow-scrolling: touch;
+                                .zhuanji-item {
+                                    display: inline-block;
+                                    margin-right: 20px;
+                                    margin-bottom: 10px;
+                                    .zhuanji-link {
+                                        position: relative;
+                                        display: block;
+                                        text-decoration: none;
+                                        color: #333;
+                                        .zhuanji-img-show {
+                                            position: relative;
+                                            display: inline-block;
+                                            width: 118px;
+                                            height: 100px;
+                                            .zhuanji-img-bg {
+                                                display: inline-block;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 100px;
+                                                height: 100px;
+                                                background-size: cover;
+                                                background-position: 50%;
+                                                background-repeat: no-repeat;
+                                                transition: all 300ms ease;
+                                            }
+                                            .zhuanji-img {
+                                                display: inline-block;
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                z-index: 1;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-image: url(../img/web/changpian.png);
+                                                background-size: 100% 100%;
+                                                background-position: 50%;
+                                                background-repeat: no-repeat;
+                                                transition: all 300ms ease;
+                                            }
+                                        }
+                                        .zhuanji-des {
+                                            width: 100px;
+                                            margin-top: 8px;
+                                            text-align: center;
+                                            .des-name {
+                                                font-size: 16px;
+                                                line-height: 1; // text-overflow: inherit;
+                                                color: #333;
+                                            }
+                                            .des-singer {
+                                                padding-top: 7px;
+                                                font-size: 14px;
+                                                line-height: 1; // text-overflow: inherit;
+                                                color: #999;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .m-s-zhuanji {
+                        .small-screen-title {
+                            padding-top: 38px; // .title-text {}
+                        }
+                        .zhuanji-list {
+                            padding-top: 30px;
+                            font-size: 0;
+                            white-space: nowrap;
+                            overflow-x: scroll;
+                            overflow-y: hidden;
+                            box-sizing: content-box;
+                            white-space: nowrap;
+                            -webkit-overflow-scrolling: touch;
+                            .zhuanji-item {
+                                display: inline-block;
+                                margin-right: 20px;
+                                margin-bottom: 10px;
+                                .zhuanji-link {
+                                    position: relative;
+                                    display: block;
+                                    text-decoration: none;
+                                    color: #333;
+                                    .zhuanji-img-show {
+                                        position: relative;
+                                        display: inline-block;
+                                        width: 118px;
+                                        height: 100px;
+                                        .zhuanji-img-bg {
+                                            display: inline-block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100px;
+                                            height: 100px;
+                                            background-size: cover;
+                                            background-position: 50%;
+                                            background-repeat: no-repeat;
+                                            transition: all 300ms ease;
+                                        }
+                                        .zhuanji-img {
+                                            display: inline-block;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            z-index: 1;
+                                            width: 100%;
+                                            height: 100%;
+                                            background-image: url(../img/web/changpian.png);
+                                            background-size: 100% 100%;
+                                            background-position: 50%;
+                                            background-repeat: no-repeat;
+                                            transition: all 300ms ease;
+                                        }
+                                    }
+                                    .zhuanji-des {
+                                        width: 100px;
+                                        text-align: center;
+                                        .des-name {
+                                            font-size: 16px;
+                                            line-height: 1; // text-overflow: inherit;
+                                            color: #333;
+                                        }
+                                        .des-singer {
+                                            padding-top: 7px;
+                                            font-size: 14px;
+                                            line-height: 1; // text-overflow: inherit;
+                                            color: #999;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .zhuanji-list::-webkit-scrollbar-thumb {
+                            border-radius: 2px;
+                            background-color: #ddd;
+                        }
+                        .zhuanji-list::-webkit-scrollbar {
+                            height: 4px;
+                            border-radius: 2px;
+                            background-color: #f5f5f5;
+                        }
+                    }
+                }
+                .main-webs {
+                    .web-all {
+                        margin-top: 0 !important;
+                        .web-all-box {
+                            .main-screen-title {
+                                padding-top: 20px;
+                                padding-bottom: 10px; // .title-text {}
+                            }
+                            .webs-list-wrp {
+                                .webs-list {
+                                    position: relative;
+                                    font-size: 0;
+                                    padding: 0 2px;
+                                    .webs-item {
+                                        height: 60px;
+                                        text-align: left;
+                                        line-height: 60px;
+                                        margin-top: 2px;
+                                        padding: 0 1px;
+                                        cursor: pointer;
+                                        .webs-item-btn {
+                                            display: inline-block;
+                                            position: relative;
+                                            width: 100%;
+                                            height: 100%;
+                                            padding-left: 44px;
+                                            border-radius: 2px;
+                                            border: solid 1px #eee;
+                                            background-color: #fff;
+                                            .item-img {
+                                                display: inline-block;
+                                                width: 26px;
+                                                height: 26px;
+                                                transition: all 300ms ease;
+                                            }
+                                            .item-text {
+                                                margin-left: 10px;
+                                                font-size: 16px;
+                                                vertical-align: middle;
+                                                color: #333;
+                                            }
+                                        }
+                                        .click {
+                                            .item-text {
+                                                color: #2abaca;
+                                            }
+                                        }
+                                        .click::after {
+                                            content: '';
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 4px;
+                                            bottom: 0;
+                                            left: 0;
+                                            right: 0;
+                                            z-index: 99;
+                                            background-color: #2abaca;
+                                        }
+                                        .webs-item-hid {
+                                            display: none;
+                                            position: absolute;
+                                            left: 0;
+                                            right: 0;
+                                            top: 65px;
+                                            .hid-list {
+                                                font-size: 0;
+                                                .hid-item {
+                                                    // padding-right: 25px;
+                                                    position: relative;
+                                                    margin-top: 12px;
+                                                    text-align: center;
+                                                    .hid-web-link {
+                                                        display: block;
+                                                        text-decoration: none;
+                                                        font-size: 16px;
+                                                        line-height: 1;
+                                                        color: #666;
+                                                    }
+                                                    .m-web-des{
+                                                        position: absolute;
+                                                        right: 0;
+                                                        top: 0;
+                                                        z-index: 8888;
+                                                        display: inline-block;
+                                                        width: 20px;
+                                                        height: 16px;
+                                                    }
+                                                    .web-link-des {
+                                                        display: none;
+                                                    }
+                                                    .web-link-des {
+                                                        display: inline-block;
+                                                        position: absolute;
+                                                        bottom: -32px;
+                                                        left: 40%;
+                                                        z-index: 44444;
+                                                        padding: 0 4px;
+                                                        line-height: 2;
+                                                        border-radius: 2px;
+                                                        background-color: #000;
+                                                        display: none;
+                                                        .des-text {
+                                                            white-space: nowrap;
+                                                            font-size: 12px;
+                                                            color: #fff;
+                                                        }
+                                                    }
+                                                    .web-link-des:before {
+                                                        content: '';
+                                                        position: absolute;
+                                                        top: -11px;
+                                                        left: 13px;
+                                                        border-style: solid;
+                                                        border-color: transparent transparent #000 transparent;
+                                                        border-width: 6px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    .webs-item::nth-of-type(2n-1) {
+                                        padding-left: 5px;
+                                    }
+                                    .webs-item::nth-of-type(2n) {
+                                        padding-right: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .m-s-zhuanji {
+                        display: none !important;
+                    }
+                }
+            }
+            .zixun-screen-box {
+                .zx-screen-con {
+                    display: flex;
+                    margin-top: 22px;
+                    .left-part {
+                        flex: 1;
+                        .zx-l-box {
+                            .zx-det-list {
+                                font-size: 0;
+                                .zx-l-item {
+                                    margin-bottom: 14px;
+                                    vertical-align: middle;
+                                    margin-left: 8px;
+                                    border-radius: 3px;
+                                    background-color: #fff;
+                                    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+                                    transition: all 200ms ease;
+                                    .zx-l-link {
+                                        display: flex;
+                                        position: relative;
+                                        text-decoration: none;
+                                        color: #333;
+                                        .l-des {
+                                            flex: 1;
+                                            width: 200px;
+                                            position: relative;
+                                            height: 127px;
+                                            float: left;
+                                            padding: 8px 0 0px 8px;
+                                            vertical-align: middle;
+                                            .des-title {
+                                                display: flex;
+                                                .title-icon {
+                                                    width: 20px;
+                                                    height: 20px;
+                                                    display: inline-block;
+                                                    vertical-align: middle;
+                                                }
+                                                .title-text {
+                                                    flex: 1;
+                                                    padding-left: 10px;
+                                                    display: inline-block;
+                                                    padding-top: 2px;
+                                                    font-size: 16px;
+                                                    vertical-align: middle;
+                                                    margin: 0;
+                                                    line-height: 1;
+                                                }
+                                            }
+                                            .des-text {
+                                                padding-top: 10px;
+                                                font-size: 14px;
+                                                line-height: 1.5;
+                                                color: #666;
+                                            }
+                                            .line-ellipsis {
+                                                -webkit-line-clamp: 3;
+                                            }
+                                            .des-bot {
+                                                position: absolute;
+                                                bottom: 6px;
+                                                left: 15px;
+                                                right: 0;
+                                                width: 124%;
+                                                .bot-left {
+                                                    float: left;
+                                                    font-size: 12px;
+                                                    line-height: 1;
+                                                    color: #999;
+                                                }
+                                                .bot-right {
+                                                    float: right;
+                                                    .icon-time {
+                                                        display: inline-block;
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        margin-right: 10px;
+                                                        vertical-align: middle;
+                                                    }
+                                                    .time-desc {
+                                                        vertical-align: middle;
+                                                        font-size: 12px;
+                                                        line-height: 1;
+                                                        color: #999;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .l-img {
+                                            float: right;
+                                            padding: 5px 8px 5px 5px;
+                                            vertical-align: middle;
+                                            .img-box {
+                                                display: inline-block;
+                                                position: relative;
+                                                width: 20vw;
+                                                height: 17.4vw;
+                                                .zixun-img-show {
+                                                    position: absolute;
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    background-size: cover;
+                                                    background-position: 50%;
+                                                    background-repeat: no-repeat;
+                                                    background-color: #ccc;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .right-part {
+                        width: 40px;
+                        margin: 0 10px;
+                        .zx-r-box {
+                            .zx-r-title {
+                                display: block;
+                                width: 100%;
+                                height: 40px;
+                                line-height: 40px;
+                                text-align: center;
+                                background-color: #ffffff;
+                                box-shadow: 3px 0px 7px 0px rgba(0, 0, 0, 0.2);
+                                border-radius: 3px;
+                                .zx-r-img {
+                                    display: inline-block;
+                                    width: 16px;
+                                    height: 16px;
+                                    vertical-align: middle;
+                                }
+                                .zx-r-text {
+                                    margin: 0;
+                                    padding-left: 5px;
+                                    display: inline-block;
+                                    font-size: 18px;
+                                    line-height: 1;
+                                    vertical-align: middle;
+                                    color: #2abaca;
+                                    display: none;
+                                }
+                            }
+                            .zx-r-list {
+                                .zx-r-item {
+                                    display: block;
+                                    height: 40px;
+                                    line-height: 40px;
+                                    text-align: center;
+                                    .zx-r-link {
+                                        display: inline-block;
+                                        text-decoration: none;
+                                        color: #333;
+                                        .zx-r-img {
+                                            display: inline-block;
+                                            width: 16px;
+                                            height: 16px;
+                                            vertical-align: middle;
+                                        }
+                                        .zx-r-text {
+                                            display: inline-block;
+                                            max-width: 120px;
+                                            padding-left: 5px;
+                                            font-size: 18px;
+                                            line-height: 1;
+                                            vertical-align: middle;
+                                            color: #333;
+                                            display: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .tubang-screen-box {
+                overflow: hidden;
+                .tb-screen-con {
+                    margin-top: 20px;
+                    .tb-screen-list {
+                        float: left;
+                        width: 33.3%;
+                        margin-right: -5px;
+                        margin-left: 5px;
+                        .tubang-item {
+                            padding-right: 8px;
+                            margin-bottom: 8px;
+                            .tubang-link {
+                                display: inline-block;
+                                text-decoration: none;
+                                border-radius: 2px;
+                                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                color: #333;
+                                .tb-top-img {
+                                    width: 100%;
+                                    .img-show {
+                                        display: block;
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                                .tb-bot-des {
+                                    padding: 2px 0;
+                                    margin: 0 6px;
+                                    .tb-des-text {
+                                        display: block;
+                                        text-decoration: none;
+                                        font-size: 14px;
+                                        line-height: 1.3;
+                                        color: #333;
+                                    }
+                                    .line-ellipsis {
+                                        height: 32px;
+                                        margin-bottom: 4px;
+                                    }
+                                }
+                                .tb-illus-text {
+                                    padding-bottom: 4px;
+                                    font-size: 12px;
+                                    .illus-tag {
+                                        line-height: 1;
+                                    }
+                                    .illus-strong {
+                                        padding-left: 4px;
+                                        line-height: 1;
+                                        font-weight: normal;
+                                        color: #2abaca;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .tb-screen-list:nth-of-type(4) {
+                        display: none;
+                    }
+                    .tb-screen-list:nth-of-type(5) {
+                        display: none;
+                    }
+                }
+            }
+            .manhua-screen-box {
+                .mh-screen-con {
+                    margin-top: 15px;
+                    .mh-m-header {
+                        background-color: #fff;
+                        .mh-h-img {
+                            // width: 145px;
+                            height: 175px;
+                            padding-top: 5px;
+                            margin: 0 auto;
+                            .mh-img-show {
+                                width: 100%;
+                                height: 100%;
+                                background-size: cover;
+                                background-position: 50%;
+                                background-repeat: no-repeat;
+                                background-color: #ccc;
+                            }
+                        }
+                        .mh-h-info {
+                            overflow: hidden;
+                            vertical-align: middle;
+                            .h-info-title {
+                                display: inline-block;
+                                width: 50vw;
+                                margin: 0 10px;
+                                padding: 8px 0;
+                                font-size: 18px;
+                                vertical-align: middle;
+                            }
+                            .h-info-by {
+                                display: inline-block;
+                                padding: 9px 0;
+                                margin: 0;
+                                font-size: 14px;
+                                vertical-align: middle;
+                                color: #999;
+                            }
+                            .h-title {
+                                padding-bottom: 7px;
+                                margin-left: 17px;
+                                .t-text {
+                                    position: relative;
+                                    font-size: 14px;
+                                }
+                                .t-text::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 2px;
+                                    left: -7px;
+                                    width: 3px;
+                                    height: 16px;
+                                    background-color: #2abaca;
+                                }
+                            }
+                            .h-info-detail {
+                                margin-bottom: 7px;
+                                padding: 0 10px;
+                                font-size: 14px;
+                                line-height: 1.5;
+                                box-sizing: border-box;
+                                color: #666;
+                            }
+                            .line-ellipsis {
+                                -webkit-line-clamp: 3;
+                            }
+                            .h-info-btn {
+                                width: 80px;
+                                height: 30px;
+                                padding-bottom: 15px;
+                                margin-top: 4px;
+                                margin-left: 10px;
+                                margin-bottom: 15px;
+                                line-height: 30px;
+                                border-radius: 15px;
+                                text-align: center;
+                                font-size: 14px;
+                                background-color: #2abaca;
+                                .h-info-link {
+                                    display: inline-block;
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }
+                        }
+                    }
+                    .tag-list {
+                        overflow: hidden;
+                        .list-show {
+                            display: flex;
+                            padding: 10px 0;
+                            margin-top: 15px;
+                            padding-left: 10px;
+                            margin-right: -5px;
+                            font-size: 0;
+                            background-color: #fff;
+                            .mh-tag-item {
+                                flex: 1;
+                                width: 100px;
+                                height: 30px;
+                                margin-right: 15px;
+                                line-height: 30px;
+                                text-align: center;
+                                border-radius: 15px;
+                                border: 1px solid #ddd;
+                                background-color: #fff;
+                                cursor: pointer;
+                                .mh-tag {
+                                    display: inline-block;
+                                    font-size: 14px;
+                                }
+                            }
+                            .mh-cur {
+                                border: solid 1px #2abaca;
+                                background-color: #2abaca;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    .mh-screen-list {
+                        background-color: #fff;
+                        .mh-screen-item {
+                            margin: 0 10px;
+                            border-top: 1px solid #ddd;
+                            .mh-item-link {
+                                display: flex;
+                                text-decoration: none;
+                                color: #333;
+                                .mh-item-img {
+                                    padding: 14px 0;
+                                    width: 100px;
+                                    height: 60px;
+                                    box-sizing: content-box;
+                                    .item-img-show {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        background-repeat: no-repeat;
+                                        background-color: #ccc;
+                                    }
+                                }
+                                .mh-item-right {
+                                    flex: 1;
+                                    padding-top: 14px;
+                                    margin-left: 15px;
+                                    .mh-item-title {
+                                        font-size: 16px;
+                                    }
+                                    .mh-item-des {
+                                        font-size: 12px;
+                                        line-height: 1.3;
+                                        color: #666;
+                                    }
+                                    .line-ellipsis {
+                                        -webkit-line-clamp: 2;
+                                    }
+                                }
+                            }
+                        }
+                        .mh-screen-sheding {
+                            margin: 0 12px;
+                            border-top: 1px solid #ddd;
+                            .mh-sd-link {
+                                display: flex;
+                                text-decoration: none;
+                                color: #333;
+                                .mh-sd-img {
+                                    margin: 14px 0;
+                                    border: 1px solid #2abaca;
+                                    border-radius: 2px;
+                                    .sd-img-show {
+                                        width: 80px;
+                                        height: 80px;
+                                        background-size: cover;
+                                        background-repeat: no-repeat;
+                                        background-position: 50%;
+                                        background-color: #ccc;
+                                    }
+                                }
+                                .main-sd-right {
+                                    flex: 1;
+                                    width: 40vw;
+                                    margin-left: 10px;
+                                    padding-top: 18px;
+                                    .sd-name {
+                                        margin: 0;
+                                        font-size: 16px;
+                                    }
+                                    .sd-jianjie {
+                                        padding-top: 4px;
+                                        font-size: 12px;
+                                        line-height: 1.5;
+                                    }
+                                    .text-ellipsis {}
+                                    .sd-detail {
+                                        font-size: 12px;
+                                        line-height: 1.5;
+                                    }
+                                    .line-ellipsis {}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .zhoubian-screen-box {
+                .zb-screen-con {
+                    margin-top: 10px;
+                    margin-left: 5px;
+                    overflow: hidden;
+                    .zb-list {
+                        display: flex;
+                        flex-wrap: wrap;
+                        margin-right: -5px;
+                        margin-bottom: 15px;
+                        .zb-item {
+                            width: 50%;
+                            margin-top: 10px;
+                            padding-right: 10px;
+                            .zb-link {
+                                display: inline-block;
+                                width: 100%;
+                                text-decoration: none;
+                                box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.1);
+                                border-radius: 3px;
+                                background-color: #fff;
+                                color: #333;
+                                .zb-img-box {
+                                    position: relative;
+                                    height: 180px;
+                                    width: 100%;
+                                    .zb-img-show {
+                                        width: 100%;
+                                        height: 100%;
+                                        background-size: cover;
+                                        background-position: 50%;
+                                        background-repeat: no-repeat;
+                                        background-color: #ccc;
+                                    }
+                                }
+                                .zb-link-des {
+                                    position: relative;
+                                    padding: 10px 0;
+                                    .zb-des-title {
+                                        margin: 0 10px;
+                                        font-size: 12px;
+                                    }
+                                    .text-ellipsis {
+                                        width: 150px;
+                                    }
+                                    .zb-des-time {
+                                        padding-top: 4px;
+                                        margin: 0 10px;
+                                        font-size: 12px;
+                                        color: #666;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .music-screen-box {
+                .music-screen-con {
+                    margin-top: 15px;
+                    margin-bottom: 20px;
+                    .music-top-tag {
+                        padding-left: 10px;
+                        border-bottom: 1px solid #eee;
+                        background-color: #fff;
+                        .music-tag-item {
+                            display: inline-block;
+                            width: 60px;
+                            height: 25px;
+                            border-radius: 12px;
+                            text-align: center;
+                            line-height: 23px;
+                            margin: 13px 10px 13px 0;
+                            font-size: 16px;
+                            border: solid 1px #cccccc;
+                            cursor: pointer;
+                        }
+                    }
+                    .music-cur {
+                        color: #fff;
+                        background-color: #2abaca;
+                        border: solid 1px #2abaca !important;
+                    }
+                    .music-list {
+                        padding-top: 20px;
+                        overflow: hidden;
+                        background-color: #fff; // display: flex;
+                        // flex-wrap: wrap;
+                        .music-item {
+                            float: left;
+                            width: 50%;
+                            margin-bottom: 15px;
+                            padding-left: 14px;
+                            .music-link {
+                                position: relative;
+                                display: block;
+                                height: 175px;
+                                text-decoration: none;
+                                color: #333;
+                                .music-img {
+                                    position: absolute;
+                                    width: 140px;
+                                    height: 140px;
+                                    background-size: cover;
+                                    background-position: 50%;
+                                    background-repeat: no-repeat;
+                                    background-color: #ccc;
+                                }
+                                .music-img-bg {
+                                    position: absolute;
+                                    width: 165px;
+                                    height: 140px;
+                                    background: url(../img/web/changpian.png) center no-repeat;
+                                    background-size: 100% 100%;
+                                }
+                                .music-name {
+                                    position: absolute;
+                                    left: 4px;
+                                    bottom: 15px;
+                                    width: 130px;
+                                    font-size: 14px;
+                                }
+                                .music-singer {
+                                    position: absolute;
+                                    left: 4px;
+                                    bottom: 0;
+                                    width: 130px;
+                                    font-size: 12px;
+                                    color: #999;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .setting-screnn-box {
+                .setting-screen-con {
+                    .zidingyi-web-wrp {
+                        .main-screen-title {
+                            margin-top: 25px;
+                            .title-text {
+                                float: left;
+                                line-height: 26px;
+                                font-size: 18px;
+                            }
+                            .title-text::before {
+                                height: 18px;
+                                left: 8px;
+                                width: 4px;
+                                top: 5px;
+                            }
+                            .zd-icon-close {
+                                position: absolute;
+                                width: 18px;
+                                height: 18px;
+                                right: 8px;
+                                top: 50%;
+                                margin-top: -9px;
+                                cursor: pointer;
+                            }
+                        }
+                        .zdy-web-panel {
+                            padding-top: 25px;
+                            .zdy-form-box {
+                                margin: 0 8px;
+                                border-radius: 5px;
+                                background-color: #fff;
+                                .zdy-form {
+                                    .zdy-f-item {
+                                        position: relative;
+                                        float: left;
+                                        display: block;
+                                        width: 33.33%;
+                                        height: 50px;
+                                        line-height: 50px;
+                                        border-bottom: 1px solid #eee;
+                                        cursor: pointer;
+                                        .zdy-web-select {
+                                            position: relative;
+                                            z-index: 20000;
+                                            vertical-align: middle;
+                                            cursor: pointer;
+                                            opacity: 0;
+                                        }
+                                        .zdy-web-icon::before {
+                                            content: '';
+                                            position: absolute;
+                                            top: 2px;
+                                            left: -23px;
+                                            width: 15px;
+                                            height: 15px;
+                                            border: solid 2px #666666;
+                                            border-radius: 100%;
+                                        }
+                                        .zdy-active::after {
+                                            content: '';
+                                            position: absolute;
+                                            top: 6px;
+                                            left: -19px;
+                                            width: 7px;
+                                            height: 7px;
+                                            background-color: #2abaca;
+                                            border-radius: 100%;
+                                        }
+                                        .zdy-active::before {
+                                            content: '';
+                                            position: absolute;
+                                            top: 2px;
+                                            left: -23px;
+                                            width: 15px;
+                                            height: 15px;
+                                            border: solid 2px #2abaca;
+                                            border-radius: 100%;
+                                        }
+                                        .zdy-web-icon {
+                                            display: inline-block;
+                                            position: relative;
+                                            width: 17px;
+                                            height: 17px;
+                                            margin-left: 14px;
+                                            vertical-align: middle;
+                                            .icon-img {
+                                                position: absolute;
+                                                top: 0;
+                                                left: 0;
+                                                width: 100%;
+                                                height: 100%;
+                                            }
+                                        }
+                                        .zdy-f-lab {
+                                            // margin-left: 4px;
+                                            margin-bottom: 0;
+                                            font-size: 12px;
+                                            vertical-align: middle;
+                                            cursor: pointer;
+                                        }
+                                        .delet-icon {
+                                            position: absolute;
+                                            display: inline-block;
+                                            width: 12px;
+                                            height: 12px;
+                                            right: -4px;
+                                            top: 50%;
+                                            margin-top: -3px;
+                                            vertical-align: middle;
+                                            display: none;
+                                            .icon-img {
+                                                display: inline-block;
+                                                width: 100%;
+                                                height: 100%;
+                                                vertical-align: top;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .zengjia-web-wrap {
+                        .main-screen-title {
+                            padding-top: 25px;
+                            .title-text {
+                                float: left;
+                                line-height: 26px;
+                                font-size: 18px;
+                            }
+                            .title-text::before {
+                                height: 18px;
+                                left: 8px;
+                                width: 4px;
+                                top: 5px;
+                            }
+                        }
+                        .zengjia-web-panel {
+                            padding-top: 25px;
+                            .zengjia-form-box {
+                                margin: 0 8px;
+                                background-color: #fff;
+                                .zengjia-form {
+                                    margin-bottom: 20px;
+                                    padding-top: 10px;
+                                    .zj-form-item {
+                                        position: relative;
+                                        padding-left: 80px;
+                                        height: 30px;
+                                        line-height: 30px;
+                                        padding-top: 10px;
+                                        box-sizing: content-box;
+                                        >label {
+                                            width: 80px;
+                                            padding-left: 17px;
+                                            text-align: left;
+                                            font-size: 14px;
+                                        }
+                                        .input-box {
+                                            margin-right: 15px;
+                                            border: solid 1px #999;
+                                            .zj-web-name {
+                                                width: 100%;
+                                                padding-left: 10px;
+                                                line-height: 12px;
+                                                border: none;
+                                                outline: none;
+                                                font-size: 12px;
+                                            }
+                                            .zj-web-site {
+                                                width: 100%;
+                                                padding-left: 10px;
+                                                line-height: 12px;
+                                                border: none;
+                                                outline: none;
+                                                font-size: 12px;
+                                            }
+                                            .zj-web-icon {
+                                                width: 100%;
+                                                padding-left: 10px;
+                                                line-height: 12px;
+                                                border: none;
+                                                outline: none;
+                                                font-size: 12px;
+                                            }
+                                        }
+                                        .web-name {
+                                            position: absolute;
+                                            left: 0;
+                                        }
+                                        .web-site {
+                                            position: absolute;
+                                            left: 0;
+                                        }
+                                        .web-icon {
+                                            position: absolute;
+                                            left: 0;
+                                        }
+                                        .btn-box {
+                                            position: relative;
+                                            float: left;
+                                            width: 75px;
+                                            height: 33px;
+                                            text-align: center;
+                                            line-height: 33px;
+                                            font-size: 14px;
+                                            .zj-btn {
+                                                width: 100%;
+                                                line-height: 33px;
+                                                border: none;
+                                                outline: none;
+                                                border-radius: 2px;
+                                                background-color: #2abaca;
+                                                color: #fff;
+                                            }
+                                            .re-zj-btn {
+                                                width: 100%;
+                                                margin-left: 10px;
+                                                line-height: 33px;
+                                                border: none;
+                                                outline: none;
+                                                border-radius: 2px;
+                                                background-color: #2abaca;
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                    .submit-btn {
+                                        padding-left: 33px;
+                                    }
+                                    .zj-form-ts {
+                                        float: left;
+                                        margin: 12px 0;
+                                        padding: 0 17px;
+                                        font-size: 12px;
+                                        line-height: 1.5;
+                                        color: #999;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+           
+        }
+        .zb-detail-wrp {
+            max-width: 100vw;
+            margin: 0 auto;
+            .zb-detail-box {
+                margin-top: 15px;
+                .zb-left-detail {
+                    padding-bottom: 10px;
+                    background-color: #fff;
+                    .zb-l-title {
+                        display: none;
+                    }
+                    .zb-img-show {
+                        padding-top: 14px;
+                        .zb-img {
+                            display: block;
+                            margin-bottom: 10px;
+                            padding: 0 10px;
+                            .zb-img-detail {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+                .zb-right-detail {
+                    .zb-r-box {
+                        margin: 25px 10px 20px;
+                        .zb-list-top {
+                            .small-screen-title {
+                                .title-text {}
+                            }
+                            .zb-list {
+                                display: flex;
+                                width: 100%;
+                                padding: 0 10px;
+                                margin-top: 20px;
+                                justify-content: space-between;
+                                .zb-item {
+                                    .zb-item-link {
+                                        display: block;
+                                        width: 60px;
+                                        height: 60px;
+                                        .zb-item-icon {
+                                            display: inline-block;
+                                            width: 100%;
+                                            height: 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .zb-list-bottom {
+                            padding-top: 28px;
+                            .small-screen-title {
+                                padding-bottom: 16px;
+                                .title-text {}
+                            }
+                            .zb-bot-list {
+                                overflow-x: auto;
+                                overflow-y: hidden;
+                                white-space: nowrap;
+                                -webkit-overflow-scrolling: touch;
+                                .zb-bot-item {
+                                    display: inline-block;
+                                    text-decoration: none;
+                                    margin-bottom: 18px;
+                                    margin-right: 12px;
+                                    .zb-bot-link {
+                                        text-decoration: none;
+                                        .img-show {
+                                            text-decoration: none;
+                                            position: relative;
+                                            width: 150px;
+                                            height: 125px;
+                                            vertical-align: middle;
+                                            .img-shangpin {
+                                                position: absolute;
+                                                width: 100%;
+                                                height: 100%;
+                                                background-position: 50%;
+                                                background-size: cover;
+                                                background-repeat: no-repeat;
+                                            }
+                                        }
+                                        .zb-bot-des {
+                                            width: 150px;
+                                            white-space: pre-wrap;
+                                            padding: 0 6px;
+                                            margin: 4px 0;
+                                            line-height: 1.2;
+                                            text-decoration: none;
+                                            color: #333;
+                                        }
+                                    }
+                                }
+                                .zb-bot-item:last-child {
+                                    margin-right: 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .zx-detail-wrp {
+            max-width: 1300px;
+            margin: 0 auto;
+            .zx-detail-box {
+                margin-top: 15px;
+                .zx-detail {
+                    padding-bottom: 20px;
+                    background-color: #fff;
+                    .zx-title {
+                        display: none;
+                    }
+                    .zx-headline {
+                        margin: 0 10px;
+                        .zx-main-title {
+                            padding: 5px 0;
+                            margin: 0;
+                            font-size: 20px;
+                            line-height: 1.5;
+                        }
+                        .zx-title-tap {
+                            .zx-tap-item {
+                                margin-right: 25px;
+                                font-size: 14px;
+                                color: #999;
+                                .tap-item-label {}
+                                .tap-item-text {}
+                            }
+                            .zx-bianji {
+                                display: none;
+                            }
+                        }
+                    }
+                    .zx-main-con {
+                        background-color: #fff;
+                        .zx-main-box {
+                            margin-top: 15px;
+                            margin-bottom: 10px;
+                            padding: 0 10px;
+                            .zx-main-text {
+                                display: block;
+                                margin-bottom: 12px;
+                                font-size: 14px;
+                                text-indent: 2em;
+                                line-height: 1.5;
+                            }
+                            .zx-main-img {
+                                display: block;
+                                width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                    .zx-page-control {
+                        .page-control {
+                            margin-top: 10px;
+                            font-size: 14px;
+                            padding: 0 10px;
+                            .control-label {
+                                vertical-align: middle;
+                                color: #999;
+                            }
+                            .prev-page {
+                                display: inline-block;
+                                width: 70%;
+                                text-decoration: none;
+                                vertical-align: middle;
+                                color: #2abaca;
+                            }
+                            .next-page {
+                                display: inline-block;
+                                width: 70%;
+                                text-decoration: none;
+                                vertical-align: middle;
+                                color: #2abaca;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .m-gzh-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            .m-gzh-code {
+                .gzh-code-img {
+                    display: block;
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+    #xfWrap {
+        position: relative;
+        padding-top: 44px;
+        padding-bottom: 100px;
+        min-height: 100vh;
+        box-sizing: content-box;
+        background-color: #f5f5f5;
+        .m-xf-wrp {
+            .m-xf-week {
+                position: fixed;
+                top: 44px;
+                left: 0;
+                right: 0;
+                z-index: 9999;
+                height: 44px;
+                padding: 0 12px;
+                background-color: #fff;
+                border-bottom: 1px solid #ddd;
+                .xf-week-list {
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    white-space: nowrap;
+                    height: 44px;
+                    line-height: 44px;
+                    -webkit-overflow-scrolling: touch;
+                    text-align: center;
+                    .xf-week-item {
+                        position: relative;
+                        display: inline-block;
+                        margin-right: 15px;
+                        font-size: 14px;
+                    }
+                    .m-xf-active {
+                        color: #2abaca;
+                    }
+                    .m-xf-active::before {
+                        content: '';
+                        position: absolute;
+                        bottom: 2px;
+                        left: -2px;
+                        width: 105%;
+                        height: 2px;
+                        background-color: #2abaca;
+                    }
+                }
+            }
+            .m-xf-main {
+                padding-top: 44px;
+                .xf-main-list {
+                    margin-top: 15px;
+                    margin-left: 10px;
+                    margin-right: 5px;
+                    margin-bottom: 9px;
+                    display: none;
+                    .xf-main-item {
+                        float: left;
+                        width: 33.33%;
+                        padding-right: 5px;
+                        padding-bottom: 16px;
+                        .xf-main-box {
+                            padding-bottom: 10px;
+                            background-color: #fff;
+                            .m-xf-img {
+                                display: block;
+                                position: relative;
+                                padding-bottom: 108%;
+                                height: 0;
+                                width: 100%;
+                                .m-img-show {
+                                    position: absolute;
+                                    width: 100%;
+                                    height: 100%;
+                                    background-size: cover;
+                                    background-position: 50%;
+                                    background-repeat: no-repeat;
+                                }
+                            }
+                            .m-xf-des {
+                                width: 100%;
+                                padding: 4px 5px;
+                                text-align: center;
+                                font-size: 12px;
+                                line-height: 1.5;
+                            }
+                            .m-go-tieba {
+                                display: flex;
+                                margin-top: 4px;
+                                .tieba-link {
+                                    display: block;
+                                    width: 50%;
+                                    padding: 4px;
+                                    // width: 65px;
+                                    // height: 25px;
+                                    margin: 0 auto;
+                                    .tieba-btn {
+                                        display: inline-block;
+                                        width: 100%;
+                                        height: auto;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .m-gzh-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            .m-gzh-code {
+                .gzh-code-img {
+                    display: block;
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+        .footer {
+            z-index: 9999;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+    }
+    #mhWrap {
+        position: relative;
+        min-height: 100vh;
+        background-color: #f5f5f5;
+        .search-header {
+            display: none !important;
+        }
+        .m-header-nav {
+            .m-nav-panel {
+                .m-nav-btn {
+                    display: inline-block;
+                    width: 44px;
+                    line-height: 44px;
+                    cursor: pointer;
+                    .m-icon-btn {}
+                }
+                .m-nav-logo {
+                    left: 0;
+                    margin-left: 60px;
+                    font-size: 16px;
+                    .logo-img {}
+                }
+            }
+            .m-nav-hid {
+                position: fixed;
+                top: 44px;
+                left: 0;
+                bottom: 0;
+                z-index: 9999;
+                display: none;
+                width: 100vw;
+                .m-hid-list {
+                    position: relative;
+                    display: block; // width: 87px;
+                    width: 0;
+                    height: 100vh;
+                    transition: width 200ms ease;
+                    background-color: #fff;
+                    .m-hid-item {
+                        height: 44px;
+                        width: 87px;
+                        line-height: 44px;
+                        text-align: center;
+                        cursor: pointer;
+                        .hid-item-link {
+                            display: block;
+                            text-decoration: none;
+                            font-size: 16px;
+                            color: #333;
+                        }
+                    }
+                    .m-hid-bottom {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        .m-bottom {
+                            height: 30px;
+                            width: 87px;
+                            line-height: 30px;
+                            text-align: center;
+                            .hid-item-link {
+                                display: block;
+                                text-decoration: none;
+                                font-size: 15px;
+                                color: #333;
+                                .m-hid-btn {
+                                    display: inline-block;
+                                    width: 30px;
+                                    height: 30px;
+                                }
+                            }
+                        }
+                    }
+                    .hid-item-cur {
+                        background-color: rgba(0, 0, 0, 0.1);
+                    } // .m-s-item {
+                    //     height: 44px;
+                    //     width: 87px;
+                    //     line-height: 44px;
+                    //     text-align: center;
+                    //     cursor: pointer;
+                    //     .hid-item-link {
+                    //         display: block;
+                    //         text-decoration: none;
+                    //         font-size: 16px;
+                    //         color: #333;
+                    //     }
+                    // }
+                }
+            }
+        }
+        .manhua-detail {
+            margin-top: 44px;
+            .mh-box {
+                max-width: 100vw;
+                margin: 0 auto;
+                padding-bottom: 20px;
+                .mh-title-top {
+                    font-size: 0;
+                    .mh-t-left {
+                        float: left;
+                        position: relative;
+                        margin-left: 50px;
+                        margin-top: 20px;
+                        font-size: 24px;
+                        display: none;
+                    }
+                    .mh-t-left::before {
+                        content: '';
+                        position: absolute;
+                        left: -20px;
+                        top: 0;
+                        height: 100%;
+                        width: 4px;
+                        background-color: #2abaca;
+                    }
+                    .mh-t-right {
+                        float: right;
+                        margin-top: 20px;
+                        margin-right: 10px;
+                        .prev-btn {
+                            width: 85px;
+                            height: 30px;
+                            text-align: center;
+                            line-height: 1.5;
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                            border: solid 1px #2abaca;
+                            text-decoration: none;
+                            color: #fff;
+                            background-color: #2abaca;
+                            cursor: pointer;
+                        }
+                        .next-btn {
+                            width: 85px;
+                            height: 30px;
+                            text-align: center;
+                            line-height: 1.5;
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            border: solid 1px #2abaca;
+                            text-decoration: none;
+                            color: #333;
+                            cursor: pointer;
+                        }
+                    }
+                }
+                .mh-img-container {
+                    margin-top: 25px;
+                    background-color: #fff;
+                    .mh-img-show {
+                        display: block;
+                        width: 100%;
+                        height: auto;
+                        margin: 0 auto;
+                    }
+                }
+                .mh-title-bot {
+                    font-size: 0;
+                    .mh-t-right {
+                        float: right;
+                        margin-top: 20px;
+                        margin-right: 10px;
+                        .prev-btn {
+                            width: 85px;
+                            height: 30px;
+                            text-align: center;
+                            line-height: 1.5;
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            border-top-left-radius: 20px;
+                            border-bottom-left-radius: 20px;
+                            border: solid 1px #2abaca;
+                            text-decoration: none;
+                            color: #fff;
+                            background-color: #2abaca;
+                            cursor: pointer;
+                        }
+                        .next-btn {
+                            width: 85px;
+                            height: 30px;
+                            text-align: center;
+                            line-height: 1.5;
+                            padding: 5px 10px;
+                            font-size: 14px;
+                            border-top-right-radius: 20px;
+                            border-bottom-right-radius: 20px;
+                            border: solid 1px #2abaca;
+                            text-decoration: none;
+                            color: #333;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+        .m-gzh-panel {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 9999999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4);
+            .m-gzh-code {
+                .gzh-code-img {
+                    display: block;
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+        .footer {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+    .night-mode {
+        background-color: #1a1e24 !important;
+        .m-nav-panel,
+        .m-xf-week {
+            background-color: #565a60 !important;
+            color: #80878d !important;
+        }
+        .m-hid-list {
+            background-color: #565a60 !important;
+        }
+        .m-nav-panel {}
+        .line-ellipsis,
+        .footer-link,
+        .hid-item-link {
+            color: #80878d !important;
+        }
+        .xf-main-box,
+        .footer {
+            background-color: #1d2429 !important;
+        }
+        .right-fix-bar {
+            .fix-bar-list {
+                .fix-bar-item {
+                    background-color: #1d2429;
+                }
+            }
+        }
+        .icon-content {
+            background-color: #1d2429 !important;
+        }
+        .m-nav-btn,
+        .m-nav-panel {
+            border: none !important;
+        }
+        .fashou-list::-webkit-scrollbar {
+            height: 4px;
+            border-radius: 2px;
+            background-color: #1a1e24 !important;
+        }
+        .zhuanji-list::-webkit-scrollbar {
+            height: 4px;
+            border-radius: 2px;
+            background-color: #1a1e24 !important;
+        }
+    }
+}

@@ -1,0 +1,3776 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>导航网页</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+	<script src="./js/jquery-3.3.1.js" type="text/javascript"></script>
+	<script src="./js/ad_db.js" type="text/javascript"></script>
+	<script src="./js/swiper.min.js" type="text/javascript"></script>
+	<script src="./js/bootstrap.min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="./css/large.css" type="text/css">
+	<link rel="stylesheet" href="./css/mid.css" type="text/css">
+	<link rel="stylesheet" href="./css/small.css" type="text/css">
+	<link rel="stylesheet" href="./css/swiper.min.css" type="text/css">
+	<link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+	<link rel="stylesheet" href="./iconfont/iconfont.css" type="text/css">
+</head>
+
+<body>
+	<div id="indexWrap" class="">
+		<div class="search-header">
+			<div class="s-inner clear">
+				<div class="top-panel">
+					<a class="left-logo" href="#">
+						<img src="https://asset.static.moe123.net/builds/20180820132231/03977178366e038201e85d8ab5a481ea.png" alt="logo"
+						 class="logo-img">
+					</a>
+					<div class="right-search-container">
+						<ul class="s-tab clear">
+							<li class="active" category="web">网页</li>
+							<li class="" category="goods">商品</li>
+							<li class="" category="video">视频</li>
+							<li class="" category="tieba"> 贴吧</li>
+							<li class="" category="image">图片</li>
+							<li class="" category="music">音乐</li>
+							<li class="" category="wiki">百科</li>
+							<li class="" category="translate">翻译</li>
+							<li class="" category="express">快递</li>
+						</ul>
+						<ul class="s-panel clear">
+							<li class="form_box active" category="web">
+								<form action="https://www.baidu.com/s" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<input type="hidden" name="ie" value="utf-8">
+									</div>
+									<div class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+											<a class="opt-img google" category="google" style="background-image: url(./img/web/google.png);">google</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="https://www.baidu.com/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/iconbaidu.png);">baidu</a>
+										</span>
+										<div class="toggle"></div>
+									</div>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="wd" placeholder="此处输入关键字进行搜索" autocomplete="off" maxlength="100">
+									</span>
+									<span class="btn-wr">
+										<input type="submit" class="search" value="百度搜索">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="goods">
+								<form action="https://s.taobao.com/search" method="GET" target="_blank" class="s-form clear">
+									<div class="params">
+										<input type="hidden" name="ie" value="utf-8">
+									</div>
+									<div class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img taobao" category="taobao" style="background-image: url(./img/web/taobao2.png);">taobao</a>
+										</div>
+										<div class="s-opt-logo">
+											<a href="https://www.taobao.com/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/icontaobao.jpg);">baidu</a>
+										</div>
+										<div class="toggle"></div>
+									</div>
+									<div class="ipt-wr">
+										<input type="text" class="keyword" name="q" placeholder="此处输入关键字进行搜索" autocomplete="off" maxlength="100">
+									</div>
+									<div class="btn-wr">
+										<input type="submit" class="search" value="淘宝搜索">
+									</div>
+								</form>
+							</li>
+							<li class="form_box" category="video">
+								<form action="https://www.bilibili.com/search" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<input name="orderby" type="hidden" value="">
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img bilibili" category="bilibili" style="background-image: url(./img/web/bilibili.png);">bilibili</a>
+											<a class="opt-img acfun" category="acfun" style="background-image: url(./img/web/acfun.png);">acfun</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="http://www.acfun.cn/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/iconbilibili.jpg);">baidu</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input type="submit" class="search" value="哔哩哔哩搜索">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="tieba">
+								<form action="https://tieba.baidu.com/f" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<input type="hidden" name="ie" value="utf-8">
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img tieba" category="tieba" style="background-image: url(./img/web/tieba.png);">tieba</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="https://tieba.baidu.com/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/icontieba.jpg);">tieba</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input class="keyword" type="text" name="kw" placeholder="此处输入关键字进行搜索" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input class="search" type="submit" value="进入贴吧">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="image">
+								<form action="https://www.pixiv.net/search.php" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<input type="hidden" name="s_mode" value="s_tag">
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img pixiv" category="pixiv" style="background-image: url(./img/web/pixiv.png);">pixiv</a>
+											<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="https://www.pixiv.net/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/iconpixiv.jpg);">pixiv</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="keyword" placeholder="输入'illust_id='可浏览作品，'id='可查看作者" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input type="submit" class="search" value="PIXIV搜索">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="music">
+								<form action="https://www.xiami.com/search" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<input type="hidden" name="pos" value="1">
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img xiami" category="xiami" style="background-image: url(./img/web/xiami.png);">xiami</a>
+											<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="https://www.xiami.com/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/iconxiami.jpg);">pixiv</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input class="search" type="submit" value="虾米音乐">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="wiki">
+								<form action="https://zh.wikipedia.org/w/index.php" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<input type="hidden" name="title" value="Special:搜索">
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="opt-img xiami" category="wiki" style="background-image: url(./img/web/wiki.png);">wikipedia</a>
+											<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank" class="wiki logo-show"
+											 style="background-image: url(./img/web/iconwiki.jpg);">wiki</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input class="search" type="submit" value="维基词条">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="translate">
+								<form action="https://dict.youdao.com/search" method="GET" target="_blank" class="s-form">
+									<div class="params">
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="youdao opt-img" category="youdao" style="background-image: url(./img/web/youdao.png);">youdao</a>
+											<a class="baidu opt-img" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+										</div>
+										<span class="s-opt-logo">
+											<a href="https://dict.youdao.com/" target="_blank" class="youdao logo-show" style="background-image: url(./img/web/iconyoudao.jpg);">youdao</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input type="submit" class="search" value="有道词典">
+									</span>
+								</form>
+							</li>
+							<li class="form_box" category="express">
+								<form action="http://www.kuaidi100.com/" method="GET" target="_blank" class="s-form">
+									<div class="params">
+										<a class="logo-model hidden" style="display: none;"></a>
+									</div>
+									<span class="opt-wr">
+										<div class="s-opt-container">
+											<a class="kuaidi100 opt-img" category="kuaidi100" style="background-image: url(./img/web/kuaidi100.png);">kuaidi100</a>
+										</div>
+										<span class="s-opt-logo ">
+											<a href="http://www.kuaidi100.com/" target="_blank" class="kuaidi100 logo-show" style="background-image: url(./img/web/iconkuaidi.jpg);">kuaidi100</a>
+										</span>
+										<div class="toggle"></div>
+									</span>
+									<span class="ipt-wr">
+										<input type="text" class="keyword" name="postid" placeholder="输入单号，在800+快递公司中为您智能查询" autocomplete="off">
+									</span>
+									<span class="btn-wr">
+										<input type="submit" class="search" value="快递100">
+									</span>
+								</form>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<header class="head-bg">
+			<div class="swiper-container">
+				<span class="left-shade"></span>
+				<span class="right-shade"></span>
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" data-id="slid_1">
+						<div class="bg-pic" style="background-image: url(./img/web/head-bg.jpg)">
+							<!-- arrow -->
+							<div class="h-arrow-panel">
+								<div class="des-box">
+									<a href="#333" class="bg-des words-break">跳转链接11111</a>
+									<div class="suo-box">
+										<img src="./img/web/suo2.png" class="icon-suo" data-state="on">
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev "></div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide" data-id="slid_2">
+						<div class="bg-pic" style="background-image: url(./img/web/head-bg2.jpg)">
+							<!-- arrow -->
+							<div class="h-arrow-panel">
+								<div class="des-box">
+									<a href="#333" class="bg-des words-break">跳转链接22222</a>
+									<div class="suo-box">
+										<img src="./img/web/suo2.png" class="icon-suo" data-state="on">
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev "></div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide" data-id="slid_3">
+						<div class="bg-pic" style="background-image: url(./img/web/head-bg3.jpg)">
+							<!-- arrow -->
+							<div class="h-arrow-panel">
+								<div class="des-box">
+									<a href="#333" class="bg-des words-break">跳转链接333333333333333333333</a>
+									<div class="suo-box">
+										<img src="./img/web/suo2.png" class="icon-suo" data-state="on">
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev "></div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- <div class="m-controler" data-status="on">
+                    <img src="./img/mob/suo2.png" class="con-btn">
+                </div> -->
+				<!-- 移动端 夜间、白天 模式 -->
+				<!-- <div class="m-day-night" id="mNightBtn" data-status="day">
+                    <img src="./img/web/yueliang.png" alt="模式切换" class="m-swift">
+                </div> -->
+			</div>
+		</header>
+		<div class="m-header-nav">
+			<div class="m-nav-panel">
+				<div class="m-nav-btn" data-status="off">
+					<img class="m-icon-btn" src="./img/mob/menu.png">
+				</div>
+				<h3 class="m-nav-logo">
+					<img class="logo-img" src="https://asset.static.moe123.net/builds/20180820132231/03977178366e038201e85d8ab5a481ea.png">
+				</h3>
+				<span class="m-back-btn" id="mbackBtn">
+					<img src="./img/mob/back.png" alt="返回" class="m-icon-back">
+				</span>
+			</div>
+			<div class="m-nav-hid">
+				<ul class="m-hid-list">
+					<!-- 上方 -->
+					<li class="m-hid-item">
+						<a href="./index.html" class="hid-item-link hid-item-cur">导航</a>
+					</li>
+					<li class="m-hid-item">
+						<a href="./index.html" class="hid-item-link">资讯</a>
+					</li>
+					<li class="m-hid-item">
+						<a href="./index.html" class="hid-item-link">图榜</a>
+					</li>
+					<li class="m-hid-item">
+						<a href="./index.html" class="hid-item-link">周边</a>
+					</li>
+					<li class="m-hid-item">
+						<a href="./index.html" class="hid-item-link">主题漫画</a>
+					</li>
+					<li class="m-hid-item">
+						<a href="./index.html" class="hid-item-link">音乐</a>
+					</li>
+
+					<li class="m-hid-item">
+						<a href="./m_xinfan.html" class="hid-item-link">新番列表</a>
+					</li>
+					<!-- 下方 -->
+					<div class="m-hid-bottom">
+						<li class="m-hid-item m-bottom" id="">
+							<a class="hid-item-link">收藏</a>
+						</li>
+						<li class="m-hid-item m-bottom" id="mGongzhong">
+							<a class="hid-item-link">关注</a>
+						</li>
+						<li class="m-hid-item m-bottom">
+							<a target="_blank" class="hid-item-link">免责声明</a>
+						</li>
+						<li class="m-s-item m-controler m-bottom" id="mHeadbg">
+							<a class="hid-item-link">图锁
+								<img class="m-hid-btn" id="tsImg" src="./img/mob/mkai.png" alt="图锁">
+							</a>
+						</li>
+						<li class="m-s-item m-bottom" id="mNightBtn" data-status="day">
+							<a class="hid-item-link">夜间
+								<img class="m-hid-btn" id="dnImg" src="./img/mob/mguan.png" alt="夜间">
+							</a>
+						</li>
+					</div>
+
+				</ul>
+			</div>
+		</div>
+		<div class="s-inner clear main_search">
+			<div class="top-panel">
+				<a class="left-logo" target="_blank" href="./index.html">
+					<img src="https://asset.static.moe123.net/builds/20180820132231/03977178366e038201e85d8ab5a481ea.png" alt="logo"
+					 class="logo-img">
+				</a>
+				<div class="right-search-container">
+					<ul class="s-tab clear">
+						<li class="active" category="web">网页</li>
+						<li class="" category="goods">商品</li>
+						<li class="" category="video">视频</li>
+						<li class="" category="tieba"> 贴吧</li>
+						<li class="" category="image">图片</li>
+						<li class="" category="music">音乐</li>
+						<li class="" category="wiki">百科</li>
+						<li class="" category="translate">翻译</li>
+						<li class="" category="express">快递</li>
+					</ul>
+					<ul class="s-panel clear">
+						<li class="form_box active" category="web">
+							<form action="https://www.baidu.com/s" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<input type="hidden" name="ie" value="utf-8">
+								</div>
+								<div class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+										<a class="opt-img google" category="google" style="background-image: url(./img/web/google.png);">google</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="https://www.baidu.com/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/iconbaidu.png);">baidu</a>
+									</span>
+									<div class="toggle"></div>
+								</div>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="wd" placeholder="此处输入关键字进行搜索" autocomplete="off" maxlength="100">
+								</span>
+								<span class="btn-wr">
+									<input type="submit" class="search" value="百度搜索">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="goods">
+							<form action="https://s.taobao.com/search" method="GET" target="_blank" class="s-form clear">
+								<div class="params">
+									<input type="hidden" name="ie" value="utf-8">
+								</div>
+								<div class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img taobao" category="taobao" style="background-image: url(./img/web/taobao2.png);">taobao</a>
+									</div>
+									<div class="s-opt-logo">
+										<a href="https://www.taobao.com/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/icontaobao.jpg);">baidu</a>
+									</div>
+									<div class="toggle"></div>
+								</div>
+								<div class="ipt-wr">
+									<input type="text" class="keyword" name="q" placeholder="此处输入关键字进行搜索" autocomplete="off" maxlength="100">
+								</div>
+								<div class="btn-wr">
+									<input type="submit" class="search" value="淘宝搜索">
+								</div>
+							</form>
+						</li>
+						<li class="form_box" category="video">
+							<form action="https://www.bilibili.com/search" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<input name="orderby" type="hidden" value="">
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img bilibili" category="bilibili" style="background-image: url(./img/web/bilibili.png);">bilibili</a>
+										<a class="opt-img acfun" category="acfun" style="background-image: url(./img/web/acfun.png);">acfun</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="http://www.acfun.cn/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/iconbilibili.jpg);">baidu</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input type="submit" class="search" value="哔哩哔哩搜索">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="tieba">
+							<form action="https://tieba.baidu.com/f" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<input type="hidden" name="ie" value="utf-8">
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img tieba" category="tieba" style="background-image: url(./img/web/tieba.png);">tieba</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="https://tieba.baidu.com/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/icontieba.jpg);">tieba</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input class="keyword" type="text" name="kw" placeholder="此处输入关键字进行搜索" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input class="search" type="submit" value="进入贴吧">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="image">
+							<form action="https://www.pixiv.net/search.php" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<input type="hidden" name="s_mode" value="s_tag">
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img pixiv" category="pixiv" style="background-image: url(./img/web/pixiv.png);">pixiv</a>
+										<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="https://www.pixiv.net/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/iconpixiv.jpg);">pixiv</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="keyword" placeholder="输入'illust_id='可浏览作品，'id='可查看作者" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input type="submit" class="search" value="PIXIV搜索">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="music">
+							<form action="https://www.xiami.com/search" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<input type="hidden" name="pos" value="1">
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img xiami" category="xiami" style="background-image: url(./img/web/xiami.png);">xiami</a>
+										<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="https://www.xiami.com/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/iconxiami.jpg);">pixiv</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input class="search" type="submit" value="虾米音乐">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="wiki">
+							<form action="https://zh.wikipedia.org/w/index.php" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<input type="hidden" name="title" value="Special:搜索">
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="opt-img xiami" category="wiki" style="background-image: url(./img/web/wiki.png);">wikipedia</a>
+										<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank" class="wiki logo-show"
+										 style="background-image: url(./img/web/iconwiki.jpg);">wiki</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input class="search" type="submit" value="维基词条">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="translate">
+							<form action="https://dict.youdao.com/search" method="GET" target="_blank" class="s-form">
+								<div class="params">
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="youdao opt-img" category="youdao" style="background-image: url(./img/web/youdao.png);">youdao</a>
+										<a class="baidu opt-img" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+									</div>
+									<span class="s-opt-logo">
+										<a href="https://dict.youdao.com/" target="_blank" class="youdao logo-show" style="background-image: url(./img/web/iconyoudao.jpg);">youdao</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input type="submit" class="search" value="有道词典">
+								</span>
+							</form>
+						</li>
+						<li class="form_box" category="express">
+							<form action="http://www.kuaidi100.com/" method="GET" target="_blank" class="s-form">
+								<div class="params">
+									<a class="logo-model hidden" style="display: none;"></a>
+								</div>
+								<span class="opt-wr">
+									<div class="s-opt-container">
+										<a class="kuaidi100 opt-img" category="kuaidi100" style="background-image: url(./img/web/kuaidi100.png);">kuaidi100</a>
+									</div>
+									<span class="s-opt-logo ">
+										<a href="http://www.kuaidi100.com/" target="_blank" class="kuaidi100 logo-show" style="background-image: url(./img/web/iconkuaidi.jpg);">kuaidi100</a>
+									</span>
+									<div class="toggle"></div>
+								</span>
+								<span class="ipt-wr">
+									<input type="text" class="keyword" name="postid" placeholder="输入单号，在800+快递公司中为您智能查询" autocomplete="off">
+								</span>
+								<span class="btn-wr">
+									<input type="submit" class="search" value="快递100">
+								</span>
+							</form>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="m-search">
+			<div class="m-search-container clear">
+				<ul class="s-tab clear">
+					<li class="active" category="web">网页</li>
+					<li class="" category="goods">商品</li>
+					<li class="" category="video">视频</li>
+					<li class="" category="tieba"> 贴吧</li>
+					<li class="" category="image">图片</li>
+					<li class="" category="music">音乐</li>
+					<li class="" category="wiki">百科</li>
+					<li class="" category="translate">翻译</li>
+					<li class="" category="express">快递</li>
+				</ul>
+				<div class="m-select-category" data-status="off">
+					<span class="m-c-tag">网页</span>
+					<div class="toggle"></div>
+				</div>
+				<ul class="s-panel clear">
+					<li class="form_box active" category="web">
+						<form action="https://www.baidu.com/s" method="GET" target="_blank" class="s-form clear">
+							<div class="params">
+								<input type="hidden" name="ie" value="utf-8">
+							</div>
+							<div class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+									<a class="opt-img google" category="google" style="background-image: url(./img/web/google.png);">google</a>
+								</div>
+								<div class="s-opt-logo">
+									<a href="https://www.baidu.com/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/iconbaidu.png);">baidu</a>
+								</div>
+								<div class="toggle"></div>
+							</div>
+							<div class="ipt-wr">
+								<input type="text" class="keyword" name="wd" placeholder="此处输入关键字进行搜索" autocomplete="off" maxlength="100">
+							</div>
+							<div class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</div>
+						</form>
+					</li>
+					<li class="form_box" category="goods">
+						<form action="https://s.taobao.com/search" method="GET" target="_blank" class="s-form clear">
+							<div class="params">
+								<input type="hidden" name="ie" value="utf-8">
+							</div>
+							<div class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img taobao" category="taobao" style="background-image: url(./img/web/taobao2.png);">taobao</a>
+								</div>
+								<div class="s-opt-logo">
+									<a href="https://www.taobao.com/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/icontaobao.jpg);">baidu</a>
+								</div>
+								<div class="toggle"></div>
+							</div>
+							<div class="ipt-wr">
+								<input type="text" class="keyword" name="q" placeholder="此处输入关键字进行搜索" autocomplete="off" maxlength="100">
+							</div>
+							<div class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</div>
+						</form>
+					</li>
+					<li class="form_box" category="video">
+						<form action="https://www.bilibili.com/search" method="GET" target="_blank" class="s-form">
+							<div class="params">
+								<input name="orderby" type="hidden" value="">
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img bilibili" category="bilibili" style="background-image: url(./img/web/bilibili.png);">bilibili</a>
+									<a class="opt-img acfun" category="acfun" style="background-image: url(./img/web/acfun.png);">acfun</a>
+								</div>
+								<span class="s-opt-logo">
+									<a href="http://www.acfun.cn/" target="_blank" class="baidu logo-show" style="background-image: url(./img/web/iconbilibili.jpg);">baidu</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+					<li class="form_box" category="tieba">
+						<form action="https://tieba.baidu.com/f" method="GET" target="_blank" class="s-form">
+							<div class="params">
+								<input type="hidden" name="ie" value="utf-8">
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img tieba" category="tieba" style="background-image: url(./img/web/tieba.png);">tieba</a>
+								</div>
+								<span class="s-opt-logo">
+									<a href="https://tieba.baidu.com/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/icontieba.jpg);">tieba</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input class="keyword" type="text" name="kw" placeholder="此处输入关键字进行搜索" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+					<li class="form_box" category="image">
+						<form action="https://www.pixiv.net/search.php" method="GET" target="_blank" class="s-form">
+							<div class="params">
+								<input type="hidden" name="s_mode" value="s_tag">
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img pixiv" category="pixiv" style="background-image: url(./img/web/pixiv.png);">pixiv</a>
+									<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+								</div>
+								<span class="s-opt-logo">
+									<a href="https://www.pixiv.net/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/iconpixiv.jpg);">pixiv</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input type="text" class="keyword" name="keyword" placeholder="输入'illust_id='可浏览作品，'id='可查看作者" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+					<li class="form_box" category="music">
+						<form action="https://www.xiami.com/search" method="GET" target="_blank" class="s-form">
+							<div class="params">
+								<input type="hidden" name="pos" value="1">
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img xiami" category="xiami" style="background-image: url(./img/web/xiami.png);">xiami</a>
+									<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+								</div>
+								<span class="s-opt-logo">
+									<a href="https://www.xiami.com/" target="_blank" class="tieba logo-show" style="background-image: url(./img/web/iconxiami.jpg);">pixiv</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+					<li class="form_box" category="wiki">
+						<form action="https://zh.wikipedia.org/w/index.php" method="GET" target="_blank" class="s-form">
+							<div class="params">
+								<input type="hidden" name="title" value="Special:搜索">
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="opt-img xiami" category="wiki" style="background-image: url(./img/web/wiki.png);">wikipedia</a>
+									<a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+								</div>
+								<span class="s-opt-logo">
+									<a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank" class="wiki logo-show"
+									 style="background-image: url(./img/web/iconwiki.jpg);">wiki</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+					<li class="form_box" category="translate">
+						<form action="https://dict.youdao.com/search" method="GET" target="_blank" class="s-form">
+							<div class="params">
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="youdao opt-img" category="youdao" style="background-image: url(./img/web/youdao.png);">youdao</a>
+									<a class="baidu opt-img" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+								</div>
+								<span class="s-opt-logo">
+									<a href="https://dict.youdao.com/" target="_blank" class="youdao logo-show" style="background-image: url(./img/web/iconyoudao.jpg);">youdao</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+					<li class="form_box" category="express">
+						<form action="http://www.kuaidi100.com/" method="GET" target="_blank" class="s-form">
+							<div class="params">
+								<a class="logo-model hidden" style="display: none;"></a>
+							</div>
+							<span class="opt-wr">
+								<div class="s-opt-container">
+									<a class="kuaidi100 opt-img" category="kuaidi100" style="background-image: url(./img/web/kuaidi100.png);">kuaidi100</a>
+								</div>
+								<span class="s-opt-logo ">
+									<a href="http://www.kuaidi100.com/" target="_blank" class="kuaidi100 logo-show" style="background-image: url(./img/web/iconkuaidi.jpg);">kuaidi100</a>
+								</span>
+								<div class="toggle"></div>
+							</span>
+							<span class="ipt-wr">
+								<input type="text" class="keyword" name="postid" placeholder="输入单号，在800+快递公司中为您智能查询" autocomplete="off">
+							</span>
+							<span class="btn-wr">
+								<input class="m-search" type="submit" value="">
+							</span>
+						</form>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="nav-icon-wrap ">
+			<div class="nav-icon-shade"></div>
+			<div class="icon-box">
+				<div class="icon-content">
+					<div class="icon-list" id="iconList">
+						<!-- <a href="https://www.bilibili.com/" class="icon-item">
+                            <div class="icon-pic-wrp">
+                                <img src="file:///C:/Po_cheng/20180824_%E5%AF%BC%E8%88%AA%E7%BD%91%E7%AB%99/20180824_daohang/img/web/iconacfun.jpg"
+                                    alt="" class="icon-pic">
+                            </div>
+                            <dd class="ico-des text-ellipsis">哔哩哔哩1111111111111</dd>
+                        </a> -->
+						<a class="icon-item " id="iconSetting">
+							<dt class="icon-pic-wrp" id="settingBtn">
+								<img class="icon-pic" src="./img/web/shezhi.png" alt="自定义">
+							</dt>
+							<dd class="ico-des text-ellipsis">自定义</dd>
+						</a>
+					</div>
+					<!-- <a class="icon_fix" id="iconSetting">
+                        <dt class="icon-pic-wrp" id="settingBtn">
+                            <img class="icon-pic" src="./img/web/shezhi.png" alt="自定义">
+                        </dt>
+                        <dd class="ico-des text-ellipsis">自定义</dd>
+                    </a> -->
+				</div>
+				<div class="icon-tag-panel">
+					<div class="left-tag">
+						<div class="tag-list">
+							<span class="tag-item active">导航</span>
+							<span class="tag-item">资讯</span>
+							<span class="tag-item">图榜</span>
+							<span class="tag-item">周边</span>
+							<span class="tag-item">主题漫画</span>
+							<span class="tag-item">音乐</span>
+						</div>
+					</div>
+
+				</div>
+				<div class="right-shouqi up" data-status="off">
+					<i class="icon-shouqi "></i>
+					<span class="shouqi-text">展开</span>
+				</div>
+			</div>
+			<div class="m-icon-show" data-status="off">
+				<img src="./img/mob/jiantou2.png" class="m-btn-img">
+			</div>
+		</div>
+		<div class="container-fluid">
+			<!-- 导航 -->
+			<div class="main-screen-box" id="fst_p" style="display:block;">
+				<div class="m-s-zixun">
+					<div class="main-screen-title clear">
+						<div class="title-text">资讯</div>
+						<a id="zixunMore" class="zixun-more">
+							更多
+						</a>
+					</div>
+					<div class="row zixun-box">
+						<div class="col-lg-9 col-md-9 zixun-left">
+							<div class="zx-l-list">
+								<a href="./zixun_detail.html" target="_blank" class="zx-l-item">
+									<div class="l-item-box">
+										<div class="zx-l-img">
+											<div class="img-show" style="background-image: url(http://lain.bgm.tv/pic/cover/l/1c/90/129844_NwzEg.jpg)"></div>
+										</div>
+										<div class="zx-r-content">
+											<span class="r-c-title line-ellipsis">不是裸狼！官方推出《狼与香辛料》111111111111111111111111111111111111111111不是裸狼！官方推出《狼与香辛料》111111111111111111111111111111111111111111不是裸狼！官方推出《狼与香辛料》111111111111111111111111111111111111111111</span>
+											<div class="bot-item">
+												<span class="zx-author text-ellipsis">工藤新一2222222222222222222222222222222222222222222</span>
+												<span class="zx-time text-ellipsis">
+													<img class="icon-time" src="./img/web/shijian1.png">
+													<em class="time-text">88分钟前223333333333333333333333</em>
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="./zixun_detail.html" target="_blank" class="zx-l-item">
+									<div class="l-item-box">
+										<div class="zx-l-img">
+											<div class="img-show" style="background-image: url(http://lain.bgm.tv/pic/cover/l/3b/3f/4631_rx6Mi.jpg)"></div>
+										</div>
+										<div class="zx-r-content">
+											<span class="r-c-title line-ellipsis">不是裸狼！官方推出《狼与香辛料》111111111111111111111111111111111111111111</span>
+											<div class="bot-item">
+												<span class="zx-author text-ellipsis">工藤新一2222222222222222222222222222222222222222222</span>
+												<span class="zx-time text-ellipsis">
+													<img class="icon-time" src="./img/web/shijian1.png">
+													<em class="time-text">88分钟前223333333333333333333333</em>
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="./zixun_detail.html" target="_blank" class="zx-l-item">
+									<div class="l-item-box">
+										<div class="zx-l-img">
+											<div class="img-show" style="background-image: url(http://lain.bgm.tv/pic/cover/l/1c/90/129844_NwzEg.jpg)"></div>
+										</div>
+										<div class="zx-r-content">
+											<span class="r-c-title line-ellipsis">不是裸狼！官方推出《狼与香辛料》111111111111111111111111111111111111111111</span>
+											<div class="bot-item">
+												<span class="zx-author text-ellipsis">工藤新一2222222222222222222222222222222222222222222</span>
+												<span class="zx-time text-ellipsis">
+													<img class="icon-time" src="./img/web/shijian1.png">
+													<em class="time-text">88分钟前223333333333333333333333</em>
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+								<a href="./zixun_detail.html" target="_blank" class="zx-l-item">
+									<div class="l-item-box">
+										<div class="zx-l-img">
+											<div class="img-show" style="background-image: url(http://lain.bgm.tv/pic/cover/l/3b/3f/4631_rx6Mi.jpg)"></div>
+										</div>
+										<div class="zx-r-content">
+											<span class="r-c-title line-ellipsis">不是裸狼！官方推出《狼与香辛料》111111111111111111111111111111111111111111</span>
+											<div class="bot-item">
+												<span class="zx-author text-ellipsis">工藤新一2222222222222222222222222222222222222222222</span>
+												<span class="zx-time text-ellipsis">
+													<img class="icon-time" src="./img/web/shijian1.png">
+													<em class="time-text">88分钟前223333333333333333333333</em>
+												</span>
+											</div>
+										</div>
+									</div>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-3 col-md-3 zixun-right">
+							<!-- <div class="zixun-r-top">
+                                <div class="swiper-container-zixun">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#" target="_blank" class="zixun-slide-show">
+                                                <div class="slide-bg" style="background-image: url(https://wx2.sinaimg.cn/large/005zWjpngy1fuqxj1oz82j30rs04gjwu.jpg)"></div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" target="_blank" class="zixun-slide-show">
+                                                <div class="slide-bg" style="background-image: url(https://wx2.sinaimg.cn/large/005zWjpngy1fus7ur5e19j30rs04gq73.jpg)"></div>
+                                            </a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#" target="_blank" class="zixun-slide-show">
+                                                <div class="slide-bg" style="background-image: url(http://img.sccnn.com/bimg/337/26731.jpg)"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="zx-next">
+                                        <div class="arrow-left"></div>
+                                    </div>
+                                    <div class="zx-prev">
+                                        <div class="arrow-right"></div>
+                                    </div>
+                                </div>
+                            </div> -->
+							<div class="zixun-r-bot">
+								<div class="r-bot-box">
+									<ul class="r-bot-list">
+										<li class="r-bot-item">
+											<a href="https://www.guokr.com/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon9.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网22222222222222222</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="http://songshuhui.net/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon10.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="http://www.geekpark.net" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon11.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="https://sspai.com/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon12.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="https://www.ifanr.com/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon13.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="https://sspai.com/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon14.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="https://sspai.com/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon1.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+										<li class="r-bot-item">
+											<a href="https://sspai.com/" target="_blank" class="r-bot-link">
+												<i class="icon-logo" style="background-image: url(./img/web/xwicon2.png)"></i>
+												<p class="r-link-text text-ellipsis">互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网互金整治办、网贷整治办拟定十举措应对网</p>
+											</a>
+										</li>
+
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 广告1 -->
+				<div class="banner-swiper-wrap">
+					<div class="swiper-container-banner">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#33" class="banner-link">
+									<div class="banner-img" style="background-image: url(https://fxmoe.com/images/extension/acgmx.jpg);"></div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#33" class="banner-link">
+									<div class="banner-img" style="background-image: url(https://fxmoe.com/images/extension/sansehuilian.jpg);"></div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#33" class="banner-link">
+									<div class="banner-img" style="background-image: url(https://fxmoe.com/images/extension/upupoo02.png);"></div>
+								</a>
+							</div>
+						</div>
+						<div class="banner-next">
+							<div class="arrow-left"></div>
+						</div>
+						<div class="banner-prev">
+							<div class="arrow-right"></div>
+						</div>
+					</div>
+				</div>
+				<div class="main-section row">
+					<div class="col-lg-10 col-md-12 m-section-left">
+						<div class="m-s-tubang">
+							<div class="main-screen-title clear">
+								<div class="title-text">图榜</div>
+								<a id="tubangMore" class="tubang-more">
+									更多
+								</a>
+							</div>
+							<div class="tubang-swiper">
+								<div class="swiper-container-tubang">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(http://s6.sinaimg.cn/mw690/727bbb7fgdea698057295&690);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(https://image.cngal.org/upload/20180827/15353373437336.jpg);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(http://s6.sinaimg.cn/mw690/727bbb7fgdea698057295&690);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(https://image.cngal.org/ume_upload/20150726/14379159139536.jpg);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(http://pic34.photophoto.cn/20150117/0005018384807538_b.jpg);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(http://s6.sinaimg.cn/mw690/727bbb7fgdea698057295&690);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(https://image.cngal.org/upload/20180820/15347732331069.jpg);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(http://s6.sinaimg.cn/mw690/727bbb7fgdea698057295&690);"></div>
+											</a>
+										</div>
+										<div class="swiper-slide">
+											<a href="#" target="_blank" class="tubang-link">
+												<div class="tubang-show" style="background-image: url(https://image.cngal.org/upload/20180819/15346633789668.jpg);"></div>
+											</a>
+										</div>
+									</div>
+									<div class="tubang-next">
+										<div class="arrow-left"></div>
+									</div>
+									<div class="tubang-prev">
+										<div class="arrow-right"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="m-s-shipin">
+							<div class="main-screen-title clear">
+								<div class="title-text">热门视频</div>
+								<!-- <a id="shipinMore" class="zixun-more">
+									更多
+								</a> -->
+							</div>
+							<div class="shipin-list">
+								<div class="shipin-item">
+									<a href="https://v.youku.com/v_show/id_XMzc5NDQ2NTE3Mg==.html" target="_blank" class="video-box">
+										<div class="video-pic">
+											<div class="video-btn">
+												<img src="./img/web/bofang.png" class="bofang-btn">
+											</div>
+											<div class="pic-show" style="background-image: url(http://r1.ykimg.com/0516000052009389675839162306C399);"></div>
+										</div>
+										<div class="video-des">
+											<div class="video-text line-ellipsis">我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米</div>
+										</div>
+									</a>
+								</div>
+								<div class="shipin-item">
+									<a href="https://v.youku.com/v_show/id_XMzc5NDQ2NTE3Mg==.html" target="_blank" class="video-box">
+										<div class="video-pic">
+											<div class="video-btn">
+												<img src="./img/web/bofang.png" class="bofang-btn">
+											</div>
+											<div class="pic-show" style="background-image: url(http://r1.ykimg.com/0516000052009389675839162306C399);"></div>
+										</div>
+										<div class="video-des">
+											<div class="video-text line-ellipsis">我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米</div>
+										</div>
+									</a>
+								</div>
+								<div class="shipin-item">
+									<a href="https://v.youku.com/v_show/id_XMzc5NDQ2NTE3Mg==.html" target="_blank" class="video-box">
+										<div class="video-pic">
+											<div class="video-btn">
+												<img src="./img/web/bofang.png" class="bofang-btn">
+											</div>
+											<div class="pic-show" style="background-image: url(http://r1.ykimg.com/0516000052009389675839162306C399);"></div>
+										</div>
+										<div class="video-des">
+											<div class="video-text line-ellipsis">我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米</div>
+										</div>
+									</a>
+								</div>
+								<div class="shipin-item">
+									<a href="https://v.youku.com/v_show/id_XMzc5NDQ2NTE3Mg==.html" target="_blank" class="video-box">
+										<div class="video-pic">
+											<div class="video-btn">
+												<img src="./img/web/bofang.png" class="bofang-btn">
+											</div>
+											<div class="pic-show" style="background-image: url(http://r1.ykimg.com/0516000052009389675839162306C399);"></div>
+										</div>
+										<div class="video-des">
+											<div class="video-text line-ellipsis">我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米我从未见过如此萌的大米</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="m-r-box col-lg-2  col-md-12">
+						<div class="m-s-fashou">
+							<div class="small-screen-title clear">
+								<div class="title-text">商品发售列表</div>
+							</div>
+							<ul class="fashou-list">
+								<li class="fashou-item">
+									<a href="#" target="_blank" class="fashou-link">
+										<div class="fashou-img">
+											<div class="img-show" style="background-image: url(./img/web/img1.jpg);"></div>
+										</div>
+										<div class="fashou-des">
+											<dt class="des-title text-ellipsis">商品名称111111111111</dt>
+											<dd class="des-time text-ellipsis">2018-08-01</dd>
+										</div>
+									</a>
+								</li>
+								<li class="fashou-item">
+									<a href="#" target="_blank" class="fashou-link">
+										<div class="fashou-img">
+											<div class="img-show" style="background-image: url(./img/web/img1.jpg);"></div>
+										</div>
+										<div class="fashou-des">
+											<dt class="des-title text-ellipsis">商品名称111111111111</dt>
+											<dd class="des-time text-ellipsis">2018-08-01</dd>
+										</div>
+									</a>
+								</li>
+								<li class="fashou-item">
+									<a href="#" target="_blank" class="fashou-link">
+										<div class="fashou-img">
+											<div class="img-show" style="background-image: url(./img/web/img1.jpg);"></div>
+										</div>
+										<div class="fashou-des">
+											<dt class="des-title text-ellipsis">商品名称111111111111</dt>
+											<dd class="des-time text-ellipsis">2018-08-01</dd>
+										</div>
+									</a>
+								</li>
+								<li class="fashou-item">
+									<a href="#" target="_blank" class="fashou-link">
+										<div class="fashou-img">
+											<div class="img-show" style="background-image: url(./img/web/img1.jpg);"></div>
+										</div>
+										<div class="fashou-des">
+											<dt class="des-title text-ellipsis">商品名称111111111111</dt>
+											<dd class="des-time text-ellipsis">2018-08-01</dd>
+										</div>
+									</a>
+								</li>
+								<li class="fashou-item">
+									<a href="#" target="_blank" class="fashou-link">
+										<div class="fashou-img">
+											<div class="img-show" style="background-image: url(./img/web/img1.jpg);"></div>
+										</div>
+										<div class="fashou-des">
+											<dt class="des-title text-ellipsis">商品名称111111111111</dt>
+											<dd class="des-time text-ellipsis">2018-08-01</dd>
+										</div>
+									</a>
+								</li>
+								<li class="fashou-item">
+									<a href="#" target="_blank" class="fashou-link">
+										<div class="fashou-img">
+											<div class="img-show" style="background-image: url(./img/web/img1.jpg);"></div>
+										</div>
+										<div class="fashou-des">
+											<dt class="des-title text-ellipsis">商品名称111111111111</dt>
+											<dd class="des-time text-ellipsis">2018-08-01</dd>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="m-s-zhuanji">
+							<div class="small-screen-title clear">
+								<div class="title-text">音乐专辑列表</div>
+							</div>
+							<ul class="zhuanji-list  clear">
+								<li class="zhuanji-item">
+									<a href="#" target="_blank" class="zhuanji-link">
+										<div class="zhuanji-img-show">
+											<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+											<div class="zhuanji-img"></div>
+										</div>
+										<div class="zhuanji-des">
+											<dt class="des-name text-ellipsis">商品名称22222</dt>
+											<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+										</div>
+									</a>
+								</li>
+								<li class="zhuanji-item">
+									<a href="#" target="_blank" class="zhuanji-link">
+										<div class="zhuanji-img-show">
+											<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+											<div class="zhuanji-img"></div>
+										</div>
+										<div class="zhuanji-des">
+											<dt class="des-name text-ellipsis">商品名称22222</dt>
+											<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+										</div>
+									</a>
+								</li>
+								<li class="zhuanji-item">
+									<a href="#" target="_blank" class="zhuanji-link">
+										<div class="zhuanji-img-show">
+											<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+											<div class="zhuanji-img"></div>
+										</div>
+										<div class="zhuanji-des">
+											<dt class="des-name text-ellipsis">商品名称22222</dt>
+											<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+										</div>
+									</a>
+								</li>
+								<li class="zhuanji-item">
+									<a href="#" target="_blank" class="zhuanji-link">
+										<div class="zhuanji-img-show">
+											<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+											<div class="zhuanji-img"></div>
+										</div>
+										<div class="zhuanji-des">
+											<dt class="des-name text-ellipsis">商品名称22222</dt>
+											<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+										</div>
+									</a>
+								</li>
+								<li class="zhuanji-item">
+									<a href="#" target="_blank" class="zhuanji-link">
+										<div class="zhuanji-img-show">
+											<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+											<div class="zhuanji-img"></div>
+										</div>
+										<div class="zhuanji-des">
+											<dt class="des-name text-ellipsis">商品名称22222</dt>
+											<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+										</div>
+									</a>
+								</li>
+								<li class="zhuanji-item">
+									<a href="#" target="_blank" class="zhuanji-link">
+										<div class="zhuanji-img-show">
+											<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+											<div class="zhuanji-img"></div>
+										</div>
+										<div class="zhuanji-des">
+											<dt class="des-name text-ellipsis">商品名称22222</dt>
+											<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!-- 广告2 -->
+				<div class="banner2-swiper-wrap">
+					<div class="swiper-container-banner2">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="#33" class="banner-link">
+									<div class="banner-img" style="background-image: url(https://fxmoe.com/images/extension/acgmx.jpg);"></div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#33" class="banner-link">
+									<div class="banner-img" style="background-image: url(https://fxmoe.com/images/extension/sansehuilian.jpg);"></div>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="#33" class="banner-link">
+									<div class="banner-img" style="background-image: url(https://fxmoe.com/images/extension/upupoo02.png);"></div>
+								</a>
+							</div>
+						</div>
+						<div class="banner-next">
+							<div class="arrow-left"></div>
+						</div>
+						<div class="banner-prev">
+							<div class="arrow-right"></div>
+						</div>
+					</div>
+				</div>
+				<div class="row main-webs">
+					<div class="web-all col-lg-10 col-md-12">
+						<div class="web-all-box">
+							<div class="main-screen-title clear">
+								<div class="title-text">网址大全</div>
+							</div>
+							<div class="webs-list-wrp">
+								<ul class="row webs-list clear">
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn ">
+											<img src="./img/web/homeicon1.png" class="item-img">
+											<span class="item-text">常用</span>
+										</span>
+										<div class="webs-item-hid " style="display:block">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">优酷优酷</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															视频网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon2.png" class="item-img">
+											<span class="item-text">工具</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon3.png" class="item-img">
+											<span class="item-text">视频弹幕</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon4.png" class="item-img">
+											<span class="item-text">声音</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon5.png" class="item-img">
+											<span class="item-text">日语</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon6.png" class="item-img">
+											<span class="item-text">综合</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon7.png" class="item-img">
+											<span class="item-text">漫画</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon8.png" class="item-img">
+											<span class="item-text">绘画</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon9.png" class="item-img">
+											<span class="item-text">女性向</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon10.png" class="item-img">
+											<span class="item-text">论坛</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon11.png" class="item-img">
+											<span class="item-text">BLOG</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon12.png" class="item-img">
+											<span class="item-text">小说</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon13.png" class="item-img">
+											<span class="item-text">剁手吃土</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon14.png" class="item-img">
+											<span class="item-text">绅士交流</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon15.png" class="item-img">
+											<span class="item-text">ACG资源</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon16.png" class="item-img">
+											<span class="item-text">常用贴吧</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon17.png" class="item-img">
+											<span class="item-text">资讯</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon18.png" class="item-img">
+											<span class="item-text">Cosplay</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon19.png" class="item-img">
+											<span class="item-text">泛二次元</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon20.png" class="item-img">
+											<span class="item-text">百科</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon21.png" class="item-img">
+											<span class="item-text">旅游</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon22.png" class="item-img">
+											<span class="item-text">杂志</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon23.png" class="item-img">
+											<span class="item-text">游戏</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon24.png" class="item-img">
+											<span class="item-text">直播</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon25.png" class="item-img">
+											<span class="item-text">图站</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon26.png" class="item-img">
+											<span class="item-text">周边</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon27.png" class="item-img">
+											<span class="item-text">展会</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+									<li class="webs-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+										<span class="webs-item-btn">
+											<img src="./img/web/homeicon28.png" class="item-img">
+											<span class="item-text">字幕组</span>
+										</span>
+										<div class="webs-item-hid">
+											<ul class="hid-list row">
+												<li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6">
+													<a href="#" target="_blank" class="hid-web-link">百度</a>
+													<img src="./img/mob/jieshi.png" alt="?" class="m-web-des">
+													<span class="web-link-des">
+														<span class="des-text">
+															知名搜索网站
+														</span>
+													</span>
+												</li>
+											</ul>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<!-- 视窗大于1300px时的音乐专辑 -->
+					<div class="m-s-zhuanji col-lg-2">
+						<div class="small-screen-title clear">
+							<div class="title-text">音乐专辑列表</div>
+						</div>
+						<ul class="zhuanji-list  clear">
+							<li class="zhuanji-item">
+								<a href="#" target="_blank" class="zhuanji-link">
+									<div class="zhuanji-img-show">
+										<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+										<div class="zhuanji-img"></div>
+									</div>
+									<div class="zhuanji-des">
+										<dt class="des-name text-ellipsis">商品名称22222</dt>
+										<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+									</div>
+								</a>
+							</li>
+							<li class="zhuanji-item">
+								<a href="#" target="_blank" class="zhuanji-link">
+									<div class="zhuanji-img-show">
+										<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+										<div class="zhuanji-img"></div>
+									</div>
+									<div class="zhuanji-des">
+										<dt class="des-name text-ellipsis">商品名称22222</dt>
+										<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+									</div>
+								</a>
+							</li>
+							<li class="zhuanji-item">
+								<a href="#" target="_blank" class="zhuanji-link">
+									<div class="zhuanji-img-show">
+										<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+										<div class="zhuanji-img"></div>
+									</div>
+									<div class="zhuanji-des">
+										<dt class="des-name text-ellipsis">商品名称22222</dt>
+										<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+									</div>
+								</a>
+							</li>
+							<li class="zhuanji-item">
+								<a href="#" target="_blank" class="zhuanji-link">
+									<div class="zhuanji-img-show">
+										<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+										<div class="zhuanji-img"></div>
+									</div>
+									<div class="zhuanji-des">
+										<dt class="des-name text-ellipsis">商品名称22222</dt>
+										<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+									</div>
+								</a>
+							</li>
+							<li class="zhuanji-item">
+								<a href="#" target="_blank" class="zhuanji-link">
+									<div class="zhuanji-img-show">
+										<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+										<div class="zhuanji-img"></div>
+									</div>
+									<div class="zhuanji-des">
+										<dt class="des-name text-ellipsis">商品名称22222</dt>
+										<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+									</div>
+								</a>
+							</li>
+							<li class="zhuanji-item">
+								<a href="#" target="_blank" class="zhuanji-link">
+									<div class="zhuanji-img-show">
+										<div class="zhuanji-img-bg" style="background-image: url(./img/web/img2.jpg)"></div>
+										<div class="zhuanji-img"></div>
+									</div>
+									<div class="zhuanji-des">
+										<dt class="des-name text-ellipsis">商品名称22222</dt>
+										<dd class="des-singer text-ellipsis">歌手名字2222222222222222222</dd>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 资讯 -->
+			<div class="zixun-screen-box" id="sec_p" style="display: none;">
+				<div class="zx-screen-con row">
+					<div class="left-part col-lg-10 col-md-10">
+						<div class="zx-l-box">
+							<ul class="zx-det-list" style="display:block;">
+								<li class="zx-l-item">
+									<a target="_blank" href="./zixun_detail.html" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon6.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">原创标题原创标题原创标题原创标题原创标题</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(./img/web/zixundetail.png);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="https://www.ifanr.com/1097562?utm_source=rss&utm_medium=rss&utm_campaign=" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon2.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">华为与 3D Mark 发表联合声明：将「性能模式」开放给用户，不断优化跑分标准
+												</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												在近日被曝出的华为「跑分作弊」事件后，9 月 7 日晚，华为与 3DMARK 母公司 UL 达成最终共识，并公布一则联合声明，表示将在之后的 EMUI 9.0 版本中把「性能模式」开放给用户，不断优化测试跑分标准。
+												事情的起因是这样的。近日，国外评测网站
+												Anandtech 对华为和荣耀手机进行了一轮测试，最终发现华为 P20、荣耀 Play、华为 Nova 3 三款华为 / 荣耀手机会根据 Apk 文件的文件名自动启用「作弊模式」。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(https://images.ifanr.cn/wp-content/uploads/2018/09/overheat-car_678x452.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="https://www.g-cores.com/articles/101867" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon4.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">依旧分为两种版本，《假面骑士巅峰争夺 ZI-O》确定将于11月29日发售
+												</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												万代宣布《假面骑士巅峰争夺 ZI-O》将于 11月 29日正式发售。本作为 NS 平台独占，分为通常版和限定版两种版本，通常版售价 6800日元（不含税）；限定版售价 9800日元（不含税）。游戏中将包含 ZI-O
+												在内超过30名假面骑士供玩家使用，最多支持
+												4名玩家联机。暂时还未公开更多关于系统及具体玩法的信息。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">路灯</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(https://alioss.g-cores.com/uploads/image/9d93ad23-f20d-4346-9692-7546fff42aa4_watermark.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="http://jandan.net/2018/09/07/jupiter-magnetic-2.html" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon8.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">日本备胎调查：你有几个结婚对象？</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												另一方面，也有人一边思考「结婚应该尽量慎重，我可不想最后失败」，一边在多个异性之间挑选最佳伴侣。那么，实际上人们在考虑结婚时，究竟有多少备胎可以选择呢？ 压倒性的答案为「1人」
+												しらべぇ编辑部以日本全国965名20多岁〜60多岁的曾考虑过结婚的男女为对象，对此展开了调查。结果显示，最多人给出的答案为只有「1人」，其中男性占比为4成，女性占比则达到了6成。
+												尽管许多人都会跟多个异性交往，但一说到踏入婚姻的殿堂，可以考虑的对象似乎就少得可怜了。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">路灯</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(./img/web/zixundetail3.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="zx-det-list" style="display:none;">
+								<li class="zx-l-item">
+									<a target="_blank" href="./zixun_detail.html" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon6.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">原创标题原创标题原创标题原创标题原创标题</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(./img/web/zixundetail.png);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="./zixun_detail.html" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon6.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">原创标题原创标题原创标题原创标题原创标题</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯原创资讯
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(./img/web/zixundetail.png);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="zx-det-list" style="display: none;">
+								<li class="zx-l-item">
+									<a target="_blank" href="https://www.ifanr.com/1097562?utm_source=rss&utm_medium=rss&utm_campaign=" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon2.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">华为与 3D Mark 发表联合声明：将「性能模式」开放给用户，不断优化跑分标准
+												</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												在近日被曝出的华为「跑分作弊」事件后，9 月 7 日晚，华为与 3DMARK 母公司 UL 达成最终共识，并公布一则联合声明，表示将在之后的 EMUI 9.0 版本中把「性能模式」开放给用户，不断优化测试跑分标准。
+												事情的起因是这样的。近日，国外评测网站
+												Anandtech 对华为和荣耀手机进行了一轮测试，最终发现华为 P20、荣耀 Play、华为 Nova 3 三款华为 / 荣耀手机会根据 Apk 文件的文件名自动启用「作弊模式」。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(https://images.ifanr.cn/wp-content/uploads/2018/09/overheat-car_678x452.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="https://www.ifanr.com/1097518?utm_source=rss&utm_medium=rss&utm_campaign=" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon2.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">拉伙百度、牵手 360，比亚迪要做汽车界的谷歌和苹果</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												比亚迪总裁王传福曾不止一次地在公开场合把汽车类比成手机，诺基亚的没落让这位企业家至今还感触颇深。 9 月 5 日，比亚迪在大本营深圳正式召开了全球开发者大会。
+												汽车是时候像手机一样开放了，在王传福看来这是汽车行业今天面临的一个重要节点。早年在自主品牌电气化上抢占先机的比亚迪决心在智能化上也能够捷足先登。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(https://images.ifanr.cn/wp-content/uploads/2018/09/10-8.jpg!720);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="zx-det-list" style="display: none;">
+								<li class="zx-l-item">
+									<a target="_blank" href="http://www.anitama.cn/article/c4c2c31c9a6759d7#source=google" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon6.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">
+													注重动画中的时代气息 系列构成小柳启伍谈《天狼 Sirius the Jaeger》的制作幕后</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												由安藤真裕负责监督、小柳启伍担当系列构成、P.A.WORKS制作的原创动画《天狼 Sirius the
+												Jaeger》以昭和初期的帝都为舞台，讲述吸血鬼与吸血鬼猎人之间的战斗。动画从开播以来，就以精彩的打斗，跌宕起伏的故事情节吸引着观众们。动画开播没多久，系列构成小柳启伍便接受了《SHin-Q》第4期的采访，简单地谈了动画的世界观、舞台设定与初期的剧情构成。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">Broadcast</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(http://cdn.animetamashi.cn/c4c2c31c9a6759d7/img/008c83-preview);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="http://www.anitama.cn/article/7ce8e514ac1c3a1e#source=google" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon6.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">《检察方的罪人》V2，《蚁人2》3位，新作入围3本</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												上个星期六碰上9月1日，每月1日是日本电影市场的普遍票价优惠日，因而这个周末各影片对前周比普遍下落率不大。
+												东宝发行的小说改编电影《检察方的罪人》顺利突破100万人次，连续2周首位。周末2日间观客数约28万4千人次、对前周比89.3%，票房收入3亿3947万3500日元、对前周比81.7%，两方比率差距较大的原因便是票价优惠日影响。上映以来10日间累计观客数114万6807人次，累计票房收入14亿2645万3600日元，最终票房收入预期值向上方调整至30亿日元。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(http://cdn.animetamashi.cn/7ce8e514ac1c3a1e/img/4711eb-preview);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="zx-det-list" style="display:none;">
+								<li class="zx-l-item">
+									<a target="_blank" href="https://www.g-cores.com/articles/101867" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon4.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">依旧分为两种版本，《假面骑士巅峰争夺 ZI-O》确定将于11月29日发售
+												</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												万代宣布《假面骑士巅峰争夺 ZI-O》将于 11月 29日正式发售。本作为 NS 平台独占，分为通常版和限定版两种版本，通常版售价 6800日元（不含税）；限定版售价 9800日元（不含税）。游戏中将包含 ZI-O
+												在内超过30名假面骑士供玩家使用，最多支持
+												4名玩家联机。暂时还未公开更多关于系统及具体玩法的信息。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">路灯</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(https://alioss.g-cores.com/uploads/image/9d93ad23-f20d-4346-9692-7546fff42aa4_watermark.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="https://www.g-cores.com/articles/101394" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon4.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">摩尔达维亚贵族战争、波-瑞战争（1600~1611）与基尔霍姆战役——正说波兰史（十九）</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												摩尔达维亚大贵族战争（Moldavian Magnate Wars 1593-1617）
+												波兰-立陶宛联邦共和国的总理（财政大臣）兼“伟大盖特曼”（最高军事统帅）杨·扎莫伊斯基对外交和战争的态度是非常明显的，他是前任国王斯特凡·巴托雷（Stefan
+												Batory）战略规划的忠实拥趸。此计划把联邦的扩张方向从北方转向南方，将奥斯曼帝国视作最大敌人，并对其实施战略进攻，遏制其在巴尔干、中欧地区的扩张。对此，罗马教廷举双手双脚赞同，教皇希克斯图斯五世（Pope
+												Sixtus
+												V）强烈支持联邦对异教徒的任何战争行为。
+												彪悍尚武，崇尚自由的哥萨克人与鞑靼人的争斗由来已久，鞑靼人素来喜爱劫掠联邦东南部领土，而哥萨克人也很喜欢抢劫奥斯曼帝国的富饶地区。双方之间每年每月都会爆发或大或小的战争与冲突，并且不存在和好的迹象。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(https://alioss.g-cores.com/uploads/image/576dcc65-326c-48c7-aca8-1492b2b064ff_watermark.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+							<ul class="zx-det-list" style="display:none;">
+								<li class="zx-l-item">
+									<a target="_blank" href="http://jandan.net/2018/09/07/jupiter-magnetic-2.html" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon8.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">日本备胎调查：你有几个结婚对象？</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												另一方面，也有人一边思考「结婚应该尽量慎重，我可不想最后失败」，一边在多个异性之间挑选最佳伴侣。那么，实际上人们在考虑结婚时，究竟有多少备胎可以选择呢？ 压倒性的答案为「1人」
+												しらべぇ编辑部以日本全国965名20多岁〜60多岁的曾考虑过结婚的男女为对象，对此展开了调查。结果显示，最多人给出的答案为只有「1人」，其中男性占比为4成，女性占比则达到了6成。
+												尽管许多人都会跟多个异性交往，但一说到踏入婚姻的殿堂，可以考虑的对象似乎就少得可怜了。
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">路灯</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(./img/web/zixundetail3.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+								<li class="zx-l-item">
+									<a target="_blank" href="http://jandan.net/2018/09/07/jupiter-magnetic.html" class="zx-l-link">
+										<div class="l-des">
+											<div class="des-title">
+												<img src="./img/web/xwicon8.png" class="title-icon">
+												<h3 class="title-text text-ellipsis">木星磁场有两个“南极”</h3>
+											</div>
+											<span class="des-text line-ellipsis">
+												一项新研究发现，木星的磁场与所有其他已知行星的磁场截然不同 - 它有两个磁南极。 科学家们用NASA的朱诺号太空船分析了木星，探测器在木星极地表面上方4000公里处飞行，探测木星的磁场 -
+												这是太阳系中最强的行星磁场 - 发现了未曾预料的结果。
+												英国利兹大学的行星科学家克里斯·琼斯说：“我们有一个木星磁场特写视图，几乎与我们对地球磁场的了解一样好，这需要数百年的时间才能完成。这让我们有机会弄清楚地球以外的行星内部真正的状态。”
+												研究的主要作者，马萨诸塞州剑桥市哈佛大学的行星科学家金伯利·摩尔说，在朱诺号发射之前，“我们手里最好的木星地图与地球相似，”
+												然而，这些新发现表明，木星的磁场与地球的磁场截然不同。她指出，“我们一开始感到困惑，因为朱诺号向我们展示的场景与我们预期的完全不同。”
+											</span>
+											<div class="des-bot">
+												<span class="bot-left text-ellipsis">帝王组_日天</span>
+												<span class="bot-right">
+													<img src="./img/web/shijian1.png" class="icon-time">
+													<span class="time-desc text-ellipsis">3分钟前</span>
+												</span>
+											</div>
+										</div>
+										<div class="l-img">
+											<div class="img-box">
+												<div class="zixun-img-show" style="background-image: url(./img/web/zixundetail2.jpg);"></div>
+											</div>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="right-part col-lg-2 col-md-2 ">
+						<div class="zx-r-box">
+							<ul class="zx-r-list">
+								<li class="zx-r-item zx_r_active">
+									<a class="zx-r-link">
+										<img src="./img/web/xwicon1.png" class="zx-r-img">
+										<span class="zx-r-text ">全部分区</span>
+									</a>
+								</li>
+								<li class="zx-r-item">
+									<a class="zx-r-link">
+										<img src="./img/web/xwicon6.png" class="zx-r-img">
+										<span class="zx-r-text">原创原创</span>
+									</a>
+								</li>
+								<li class="zx-r-item">
+									<a class="zx-r-link">
+										<img src="./img/web/xwicon2.png" class="zx-r-img">
+										<span class="zx-r-text text-ellipsis">ACG狗屋</span>
+									</a>
+								</li>
+								<li class="zx-r-item">
+									<a class="zx-r-link">
+										<img src="./img/web/xwicon3.png" class="zx-r-img">
+										<span class="zx-r-text">Anitama</span>
+									</a>
+								</li>
+								<li class="zx-r-item">
+									<a class="zx-r-link">
+										<img src="./img/web/xwicon4.png" class="zx-r-img">
+										<span class="zx-r-text">机核网</span>
+									</a>
+								</li>
+								<li class="zx-r-item">
+									<a class="zx-r-link">
+										<img src="./img/web/xwicon8.png" class="zx-r-img">
+										<span class="zx-r-text">煎蛋</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- 图榜 -->
+			<div class="tubang-screen-box" id="th_p" style="display: none;">
+				<div class="tb-screen-con ">
+					<ul class="tb-screen-list">
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg3.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg3.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg4.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg4.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg5.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg5.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg1.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg1.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="tb-screen-list">
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg3.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg3.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg4.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg4.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg1.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg1.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="tb-screen-list">
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg4.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg4.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg5.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg5.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg1.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg1.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="tb-screen-list">
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg3.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg3.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg4.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg4.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg5.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg5.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg1.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg1.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="tb-screen-list">
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg1.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg1.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg2.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg2.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg3.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg3.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="tubang-item">
+							<a href="#" target="_blank" class="tubang-link">
+								<div class="tb-top-img">
+									<!-- <div class="img-show" style="background-image: url(./img/web/tuimg4.png);"></div> -->
+									<img class="img-show" src="./img/web/tuimg4.png" alt="图榜">
+								</div>
+								<div class="tb-bot-des">
+									<span class="tb-des-text line-ellipsis">もし10人中1000人がポプちんのもし10人中1000人がポプちんのもし10人中1000人がポプちんの
+									</span>
+									<div class="tb-illus-text">
+										<span class="illus-tag">lllus by</span>
+										<strong class="illus-strong">こと嫌い
+										</strong>
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 主题漫画 -->
+			<div class="manhua-screen-box" id="fou_p" style="display: none;">
+				<div class="mh-screen-con">
+					<div class="mh-m-header clear">
+						<div class="mh-h-img">
+							<div class="mh-img-show" style="background-image: url(./img/web/fengmian.jpg);"></div>
+						</div>
+						<div class="mh-h-info">
+							<h3 class="h-info-title text-ellipsis">标题标题333333333333333333333333333333333</h3>
+							<h6 class="h-info-by">by balbalbal</h6>
+							<div class="h-title">
+								<span class="t-text">简介</span>
+							</div>
+							<span class="h-info-detail line-ellipsis">讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。
+							</span>
+							<div class="h-info-btn">
+								<a href="#" target="_blank" class="h-info-link">从头阅读</a>
+							</div>
+						</div>
+					</div>
+					<div class="tag-list">
+						<ul class="list-show clear">
+							<li class="mh-tag-item mh-cur">
+								<span class="mh-tag " data-tag="主线故事">主线故事</span>
+							</li>
+							<li class="mh-tag-item">
+								<span class="mh-tag" data-tag="日常四格">日常四格</span>
+							</li>
+							<li class="mh-tag-item">
+								<span class="mh-tag" data-tag="资料设定">资料设定</span>
+							</li>
+						</ul>
+					</div>
+					<ul class="mh-screen-list zhuxian_p" style="display: block;">
+						<li class="mh-screen-item">
+							<a href="./manhua_detail.html" target="_blank" class="mh-item-link">
+								<div class="mh-item-img">
+									<div class="item-img-show" style="background-image: url(./img/web/zhuxian.png);"></div>
+								</div>
+								<div class="mh-item-right">
+									<dt class="mh-item-title">第12话 守护天使</dt>
+									<dd class="mh-item-des line-ellipsis">上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手...上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手2222222222222222222222222222222222222222222222222222222222222222222222222222222222222</dd>
+								</div>
+							</a>
+						</li>
+						<li class="mh-screen-item">
+							<a href="./manhua_detail.html" target="_blank" class="mh-item-link">
+								<div class="mh-item-img">
+									<div class="item-img-show" style="background-image: url(./img/web/zhuxian.png);"></div>
+								</div>
+								<div class="mh-item-right">
+									<dt class="mh-item-title">第12话 守护天使</dt>
+									<dd class="mh-item-des line-ellipsis">上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手...上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手2222222222222222222222222222222222222222222222222222222222222222222222222222222222222</dd>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="mh-screen-list sige_p" style="display: none;">
+						<li class="mh-screen-item">
+							<a href="./manhua_detail.html" target="_blank" class="mh-item-link">
+								<div class="mh-item-img">
+									<div class="item-img-show" style="background-image: url(./img/web/sige.png);"></div>
+								</div>
+								<div class="mh-item-right">
+									<dt class="mh-item-title">第8888话 四格漫画</dt>
+									<dd class="mh-item-des line-ellipsis">上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手...上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手2222222222222222222222222222222222222222222222222222222222222222222222222222222222222</dd>
+								</div>
+							</a>
+						</li>
+						<li class="mh-screen-item">
+							<a href="./manhua_detail.html" target="_blank" class="mh-item-link">
+								<div class="mh-item-img">
+									<div class="item-img-show" style="background-image: url(./img/web/sige.png);"></div>
+								</div>
+								<div class="mh-item-right">
+									<dt class="mh-item-title">第8888话 四格漫画</dt>
+									<dd class="mh-item-des line-ellipsis">上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手...上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手上班族土间太平的妹妹是位公认的美少女，她学习运动样样拿手2222222222222222222222222222222222222222222222222222222222222222222222222222222222222</dd>
+								</div>
+							</a>
+						</li>
+					</ul>
+					<ul class="mh-screen-list sheding_p" style="display: none">
+						<li class="mh-screen-sheding">
+							<a href="#" target="_blank" class="mh-sd-link">
+								<div class="mh-sd-img">
+									<div class="sd-img-show" style="background-image: url(./img/web/sheding1.jpg);"></div>
+								</div>
+								<div class="main-sd-right">
+									<h3 class="sd-name">大空翼</h3>
+									<div class="sd-jianjie text-ellipsis">10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。</div>
+									<div class="sd-detail line-ellipsis">富强、民主、文明、和谐, 自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治,
+										爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐,
+										自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治,
+										爱国、敬业、诚信、友善富强、民主、文明、和谐,
+										自由、平等、公正、法治, 爱国、敬业、诚信、友善
+									</div>
+								</div>
+							</a>
+						</li>
+						<li class="mh-screen-sheding">
+							<a href="#" target="_blank" class="mh-sd-link">
+								<div class="mh-sd-img">
+									<div class="sd-img-show" style="background-image: url(./img/web/sheding.jpg);"></div>
+								</div>
+								<div class="main-sd-right">
+									<h3 class="sd-name">大空翼</h3>
+									<div class="sd-jianjie text-ellipsis">10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。10岁。性格开朗，天才球员。</div>
+									<div class="sd-detail line-ellipsis">富强、民主、文明、和谐, 自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治,
+										爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐,
+										自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治, 爱国、敬业、诚信、友善富强、民主、文明、和谐, 自由、平等、公正、法治,
+										爱国、敬业、诚信、友善富强、民主、文明、和谐,
+										自由、平等、公正、法治, 爱国、敬业、诚信、友善
+									</div>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 周边 -->
+			<div class="zhoubian-screen-box" id="fif_p" style="display: none;">
+				<div class="zb-screen-con">
+					<ul class="zb-list">
+						<li class="zb-item">
+							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+								<div class="zb-img-box">
+									<div class="zb-img-show" style="background-image: url(./img/mob/shouban1.jpg);"></div>
+								</div>
+								<div class="zb-link-des">
+									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+									<dd class="zb-des-time">2018-08-30</dd>
+								</div>
+							</a>
+						</li>
+						<li class="zb-item">
+							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+								<div class="zb-img-box">
+									<div class="zb-img-show" style="background-image: url(./img/mob/shouban2.jpg);"></div>
+								</div>
+								<div class="zb-link-des">
+									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+									<dd class="zb-des-time">2018-08-30</dd>
+								</div>
+							</a>
+						</li>
+						<li class="zb-item">
+							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+								<div class="zb-img-box">
+									<div class="zb-img-show" style="background-image: url(./img/mob/shouban3.jpg);"></div>
+								</div>
+								<div class="zb-link-des">
+									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+									<dd class="zb-des-time">2018-08-30</dd>
+								</div>
+							</a>
+						</li>
+						<li class="zb-item">
+							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+								<div class="zb-img-box">
+									<div class="zb-img-show" style="background-image: url(./img/mob/shouban4.jpg);"></div>
+								</div>
+								<div class="zb-link-des">
+									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+									<dd class="zb-des-time">2018-08-30</dd>
+								</div>
+							</a>
+						</li>
+						<li class="zb-item">
+							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+								<div class="zb-img-box">
+									<div class="zb-img-show" style="background-image: url(./img/mob/shouban5.jpg);"></div>
+								</div>
+								<div class="zb-link-des">
+									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+									<dd class="zb-des-time">2018-08-30</dd>
+								</div>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 音乐 -->
+			<div class="music-screen-box" id="six_p" style="display: none;">
+				<div class="music-screen-con">
+					<div class="music-top-tag">
+						<span class="music-tag-item" data-tag="op_ed">OP/ED</span>
+						<span class="music-tag-item" data-tag="ost">OST</span>
+						<span class="music-tag-item" data-tag="other">其他</span>
+					</div>
+					<!-- 按时间排序所有项 -->
+					<ul class="music-list clear" id="all_js">
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+					</ul>
+					<ul class="music-list  clear" id="op_js" style="display: none;">
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/5pPUU5B_eRSXhiDVAairmw==/109951163277987820.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+					</ul>
+					<ul class="music-list  clear" id="ost_js" style="display: none;">
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/JSQpjwgMo3QGwU5666osug==/109951163424266521.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+					</ul>
+					<ul class="music-list  clear" id="other_js" style="display: none;">
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+						<li class="music-item clear">
+							<a href="#" class="music-link">
+								<div class="music-img" style="background-image: url(https://p1.music.126.net/-Va831JHNunLGTaYmsINjQ==/109951163518949291.jpg);"></div>
+								<div class="music-img-bg"></div>
+								<dt class="music-name text-ellipsis">名字666666666666666666666666666666</dt>
+								<dd class="music-singer text-ellipsis">宇多田ヒカル68888888888888888888888888888888888</dd>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 自定义网站 -->
+			<div class="setting-screnn-box" id="sev_p" style="display: none;">
+				<div class="setting-screen-con">
+					<div class="zidingyi-web-wrp">
+						<div class="main-screen-title clear">
+							<div class="title-text">自定义网站</div>
+							<img src="./img/web/delet.png" alt="关闭" id="zdClose" class="zd-icon-close">
+						</div>
+						<div class="zdy-web-panel">
+							<div class="zdy-form-box clear">
+								<!-- <form action="#" class="zdy-form"> -->
+								<div class="zdy-form clear" id="zdyForm">
+									<!-- <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="云音乐" data-id="1">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/yunyinyue.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://music.163.com/">云音乐</label>
+                                        <span class="delet-icon">
+                                            <img src="./img/web/delet.png" alt="删" class="icon-img">
+                                        </span>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="微博" data-id="2">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/weibo.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.weibo.com">微博</label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="淘宝网" data-id="3">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/taobao.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.taobao.com">淘宝网</label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="百度" data-id="4">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/baidu.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.baidu.com">
+                                            百度
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" class="zdy-web-select" name="sel_web" value="Twitter"
+                                            data-id="5">
+                                        <span class="zdy-web-icon">
+                                            <img src="./img/web/twitter.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.twitter.com">
+                                            Twitter
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" class="zdy-web-select" name="sel_web" value="Facebook"
+                                            data-id="6">
+                                        <span class="zdy-web-icon">
+                                            <img src="./img/web/facebook.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.facebook.com">
+                                            Facebook
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" class="zdy-web-select" name="sel_web" value="YouTube"
+                                            data-id="7">
+                                        <span class="zdy-web-icon">
+                                            <img src="./img/web/youtube.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.youtube.com">
+                                            YouTube
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="哔哩哔哩" data-id="8">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/bilibili.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.bilibili.com/">
+                                            哔哩哔哩
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="Acfun" data-id="9">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/acfun.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="http://www.acfun.cn/">
+                                            Acfun
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="嘀哩嘀哩" data-id="10">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/dilidili.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="http://www.dilidili.wang">
+                                            嘀哩嘀哩
+                                        </label>
+                                    </div>
+
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" class="zdy-web-select" name="sel_web" value="半次元"
+                                            data-id="11">
+                                        <span class="zdy-web-icon">
+                                            <img src="./img/web/banciyuan.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://bcy.net">
+                                            半次元
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="Steam" data-id="12">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/steam.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://store.steampowered.com">
+                                            Steam
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="动漫之家" data-id="13">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/dongmanzhijia.png" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="http://www.dmzj.com/">
+                                            动漫之家
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" class="zdy-web-select" name="sel_web" value="Pivix"
+                                            data-id="14">
+                                        <span class="zdy-web-icon">
+                                            <img src="./img/web/pivix.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.pixiv.net">
+                                            Pivix
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="啊噗猫追番" data-id="15">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/apu.png" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://anime.upupoo.com/">
+                                            啊噗猫追番
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" class="zdy-web-select" name="sel_web" value="番组计划"
+                                            data-id="16">
+                                        <span class="zdy-web-icon">
+                                            <img src="./img/web/fanzu.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.bangumi.tv/">
+                                            番组计划
+                                        </label>
+                                    </div>
+                                    <div class="zdy-f-item">
+                                        <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
+                                            value="轻之文库" data-id="17">
+                                        <span class="zdy-web-icon zdy-active">
+                                            <img src="./img/web/qingzhiwen.jpg" class="icon-img">
+                                        </span>
+                                        <label class="zdy-f-lab" for="sel_web" data-site="https://www.linovel.net">
+                                            轻之文库
+                                        </label>
+                                    </div>
+                                </div> -->
+									<!-- </form> -->
+								</div>
+							</div>
+						</div>
+						<div class="zengjia-web-wrap">
+							<div class="main-screen-title clear">
+								<div class="title-text">增加网站</div>
+							</div>
+							<div class="zengjia-web-panel">
+								<div class="zengjia-form-box">
+									<!-- <form action="#" class="zengjia-form"> -->
+									<div class="zengjia-form clear">
+										<div class="zj-form-item">
+											<label for="web_name" class="web-name">
+												网站名
+											</label>
+											<div class="input-box">
+												<input type="text" class="zj-web-name" id="zjName" name="web_name" placeholder="如：哔哩哔哩">
+											</div>
+
+										</div>
+										<div class="zj-form-item">
+											<label for="web_site" class="web-site">
+												网址
+											</label>
+											<div class="input-box">
+												<input type="text" class="zj-web-site" id="zjSite" name="web_site" placeholder="如：https://www.baidu.com/">
+											</div>
+
+										</div>
+										<div class="zj-form-item">
+											<label for="web_icon" class="web-icon">
+												图标网址
+											</label>
+											<div class="input-box">
+												<input type="text" class="zj-web-icon" id="zjIcon" name="web_icon" placeholder="如：http://example.com/img/icon.png">
+											</div>
+
+										</div>
+										<div class="zj-form-item submit-btn">
+											<div class="btn-box">
+												<input type="button" value="增加" class="zj-btn" id="zjBtn">
+											</div>
+											<div class="btn-box">
+												<input type="button" value="还原设置" class="re-zj-btn" id="rezjBtn">
+											</div>
+										</div>
+										<div class="zj-form-ts">
+											提示：可以将图标上传到公共网盘哟，这里推荐 偷揉图床 极简图床 SM.MS 图床 ，自定义网址最多可以设置22个哟! 更多设置敬请期待，反馈请加群：123456789
+										</div>
+									</div>
+									<!-- </form> -->
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="left-fix-bar">
+				<span class="fix-bar-btn" data-status="open">
+					<span class="iconfont bar-btn-img" id="fixOpen" style="display: inline-block;padding-left: 5px;">&#xf0343;</span>
+					<span class="iconfont bar-btn-img" id="fixOff" style="display: none;">&#xf0344;</span>
+					<!-- <img src="./img/web/jiantou5.png" class="bar-btn-img"> -->
+				</span>
+				<div class="fix-bar-panel">
+					<div class="top-weather-box">
+
+						<div class="weather-show">
+							<div class="weather-list">
+								<div class="weather-item item_today">
+									<img src="./img/web/tianqi1-11.png" class="weather-pic">
+									<div class="weather-detail">
+										<span class="weather-des">今日多云</span>
+										<span class="weather-tem">29~37℃</span>
+									</div>
+								</div>
+								<div class="weather-item item_tomorrow">
+									<img src="./img/web/tianqi1-5.png" class="weather-pic">
+									<div class="weather-detail">
+										<span class="weather-des">明日多云</span>
+										<span class="weather-tem">18~20℃</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="city-bar">
+							<div class="selected-city">合肥</div>
+							<div class="switch-city">[切换]</div>
+						</div>
+						<div class="select-city-bar">
+							<div class="city-setting">
+								<fieldset>
+									<legend class="title theme-text">选择城市
+										<a href="#" class="weather-cancel js-cancel" id="weather-cancel">[返回]</a>
+									</legend>
+									<select name="weather-prov" id="weather-prov" class=""></select>
+									<select name="weather-city" id="weather-city"></select>
+									<input type="button" value="[更换]" class="weather-done">
+								</fieldset>
+							</div>
+						</div>
+					</div>
+					<div class="left-list-box">
+						<ul class="list-show">
+							<li class="list-item  fix-select">新番列表</li>
+							<!-- <li class="list-item">手办列表</li> -->
+							<!-- <li class="list-item">公告</li> -->
+							<li class="list-item">免责声明</li>
+						</ul>
+						<ul class="list-detail list_xinfan">
+							<li class="detail-item xinfan_item xq-active">星期一</li>
+							<li class="detail-item xinfan_item">星期二</li>
+							<li class="detail-item xinfan_item">星期三</li>
+							<li class="detail-item xinfan_item">星期四</li>
+							<li class="detail-item xinfan_item">星期五</li>
+							<li class="detail-item xinfan_item">星期六</li>
+							<li class="detail-item xinfan_item">星期日</li>
+						</ul>
+						<!-- <ul class="list-detail list_shouban ">
+                        <li class="detail-item xq-active">手办列表</li>
+                        <li class="detail-item ">手办列表</li>
+                        <li class="detail-item ">手办列表</li>
+                    </ul> -->
+						<!-- <ul class="list-detail list_gonggao">
+                        <li class="detail-item xq-active">公告列表</li>
+                        <li class="detail-item ">公告列表</li>
+                        <li class="detail-item">公告列表</li>
+                    </ul> -->
+						<ul class="list-detail list_mianze">
+							<li class="detail-item xq-active">免责声明</li>
+							<li class="detail-item ">免责声明</li>
+							<li class="detail-item">免责声明</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_mon" data-week="mon">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周一周一周一周一周一周一周一周一周一周一周一周一周一周一周一周一</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">轻羽飞扬轻羽飞扬轻轻羽飞扬轻羽飞扬轻轻羽飞扬轻羽飞扬轻轻羽飞扬轻羽飞扬轻</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">轻羽飞扬轻羽飞扬轻轻羽飞扬轻羽飞扬轻轻羽飞扬轻羽飞扬轻轻羽飞扬轻羽飞扬轻</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_tues" data-week="tues">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周二周二周二周二周二周二周二</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_wen" data-week="wen">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周三</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_thur" data-week="thur">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_fri" data-week="fri">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周五</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_sat" data-week="sat">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周六</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+						<ul class="list-main xinfan_show xf_sun" data-week="sun">
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周日</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="fix-bar-bottom">
+					<div class="gonggao-box">
+						<img src="./img/web/banniang.png" class="gonggao-img">
+						<img src="./img/web/erweima.png" class="gonggao-code">
+						<h5 class="gonggao-des">公告号</h5>
+					</div>
+				</div>
+			</div>
+			<div class="right-fix-bar">
+				<div class="fix-bar-list">
+					<div class="fix-bar-item ">
+						<a target="_blank" class="item-box" id="night_mode" data-status="day">
+							<img src="./img/web/yueliang.png" class="item-img">
+						</a>
+					</div>
+					<div class="fix-bar-item">
+						<a href="#" target="_blank" class="item-box">
+							<img src="./img/web/iconweibo.png" class="item-img">
+						</a>
+					</div>
+					<div class="fix-bar-item wexin_item">
+						<a href="#" target="_blank" class="item-box">
+							<img src="./img/web/iconweixin.png" class="item-img">
+						</a>
+					</div>
+					<div class="fix-bar-item" id="favorites">
+						<a target="_blank" class="item-box">
+							<img src="./img/web/iconshoucang.png" class="item-img">
+						</a>
+					</div>
+					<div class="fix-bar-item" id="setHome">
+						<a target="_blank" class="item-box">
+							<img src="./img/web/iconzhuye.png" class="item-img">
+						</a>
+					</div>
+
+					<div class="fix-bar-item top_item">
+						<span target="_blank" class="item-box">
+							<img src="./img/web/iconzhiding.png" class="item-img">
+						</span>
+					</div>
+				</div>
+				<div class="code-box">
+					<img src="./img/web/erweima2.png" class="code-right">
+					<div class="code-des">扫码关注微信公众号</div>
+				</div>
+			</div>
+			<!-- 移动端 二维码 -->
+			<div class="m-gzh-panel" style="display: none;">
+				<div class="m-gzh-code">
+					<img src="./img/web/erweima2.png" alt="二维码" class="gzh-code-img">
+				</div>
+			</div>
+			<footer class="footer">
+				<div class="footer-list-box">
+					<ul class="footer-list row">
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">网站信息</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">友情链接</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">Designed by</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">关于我们</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">幻次元加速器</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">腾讯云</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">联系我们</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">幻天领域</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">@新浪微博</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">免责声明</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">轻文轻小说</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">粤ICP</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">错误反馈</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-xs-4">啊噗猫</a>
+						</li>
+						<li class="footer-item">
+							<a href="#" class="footer-link col-lg-4 ">捐助网站</a>
+						</li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+		<!-- 轮播组件 -->
+		<script src="./js/swiper.js" type="text/javascript"></script>
+		<!-- 主要js -->
+		<script src="./js/pub.js" type="text/javascript"></script>
+		<!-- 主页切换 -->
+		<script src="./js/qiehuan.js" type="text/javascript"></script>
+		<!-- 自定义网站 -->
+		<script src="./js/settingweb.js" type="text/javascript"></script>
+		<!-- 导航切换 -->
+		<script src="./js/daohang.js" type="text/javascript"></script>
+		<!-- 夜间模式 -->
+		<script src="./js/night_mode.js" type="text/javascript"></script>
+</body>
+
+</html>

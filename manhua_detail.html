@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>阅读漫画</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,
+    maximum-scale=1.0, user-scalable=0,user-scalable=no,minimal-ui">
+    <script src="./js/jquery-3.3.1.js" type="text/javascript"></script>
+    <script src="./js/bootstrap.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/large.css" type="text/css">
+    <link rel="stylesheet" href="./css/mid.css" type="text/css">
+    <link rel="stylesheet" href="./css/small.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+</head>
+
+<body>
+    <div id="mhWrap" class="">
+        <div class="search-header">
+            <div class="s-inner clear">
+                <div class="top-panel">
+                    <a class="left-logo" href="#">
+                        <img src="https://asset.static.moe123.net/builds/20180820132231/03977178366e038201e85d8ab5a481ea.png"
+                            alt="logo" class="logo-img">
+                    </a>
+                    <div class="right-search-container">
+                        <ul class="s-tab clear">
+                            <li class="active" category="web">网页</li>
+                            <li class="" category="goods">商品</li>
+                            <li class="" category="video">视频</li>
+                            <li class="" category="tieba"> 贴吧</li>
+                            <li class="" category="image">图片</li>
+                            <li class="" category="music">音乐</li>
+                            <li class="" category="wiki">百科</li>
+                            <li class="" category="translate">翻译</li>
+                            <li class="" category="express">快递</li>
+                        </ul>
+                        <ul class="s-panel clear">
+                            <li class="form_box active" category="web">
+                                <form action="https://www.baidu.com/s" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <input type="hidden" name="ie" value="utf-8">
+                                    </div>
+                                    <div class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+                                            <a class="opt-img google" category="google" style="background-image: url(./img/web/google.png);">google</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="https://www.baidu.com/" target="_blank" class="baidu logo-show"
+                                                style="background-image: url(./img/web/iconbaidu.png);">baidu</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </div>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="wd" placeholder="此处输入关键字进行搜索"
+                                            autocomplete="off" maxlength="100">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input type="submit" class="search" value="百度搜索">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="goods">
+                                <form action="https://s.taobao.com/search" method="GET" target="_blank" class="s-form clear">
+                                    <div class="params">
+                                        <input type="hidden" name="ie" value="utf-8">
+                                    </div>
+                                    <div class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img taobao" category="taobao" style="background-image: url(./img/web/taobao2.png);">taobao</a>
+                                        </div>
+                                        <div class="s-opt-logo">
+                                            <a href="https://www.taobao.com/" target="_blank" class="baidu logo-show"
+                                                style="background-image: url(./img/web/icontaobao.jpg);">baidu</a>
+                                        </div>
+                                        <div class="toggle"></div>
+                                    </div>
+                                    <div class="ipt-wr">
+                                        <input type="text" class="keyword" name="q" placeholder="此处输入关键字进行搜索"
+                                            autocomplete="off" maxlength="100">
+                                    </div>
+                                    <div class="btn-wr">
+                                        <input type="submit" class="search" value="淘宝搜索">
+                                    </div>
+                                </form>
+                            </li>
+                            <li class="form_box" category="video">
+                                <form action="https://www.bilibili.com/search" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <input name="orderby" type="hidden" value="">
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img bilibili" category="bilibili" style="background-image: url(./img/web/bilibili.png);">bilibili</a>
+                                            <a class="opt-img acfun" category="acfun" style="background-image: url(./img/web/acfun.png);">acfun</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="http://www.acfun.cn/" target="_blank" class="baidu logo-show"
+                                                style="background-image: url(./img/web/iconbilibili.jpg);">baidu</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input type="submit" class="search" value="哔哩哔哩搜索">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="tieba">
+                                <form action="https://tieba.baidu.com/f" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <input type="hidden" name="ie" value="utf-8">
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img tieba" category="tieba" style="background-image: url(./img/web/tieba.png);">tieba</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="https://tieba.baidu.com/" target="_blank" class="tieba logo-show"
+                                                style="background-image: url(./img/web/icontieba.jpg);">tieba</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input class="keyword" type="text" name="kw" placeholder="此处输入关键字进行搜索"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input class="search" type="submit" value="进入贴吧">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="image">
+                                <form action="https://www.pixiv.net/search.php" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <input type="hidden" name="s_mode" value="s_tag">
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img pixiv" category="pixiv" style="background-image: url(./img/web/pixiv.png);">pixiv</a>
+                                            <a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="https://www.pixiv.net/" target="_blank" class="tieba logo-show"
+                                                style="background-image: url(./img/web/iconpixiv.jpg);">pixiv</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="keyword" placeholder="输入'illust_id='可浏览作品，'id='可查看作者"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input type="submit" class="search" value="PIXIV搜索">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="music">
+                                <form action="https://www.xiami.com/search" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <input type="hidden" name="pos" value="1">
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img xiami" category="xiami" style="background-image: url(./img/web/xiami.png);">xiami</a>
+                                            <a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="https://www.xiami.com/" target="_blank" class="tieba logo-show"
+                                                style="background-image: url(./img/web/iconxiami.jpg);">pixiv</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="keyword" placeholder="此处输入关键字进行搜索"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input class="search" type="submit" value="虾米音乐">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="wiki">
+                                <form action="https://zh.wikipedia.org/w/index.php" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <input type="hidden" name="title" value="Special:搜索">
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="opt-img xiami" category="wiki" style="background-image: url(./img/web/wiki.png);">wikipedia</a>
+                                            <a class="opt-img baidu" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="https://zh.wikipedia.org/wiki/Wikipedia:%E9%A6%96%E9%A1%B5" target="_blank"
+                                                class="wiki logo-show" style="background-image: url(./img/web/iconwiki.jpg);">wiki</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input class="search" type="submit" value="维基词条">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="translate">
+                                <form action="https://dict.youdao.com/search" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="youdao opt-img" category="youdao" style="background-image: url(./img/web/youdao.png);">youdao</a>
+                                            <a class="baidu opt-img" category="baidu" style="background-image: url(./img/web/baidu.png);">baidu</a>
+                                        </div>
+                                        <span class="s-opt-logo">
+                                            <a href="https://dict.youdao.com/" target="_blank" class="youdao logo-show"
+                                                style="background-image: url(./img/web/iconyoudao.jpg);">youdao</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="keyword" placeholder="此处输入短句进行翻译"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input type="submit" class="search" value="有道词典">
+                                    </span>
+                                </form>
+                            </li>
+                            <li class="form_box" category="express">
+                                <form action="http://www.kuaidi100.com/" method="GET" target="_blank" class="s-form">
+                                    <div class="params">
+                                        <a class="logo-model hidden" style="display: none;"></a>
+                                    </div>
+                                    <span class="opt-wr">
+                                        <div class="s-opt-container">
+                                            <a class="kuaidi100 opt-img" category="kuaidi100" style="background-image: url(./img/web/kuaidi100.png);">kuaidi100</a>
+                                        </div>
+                                        <span class="s-opt-logo ">
+                                            <a href="http://www.kuaidi100.com/" target="_blank" class="kuaidi100 logo-show"
+                                                style="background-image: url(./img/web/iconkuaidi.jpg);">kuaidi100</a>
+                                        </span>
+                                        <div class="toggle"></div>
+                                    </span>
+                                    <span class="ipt-wr">
+                                        <input type="text" class="keyword" name="postid" placeholder="输入单号，在800+快递公司中为您智能查询"
+                                            autocomplete="off">
+                                    </span>
+                                    <span class="btn-wr">
+                                        <input type="submit" class="search" value="快递100">
+                                    </span>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="m-header-nav">
+            <div class="m-nav-panel">
+                <a href="./index.html" class="m-nav-btn">
+                    <img class="m-icon-btn" src="./img/web/jiantou5.png">
+                </a>
+                <h3 class="m-nav-logo">
+                    第12话 守护天使
+                </h3>
+            </div>
+        </div>
+        <div class="right-fix-bar">
+            <div class="fix-bar-list">
+                <div class="fix-bar-item ">
+                    <a target="_blank" class="item-box" id="night_mode" data-status="day">
+                        <img src="./img/web/yueliang.png" class="item-img">
+                    </a>
+                </div>
+                <div class="fix-bar-item">
+                    <a href="#" target="_blank" class="item-box">
+                        <img src="./img/web/iconweibo.png" class="item-img">
+                    </a>
+                </div>
+                <div class="fix-bar-item wexin_item">
+                    <a href="#" target="_blank" class="item-box">
+                        <img src="./img/web/iconweixin.png" class="item-img">
+                    </a>
+                </div>
+                <div class="fix-bar-item">
+                    <a href="#" target="_blank" class="item-box">
+                        <img src="./img/web/iconshoucang.png" class="item-img">
+                    </a>
+                </div>
+                <div class="fix-bar-item">
+                    <a href="#" target="_blank" class="item-box">
+                        <img src="./img/web/iconzhuye.png" class="item-img">
+                    </a>
+                </div>
+                <div class="fix-bar-item top_item">
+                    <span target="_blank" class="item-box">
+                        <img src="./img/web/iconzhiding.png" class="item-img">
+                    </span>
+                </div>
+            </div>
+            <div class="code-box">
+                <img src="./img/web/erweima2.png" class="code-right">
+                <div class="code-des">扫码关注微信公众号</div>
+            </div>
+        </div>
+        <div class="manhua-detail">
+            <div class="mh-box">
+                <div class="mh-title-top clear">
+                    <h4 class="mh-t-left">
+                        漫画标题 - 第12话 守护天使
+                    </h4>
+                    <div class="mh-t-right">
+                        <a href="#" class="prev-btn">上一话</a>
+                        <a href="#" class="next-btn">下一话</a>
+                    </div>
+                </div>
+                <div class="mh-img-container">
+                    <img src="./img/web/yuedumanhua.png" alt="阅读漫画" class="mh-img-show">
+                </div>
+                <div class="mh-title-bot clear">
+                    <div class="mh-t-right">
+                        <a href="#" class="prev-btn">上一话</a>
+                        <a href="#" class="next-btn">下一话</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer-list-box">
+                <ul class="footer-list row">
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">网站信息</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">友情链接</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">Designed by</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">关于我们</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">幻次元加速器</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">腾讯云</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">联系我们</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">幻天领域</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">@新浪微博</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">免责声明</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">轻文轻小说</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">粤ICP</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">错误反馈</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-xs-4">啊噗猫</a></li>
+                    <li class="footer-item"><a href="#" class="footer-link col-lg-4 ">捐助网站</a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+    <!-- 夜间模式 -->
+    <script src="./js/night_mode.js" type="text/javascript"></script>
+</body>
+<script>
+    $(window).resize(function () {
+        window.location.reload()
+    });
+    /**
+     * 初始属性
+     */
+    function init() {
+        this.pageW = $(window).width()
+    }
+    /**
+     * 右侧固定菜单栏
+     * 回到顶部
+     */
+    $(".top_item").on("click", function () {
+        scrollToTop(".top_item");
+    })
+
+    function scrollToTop(anchorId) {
+        var dis = $(window).scrollTop();
+        $('html,body').animate({
+            scrollTop: '0px'
+        }, 240);
+    };
+    /**
+     * 搜索功能
+     */
+    (function () {
+        /**
+         * 头部搜索功能
+         * 展示、隐藏
+         */
+        init();
+        /**
+         * 搜索功能
+         * 标签切换
+         * 对应form表单切换
+         */
+        $(".s-tab li").each(function () {
+            $(this).on("click", function () {
+                var tab = $(this).attr("category")
+                $(".s-tab li").removeClass("active")
+                $(".s-tab li[category=" + tab + "]").each(function () {
+                    $(this).addClass("active")
+                })
+                // $(this).addClass("active")
+                // console.log($(".s-panel li[category= " + tab + "]"))
+                $(".s-panel li").css("display", "none")
+                $(".s-panel li[category=" + tab + "]").each(function () {
+                    $(this).css("display", "block")
+                })
+
+            })
+        })
+        init();
+        if (this.pageW > 768) {
+            /**
+             * 展开搜索选项
+             */
+            $(".toggle").on("click", function () {
+                if ($(this).hasClass("open")) {
+                    $(this).removeClass("open")
+                    $(this).siblings(".s-opt-container").css("display", "none")
+                } else {
+                    $(this).addClass("open")
+                    $(this).siblings(".s-opt-container").css("display", "block")
+                }
+            })
+        }
+
+        /**
+         * 选择对应的搜索页面
+         */
+        $(".opt-img").each(function () {
+            $(this).on("click", function () {
+                var form_tab;
+                $(this).parent(".s-opt-container").css("display", "none")
+                $(this).parent(".s-opt-container").siblings(".toggle").removeClass("open")
+                $(".s-tab li").each(function () {
+                    // 获取点击当前搜索分类
+                    if ($(this).hasClass("active")) {
+                        form_tab = $(this).attr("category")
+                    }
+                })
+                var ele = $(this).parent(".s-opt-container").next(".s-opt-logo").children(
+                    ".logo-show")
+                var category = $(this).attr("category")
+                // 后台获取对应搜索页面结构
+                // 只模拟了 “网页” “视频” 数据
+                $.ajax({
+                    type: "GET",
+                    url: "https://www.easy-mock.com/mock/5b1f6c63932dab78e63b3984/hscourt/search",
+                    data: form_tab,
+                    success: function (data, state) {
+                        switch (form_tab) {
+                            case "web":
+                                console.log(23332323232)
+                                var webData = data.data.web
+                                var action
+                                var name_params
+                                var val_params
+                                var form = $(".form_box[category = web]")
+                                // 确定选中的搜索网页
+                                switch (category) {
+                                    case "baidu":
+                                        action = webData.baidu.action
+                                        form.children(".s-form").attr("action", action)
+                                        var len = webData.baidu.params.length
+                                        form.find(".params").empty()
+                                        for (var i = 0; i < len; i++) {
+                                            (function (index) {
+                                                name_params = webData.baidu.params[
+                                                    index].name
+                                                val_params = webData.baidu.params[
+                                                    index].value
+                                                var html =
+                                                    '<input type="hidden" name="' +
+                                                    name_params +
+                                                    '" value="' +
+                                                    val_params +
+                                                    '"> ';
+                                                form.find(".params").append(html)
+                                            })(i);
+                                        }
+                                        var name = webData.baidu.ipt.name
+                                        var placeholder = webData.baidu.ipt.placeholder
+                                        form.find(".keyword").attr("name", name).attr(
+                                            "placeholder", placeholder)
+                                        var home = webData.baidu.home
+                                        var backgroundImage = webData.baidu.backgroundImage
+                                        var html_logo =
+                                            '<a href="' + home +
+                                            '" target="_blank" class="baidu logo-show" style="background-image:' +
+                                            backgroundImage + ';">' + category + "</a>";
+                                        form.find(".s-opt-logo").empty().append(
+                                            html_logo)
+                                        form.find(".search").val(webData.baidu.btn.value)
+                                        break;
+                                    case "google":
+                                        action = webData.google.action
+                                        form.children(".s-form").attr("action", action)
+                                        var len = webData.google.params.length
+                                        form.find(".params").empty()
+                                        for (var i = 0; i < len; i++) {
+                                            (function (index) {
+                                                name_params = webData.google.params[
+                                                    index].name
+                                                val_params = webData.google.params[
+                                                    index].value
+                                                var html =
+                                                    '<input type="hidden" name="' +
+                                                    name_params +
+                                                    '" value="' +
+                                                    val_params +
+                                                    '"> ';
+                                                form.find(".params").empty().append(
+                                                    html)
+                                            })(i);
+                                        }
+                                        var name = webData.google.ipt.name
+                                        var placeholder = webData.google.ipt.placeholder
+                                        form.find(".keyword").attr("name", name).attr(
+                                            "placeholder", placeholder)
+                                        var home = webData.google.home
+                                        var backgroundImage = webData.google.backgroundImage
+                                        var html_logo =
+                                            '<a href="' + home +
+                                            '" target="_blank" class="google logo-show" style="background-image: ' +
+                                            backgroundImage + ';">' + category + "</a>";
+                                        form.find(".s-opt-logo").empty().append(
+                                            html_logo)
+                                        form.find(".search").val(webData.google.btn.value)
+                                        break;
+                                }
+                                break;
+                            case "video":
+                                var webData = data.data.video
+                                var action
+                                var name_params
+                                var val_params
+                                var form = $(".form_box[category = video]")
+                                switch (category) {
+                                    case "bilibili":
+                                        action = webData.bilibili.action
+                                        form.children(".s-form").attr("action", action)
+                                        var len = webData.bilibili.params.length
+                                        form.find(".params").empty()
+                                        for (var i = 0; i < len; i++) {
+                                            (function (index) {
+                                                name_params = webData.bilibili.params[
+                                                    index].name
+                                                val_params = webData.bilibili.params[
+                                                    index].value
+                                                var html =
+                                                    '<input type="hidden" name="' +
+                                                    name_params +
+                                                    '" value="' +
+                                                    val_params +
+                                                    '"> ';
+                                                form.find(".params").append(html)
+                                            })(i);
+                                        }
+                                        var name = webData.bilibili.ipt.name
+                                        var placeholder = webData.bilibili.ipt.placeholder
+                                        form.find(".keyword").attr("name", name).attr(
+                                            "placeholder", placeholder)
+                                        var home = webData.bilibili.home
+                                        var backgroundImage = webData.bilibili.backgroundImage
+                                        var html_logo =
+                                            '<a href="' + home +
+                                            '" target="_blank" class="bilibili logo-show" style="background-image:' +
+                                            backgroundImage + ';">' + category + "</a>";
+                                        form.find(".s-opt-logo").empty().append(
+                                            html_logo)
+                                        form.find(".search").val(webData.bilibili.btn.value)
+                                        break;
+                                    case "acfun":
+                                        action = webData.acfun.action
+                                        form.children(".s-form").attr("action", action)
+                                        var len = webData.acfun.params.length
+                                        form.find(".params").empty()
+                                        for (var i = 0; i < len; i++) {
+                                            (function (index) {
+                                                name_params = webData.acfun.params[
+                                                    index].name
+                                                val_params = webData.acfun.params[
+                                                    index].value
+                                                var html =
+                                                    '<input type="hidden" name="' +
+                                                    name_params +
+                                                    '" value="' +
+                                                    val_params +
+                                                    '"> ';
+                                                form.find(".params").empty().append(
+                                                    html)
+                                            })(i);
+                                        }
+                                        var name = webData.acfun.ipt.name
+                                        var placeholder = webData.acfun.ipt.placeholder
+                                        form.find(".keyword").attr("name", name).attr(
+                                            "placeholder", placeholder)
+                                        var home = webData.acfun.home
+                                        var backgroundImage = webData.acfun.backgroundImage
+                                        var html_logo =
+                                            '<a href="' + home +
+                                            '" target="_blank" class="acfun logo-show" style="background-image: ' +
+                                            backgroundImage + ';">' + category + "</a>";
+                                        form.find(".s-opt-logo").empty().append(
+                                            html_logo)
+                                        form.find(".search").val(webData.acfun.btn.value)
+                                        break;
+                                }
+                                break;
+                            default:
+                                break;
+                        }
+                    },
+                })
+            })
+        })
+        if (pageW > 768 && pageW <= 992) {
+            /**
+             * 移动端
+             * 确定搜索
+             */
+            $(".btn-wr")
+        }
+        if (pageW <= 768) {
+            /**
+             * 移动端 
+             * 动态赋值搜索标签宽度
+             */
+            var holyW = $(".m-search-container").find(".m-select-category").width() + $(".m-search-container").find(
+                    ".opt-wr").width() + $(".m-search-container").find(".ipt-wr").width() + $(".m-search-container")
+                .find(".btn-wr").width() + 5
+            console.log(holyW)
+            // 赋值
+            $(".m-search-container .s-tab").css("width", holyW)
+            /**
+             * 展开搜索选项
+             */
+            $(".toggle").on("click", function () {
+                if ($(this).hasClass("open")) {
+                    $(this).removeClass("open")
+                    $(this).siblings(".s-opt-container").css("display", "none")
+                } else {
+                    $(this).addClass("open")
+                    $(this).siblings(".s-opt-container").css("display", "block")
+                    //打开网址列表
+                    //关闭标签列表
+                    $(".m-select-category").prev(".s-tab").css("display", "none")
+                    $(".m-select-category").attr("data-status", "off")
+                    $(".m-select-category").find(".toggle").removeClass("open")
+                }
+            })
+            /**
+             * 移动端
+             * 展开网站标签列表
+             */
+            $(".m-select-category").on("click", function () {
+                var status = $(this).attr("data-status")
+                if (status == "off") {
+                    $(this).prev(".s-tab").css("display", "block")
+                    $(this).attr("data-status", "on")
+                    $(this).find(".toggle").addClass("open")
+                    //打开标签列表
+                    //关闭标签列表
+                    $(".opt-wr").find(".toggle").removeClass("open")
+                    $(".opt-wr").find(".toggle").siblings(".s-opt-container").css("display", "none")
+                    /**
+                     * 移动端
+                     * 选择标签
+                     * 赋值给按钮
+                     */
+                    $(".m-search-container").find(".s-tab li").each(function () {
+                        $(this).on("click", function () {
+                            var tag_val = $(this).text()
+                            /**
+                             * 移动端
+                             * 商品和网页切换
+                             */
+                            if (tag_val == "商品") {
+                                $(".s-tab li[category = goods]").css("display", "none")
+                                $(".s-tab li[category = web]").css("display", "block")
+                            } else if (tag_val == "网页") {
+                                $(".s-tab li[category = goods]").css("display", "block")
+                                $(".s-tab li[category = web]").css("display", "none")
+                            }
+                            $(".m-c-tag").text(tag_val)
+                            //关闭网址列表
+                            $(".m-select-category").prev(".s-tab").css("display", "none")
+                            $(".m-select-category").attr("data-status", "off")
+                            $(".m-select-category").find(".toggle").removeClass("open")
+                        })
+                    })
+                } else {
+                    $(this).prev(".s-tab").css("display", "none")
+                    $(this).attr("data-status", "off")
+                    $(this).find(".toggle").removeClass("open")
+                }
+            })
+        }
+        /**
+         * 右侧固定菜单栏
+         * 微信二维码
+         */
+        $(".wexin_item").hover(
+            function () {
+                $(".code-box").css("display", "block")
+            },
+            function () {
+                $(".code-box").css("display", "none")
+            })
+        $(".code-box").hover(
+            function () {
+                $(this).css("display", "block")
+            },
+            function () {
+                $(this).css("display", "none")
+            })
+    })();
+</script>
+
+</html>
