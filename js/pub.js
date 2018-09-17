@@ -648,6 +648,7 @@ $(document).ready(function () {
                 $(this).on("click", function () {
                     var state = $(this).next(".web-link-des").css("display")
                     if (state == "none") {
+                        $(".m-web-des").removeClass("show")
                         $(".web-link-des").css("display", "none")
                         $(this).next(".web-link-des").css("display", "inline-block")
                         $(this).addClass("show")
