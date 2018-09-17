@@ -668,7 +668,7 @@
     height: auto;
   }
   #indexWrap .left-fix-bar {
-    display: none!important;
+    display: none !important;
   }
   #indexWrap .container-fluid {
     max-width: 1300px;
@@ -1542,8 +1542,12 @@
     top: 0;
     z-index: 8888;
     display: inline-block;
-    width: 20px;
+    width: 16px;
     height: 16px;
+    background-color: #ccc;
+  }
+  #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list .webs-item .webs-item-hid .hid-list .hid-item .show {
+    background-color: #2abaca;
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list .webs-item .webs-item-hid .hid-list .hid-item .web-link-des {
     display: none;

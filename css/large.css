@@ -615,7 +615,7 @@ body {
     vertical-align: top;
   }
   #indexWrap .search-header .s-inner .top-panel .right-search-container .s-panel > li .s-form .ipt-wr .keyword {
-    width: 431;
+    width: 431px;
     height: 40px;
     padding-left: 30px;
     box-sizing: content-box;
@@ -2026,7 +2026,7 @@ body {
     padding-left: 14px;
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .m-s-zhuanji .small-screen-title {
-    padding-top: 38px;
+    padding-top: 48px;
     padding-bottom: 38px;
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .m-s-zhuanji .zhuanji-list {

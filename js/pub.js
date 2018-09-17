@@ -650,8 +650,10 @@ $(document).ready(function () {
                     if (state == "none") {
                         $(".web-link-des").css("display", "none")
                         $(this).next(".web-link-des").css("display", "inline-block")
+                        $(this).addClass("show")
                     } else {
                         $(".web-link-des").css("display", "none")
+                        $(this).removeClass("show")
                     }
                     return false;
                 })
