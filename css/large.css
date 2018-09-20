@@ -2595,6 +2595,7 @@ body {
   #indexWrap .music-screen-box .music-screen-con .music-cur {
     background-color: #2abaca;
     border: solid 1px #2abaca !important;
+    color: #fff;
   }
   #indexWrap .music-screen-box .music-screen-con .music-list {
     padding-top: 30px;
@@ -3228,7 +3229,7 @@ body {
     vertical-align: top;
   }
   #mhWrap .search-header .s-inner .top-panel .right-search-container .s-panel > li .s-form .ipt-wr .keyword {
-    width: 400px;
+    width: 431px;
     height: 40px;
     padding-left: 30px;
     box-sizing: content-box;
