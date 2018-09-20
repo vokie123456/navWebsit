@@ -174,8 +174,8 @@
                   $("#six_p").css("display", "none")
                   $("#sev_p").css("display", "none")
                   $("#mbackBtn").css("display", "inline-block")
-                  document.getElementsByClassName("tag-item")[3].classList.add("active")
-                  document.getElementsByClassName("hid-item-link")[3].classList.add("hid-item-cur")
+                  document.getElementsByClassName("tag-item")[4].classList.add("active")
+                  document.getElementsByClassName("hid-item-link")[4].classList.add("hid-item-cur")
                   break;
               case "周边":
                   $("#fst_p").css("display", "none")
@@ -186,8 +186,8 @@
                   $("#six_p").css("display", "none")
                   $("#sev_p").css("display", "none")
                   $("#mbackBtn").css("display", "inline-block")
-                  document.getElementsByClassName("tag-item")[4].classList.add("active")
-                  document.getElementsByClassName("hid-item-link")[4].classList.add("hid-item-cur")
+                  document.getElementsByClassName("tag-item")[3].classList.add("active")
+                  document.getElementsByClassName("hid-item-link")[3].classList.add("hid-item-cur")
                   break;
               case "音乐":
                   $("#fst_p").css("display", "none")
@@ -233,7 +233,4 @@
           $(".m-nav-hid").css("display", "none")
           $(".m-nav-btn").attr("data-status", "off")
       }
-
-
-
   })();
