@@ -439,8 +439,7 @@
                                     vertical-align: middle;
                                     border-top-left-radius: 3px;
                                     border-bottom-left-radius: 3px;
-                                    opacity: 0.8;
-                                    background-color: #fff;
+                                    background-color: rgba(255, 255, 255, 0.8);
                                     >a {
                                         display: inline-block;
                                         text-align: center;
@@ -528,9 +527,10 @@
                                 background-size: 20px 20px;
                                 background-position: 50%;
                                 background-color: #fff;
-                                .m-search {
+                                .search {
                                     position: absolute;
                                     top: 0;
+                                    left: 0;
                                     -webkit-appearance: none;
                                     width: 50px;
                                     height: 40px;
@@ -640,6 +640,9 @@
                                 margin-top: 10px;
                                 background-color: #fcfcfc;
                                 cursor: pointer;
+                                >a{
+                                    color: #333;
+                                }
                             }
                         }
                     }
@@ -912,12 +915,11 @@
                                 .r-bot-box {
                                     margin-top: 6px;
                                     .r-bot-list {
-                                        margin-top: 18px;
                                         font-size: 0;
                                         .r-bot-item {
                                             padding: 0 10px;
                                             cursor: pointer;
-                                            margin-top: 15px;
+                                            margin-top: 4px;
                                             display: none;
                                             .r-bot-link {
                                                 display: block;
@@ -1605,14 +1607,14 @@
                                                     //     height: 16px;
                                                     // }
                                                     .m-web-des {
-                                                            position: absolute;
-                                                            right: 0;
-                                                            top: 0;
-                                                            z-index: 8888;
-                                                            display: inline-block;
-                                                            width: 16px;
-                                                            height: 16px;
-                                                            background-color: #ccc;
+                                                        position: absolute;
+                                                        right: 0;
+                                                        top: 0;
+                                                        z-index: 8888;
+                                                        display: inline-block;
+                                                        width: 16px;
+                                                        height: 16px;
+                                                        background-color: #ccc;
                                                     }
                                                     .show {
                                                         background-color: #2abaca;
@@ -2642,6 +2644,14 @@
                                 font-size: 14px;
                                 text-indent: 2em;
                                 line-height: 1.5;
+                                >p {
+                                    >img {
+                                        margin: 10px 0;
+                                        max-width: 100% !important;
+                                        height: auto !important;
+                                        display: block;
+                                    }
+                                }
                             }
                             .zx-main-img {
                                 display: block;

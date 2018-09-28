@@ -37,7 +37,8 @@
             $("#night_mode").children(".item-img").attr("src", "./img/web/taiyang.png")
             $("#mNightBtn").children(".m-swift").attr("src", "./img/web/taiyang.png")
             $("#dnImg").attr("src", "./img/mob/mkai.png")
-
+            $(".iframe_1").css("display", "none")
+            $(".iframe_2").css("display", "inline-block")
         } else {
             // 白天
             $("#indexWrap").removeClass("night-mode")
@@ -46,6 +47,8 @@
             $("#night_mode").children(".item-img").attr("src", "./img/web/yueliang.png")
             $("#mNightBtn").children(".m-swift").attr("src", "./img/web/yueliang.png")
             $("#dnImg").attr("src", "./img/mob/mguan.png")
+            $(".iframe_1").css("display", "inline-block")
+            $(".iframe_2").css("display", "none")
         }
     }
     $("#night_mode").on("click", function () {

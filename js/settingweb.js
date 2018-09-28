@@ -42,14 +42,14 @@
         // 根据选中项,渲染上方列表
         resetWeb();
     }
-
     function resetWeb() {
         $("#zdyForm").empty();
         $("#iconList").empty()
         // 获取原始网站列表
         $.ajax({
             type: "GET",
-            url: "https://www.easy-mock.com/mock/5b1f6c63932dab78e63b3984/hscourt/orig_list",
+            // url: "https://www.easy-mock.com/mock/5b1f6c63932dab78e63b3984/hscourt/orig_list",
+            url:'../api/web.json',
             data: "",
             dataType: "json",
             success: function (data) {
@@ -60,15 +60,15 @@
                         var id = data.data[index].id
                         var checked = data.data[index].checked
                         var name = data.data[index].name
-                        var website = data.data[index].website
-                        var iconUrl = data.data[index].iconUrl
+                        var url = data.data[index].url
+                        var image = data.data[index].image
                         var list = {
                             id: id,
                             child: {
                                 checked: checked,
                                 name: name,
-                                website: website,
-                                iconUrl: iconUrl,
+                                url: url,
+                                image: image,
                             }
                         }
                         curList.push(list)
@@ -86,9 +86,9 @@
         // 清空原有下方列表
         var id
         var checked
-        var website
+        var url
         var name
-        var iconUrl
+        var image
         $("#zdyForm").empty()
         var len = LBC_cur.get().length
         for (var i = 0; i < len; i++) {
@@ -96,8 +96,8 @@
                 id = LBC_cur.get()[index].id
                 checked = LBC_cur.get()[index].child.checked
                 name = LBC_cur.get()[index].child.name
-                website = LBC_cur.get()[index].child.website
-                iconUrl = LBC_cur.get()[index].child.iconUrl
+                url = LBC_cur.get()[index].child.url
+                image = LBC_cur.get()[index].child.image
                 // 渲染到下列表
                 if (!checked) {
                     var html_false = `
@@ -105,9 +105,9 @@
                             <input type="checkbox"  class="zdy-web-select" name="sel_web"
                                 value="${name}" data-id="${id}">
                             <span class="zdy-web-icon">
-                                <img src="${iconUrl}" class="icon-img">
+                                <img src="/upload/${image}" class="icon-img">
                             </span>
-                            <label class="zdy-f-lab" for="sel_web" data-site="${website}">${name}</label>
+                            <label class="zdy-f-lab" for="sel_web" data-site="${url}">${name}</label>
                             <span class="delet-icon">
                                 <img src="./img/web/delet.png" alt="删" class="icon-img">
                             </span>
@@ -120,9 +120,9 @@
                             <input type="checkbox" checked="checked" class="zdy-web-select" name="sel_web"
                                 value="${name}" data-id="${id}">
                             <span class="zdy-web-icon zdy-active">
-                                <img src="${iconUrl}" class="icon-img">
+                                <img src="${image}" class="icon-img">
                             </span>
-                            <label class="zdy-f-lab" for="sel_web" data-site="${website}">${name}</label>
+                            <label class="zdy-f-lab" for="sel_web" data-site="${url}">${name}</label>
                             <span class="delet-icon">
                                 <img src="./img/web/delet.png" alt="删" class="icon-img">
                             </span>
@@ -158,14 +158,14 @@
                 var id = LBC_cur.get()[index].id
                 var checked = LBC_cur.get()[index].child.checked
                 var name = LBC_cur.get()[index].child.name
-                var website = LBC_cur.get()[index].child.website
-                var iconUrl = LBC_cur.get()[index].child.iconUrl
+                var url = LBC_cur.get()[index].child.url
+                var image = LBC_cur.get()[index].child.image
                 if (checked) {
                     // 渲染到上列表
                     var html_top = `
-                        <a href="${website}" class="icon-item" target="_blank"  data-id="${id}">
+                        <a href="${url}" class="icon-item" target="_blank"  data-id="${id}">
                             <div class="icon-pic-wrp">
-                                <img src="${iconUrl}"
+                                <img src="${image}"
                                     alt="" class="icon-pic">
                             </div>
                             <dd class="ico-des text-ellipsis">${name}</dd>
@@ -202,8 +202,8 @@
                     child: {
                         checked: true,
                         name: add_name,
-                        website: add_web,
-                        iconUrl: add_icon,
+                        url: add_web,
+                        image: add_icon,
                     }
                 }
                 curList = LBC_cur.get()

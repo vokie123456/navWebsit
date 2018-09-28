@@ -23,17 +23,17 @@ $(document).ready(function () {
     });
     /**
      * 搜索功能
+     * 单一职责原则
      */
     (function () {
         /**
          * 头部搜索功能
          * 展示、隐藏
          */
-        init();
+        // init();
         // document.getElementsByClassName("webs-item-hid")[0].style.display = "none"
         $(window).on("scroll", function () {
             var windowH = $(window).scrollTop()
-            // console.log("不该打印的打印"+windowH)
             if (windowH >= 200) {
                 $(".search-header").css("display", "block")
                 $(".main_search").css("display", "none")
@@ -42,290 +42,276 @@ $(document).ready(function () {
                 $(".main_search").css("display", "block")
             }
         })
-
-        /**
-         * 搜索功能
-         * 标签切换
-         * 对应form表单切换
-         */
-        $(".s-tab li").each(function () {
-            $(this).on("click", function () {
-                var tab = $(this).attr("category")
-                $(".s-tab li").removeClass("active")
-                $(".s-tab li[category=" + tab + "]").each(function () {
-                    $(this).addClass("active")
-                })
-                // $(this).addClass("active")
-                // console.log($(".s-panel li[category= " + tab + "]"))
-                $(".s-panel li").css("display", "none")
-                $(".s-panel li[category=" + tab + "]").each(function () {
-                    $(this).css("display", "block")
-                })
-
-            })
-        })
-        init();
-        if (this.pageW > 768) {
-            /**
-             * 展开搜索选项
-             */
-            $(".toggle").on("click", function () {
-                if ($(this).hasClass("open")) {
-                    $(this).removeClass("open")
-                    $(this).siblings(".s-opt-container").css("display", "none")
-                } else {
-                    $(this).addClass("open")
-                    $(this).siblings(".s-opt-container").css("display", "block")
-                }
-            })
-        }
-
-        /**
-         * 选择对应的搜索页面
-         */
-        $(".opt-img").each(function () {
-            $(this).on("click", function () {
-                var form_tab;
-                $(this).parent(".s-opt-container").css("display", "none")
-                $(this).parent(".s-opt-container").siblings(".toggle").removeClass("open")
-                $(".s-tab li").each(function () {
-                    // 获取点击当前搜索分类
-                    if ($(this).hasClass("active")) {
-                        form_tab = $(this).attr("category")
-                    }
-                })
-                var ele = $(this).parent(".s-opt-container").next(".s-opt-logo").children(".logo-show")
-                var category = $(this).attr("category")
-                // 后台获取对应搜索页面结构
-                // 只模拟了 “网页” “视频” 数据
+        // 获取数据
+        function GetData(callBackArr) {
+            this.getData = function (url, param) {
                 $.ajax({
+                    url: url,
+                    data: param,
                     type: "GET",
-                    url: "https://www.easy-mock.com/mock/5b1f6c63932dab78e63b3984/hscourt/search",
-                    data: form_tab,
-                    success: function (data, state) {
-                        switch (form_tab) {
-                            case "web":
-                                var webData = data.data.web
-                                var action
-                                var name_params
-                                var val_params
-                                var form = $(".form_box[category = web]")
-                                // 确定选中的搜索网页
-                                switch (category) {
-                                    case "baidu":
-                                        action = webData.baidu.action
-                                        form.children(".s-form").attr("action", action)
-                                        var len = webData.baidu.params.length
-                                        form.find(".params").empty()
-                                        for (var i = 0; i < len; i++) {
-                                            (function (index) {
-                                                name_params = webData.baidu.params[index].name
-                                                val_params = webData.baidu.params[index].value
-                                                var html =
-                                                    '<input type="hidden" name="' +
-                                                    name_params +
-                                                    '" value="' +
-                                                    val_params +
-                                                    '"> ';
-                                                form.find(".params").append(html)
-                                            })(i);
-                                        }
-                                        var name = webData.baidu.ipt.name
-                                        var placeholder = webData.baidu.ipt.placeholder
-                                        form.find(".keyword").attr("name", name).attr("placeholder", placeholder)
-                                        var home = webData.baidu.home
-                                        var backgroundImage = webData.baidu.backgroundImage
-                                        var html_logo =
-                                            '<a href="' + home + '" target="_blank" class="baidu logo-show" style="background-image:' +
-                                            backgroundImage + ';">' + category + "</a>";
-                                        form.find(".s-opt-logo").empty().append(html_logo)
-                                        form.find(".search").val(webData.baidu.btn.value)
-                                        break;
-                                    case "google":
-                                        action = webData.google.action
-                                        form.children(".s-form").attr("action", action)
-                                        var len = webData.google.params.length
-                                        form.find(".params").empty()
-                                        for (var i = 0; i < len; i++) {
-                                            (function (index) {
-                                                name_params = webData.google.params[index].name
-                                                val_params = webData.google.params[index].value
-                                                var html =
-                                                    '<input type="hidden" name="' +
-                                                    name_params +
-                                                    '" value="' +
-                                                    val_params +
-                                                    '"> ';
-                                                form.find(".params").empty().append(html)
-                                            })(i);
-                                        }
-                                        var name = webData.google.ipt.name
-                                        var placeholder = webData.google.ipt.placeholder
-                                        form.find(".keyword").attr("name", name).attr("placeholder", placeholder)
-                                        var home = webData.google.home
-                                        var backgroundImage = webData.google.backgroundImage
-                                        var html_logo =
-                                            '<a href="' + home + '" target="_blank" class="google logo-show" style="background-image: ' +
-                                            backgroundImage + ';">' + category + "</a>";
-                                        form.find(".s-opt-logo").empty().append(html_logo)
-                                        form.find(".search").val(webData.google.btn.value)
-                                        break;
-                                }
-                                break;
-                            case "video":
-                                var webData = data.data.video
-                                var action
-                                var name_params
-                                var val_params
-                                var form = $(".form_box[category = video]")
-                                switch (category) {
-                                    case "bilibili":
-                                        action = webData.bilibili.action
-                                        form.children(".s-form").attr("action", action)
-                                        var len = webData.bilibili.params.length
-                                        form.find(".params").empty()
-                                        for (var i = 0; i < len; i++) {
-                                            (function (index) {
-                                                name_params = webData.bilibili.params[index].name
-                                                val_params = webData.bilibili.params[index].value
-                                                var html =
-                                                    '<input type="hidden" name="' +
-                                                    name_params +
-                                                    '" value="' +
-                                                    val_params +
-                                                    '"> ';
-                                                form.find(".params").append(html)
-                                            })(i);
-                                        }
-                                        var name = webData.bilibili.ipt.name
-                                        var placeholder = webData.bilibili.ipt.placeholder
-                                        form.find(".keyword").attr("name", name).attr("placeholder", placeholder)
-                                        var home = webData.bilibili.home
-                                        var backgroundImage = webData.bilibili.backgroundImage
-                                        var html_logo =
-                                            '<a href="' + home + '" target="_blank" class="bilibili logo-show" style="background-image:' +
-                                            backgroundImage + ';">' + category + "</a>";
-                                        form.find(".s-opt-logo").empty().append(html_logo)
-                                        form.find(".search").val(webData.bilibili.btn.value)
-                                        break;
-                                    case "acfun":
-                                        action = webData.acfun.action
-                                        form.children(".s-form").attr("action", action)
-                                        var len = webData.acfun.params.length
-                                        form.find(".params").empty()
-                                        for (var i = 0; i < len; i++) {
-                                            (function (index) {
-                                                name_params = webData.acfun.params[index].name
-                                                val_params = webData.acfun.params[index].value
-                                                var html =
-                                                    '<input type="hidden" name="' +
-                                                    name_params +
-                                                    '" value="' +
-                                                    val_params +
-                                                    '"> ';
-                                                form.find(".params").empty().append(html)
-                                            })(i);
-                                        }
-                                        var name = webData.acfun.ipt.name
-                                        var placeholder = webData.acfun.ipt.placeholder
-                                        form.find(".keyword").attr("name", name).attr("placeholder", placeholder)
-                                        var home = webData.acfun.home
-                                        var backgroundImage = webData.acfun.backgroundImage
-                                        var html_logo =
-                                            '<a href="' + home + '" target="_blank" class="acfun logo-show" style="background-image: ' +
-                                            backgroundImage + ';">' + category + "</a>";
-                                        form.find(".s-opt-logo").empty().append(html_logo)
-                                        form.find(".search").val(webData.acfun.btn.value)
-                                        break;
-                                }
-                                break;
-                            default:
-                                break;
-                        }
-                    },
+                    dataType: "json",
+                    beforeSend: this.LoadFn, //加载执行方法  
+                    erro: this.erroFn, //错误执行方法  
+                    success: this.succFn //成功执行方法  
                 })
-            })
-        })
-        if (pageW > 768 && pageW <= 992) {
-            /**
-             * 移动端
-             * 确定搜索
-             */
-            $(".btn-wr")
+            }
+            // 进行
+            this.LoadFn = function () {}
+            // 成功
+            this.succFn = function (data) {
+                $(data).each(function (index, item) {
+
+                    // 初始化搜索栏
+                    iR.initRender(item)
+                    // 数据加入缓存
+                    iC.catchData(item)
+                    // 用户选择搜索模块和搜索网站
+                    tR.selcet()
+                    // 移动端模块和搜索切换
+                    mS.mobSearch()
+                })
+            }
+            // 失败
+            this.erroFn = function () {
+                alert(erro)
+            }
         }
-        if (pageW <= 768) {
-            /**
-             * 移动端 
-             * 动态赋值搜索标签宽度
-             */
-            var holyW = $(".m-search-container").find(".m-select-category").width() + $(".m-search-container").find(".opt-wr").width() + $(".m-search-container").find(".ipt-wr").width() + $(".m-search-container").find(".btn-wr").width() + 5
-            // console.log(holyW)
-            // 赋值
-            // $(".m-search-container .s-tab").css("width", holyW)
-            /**
-             * 展开搜索选项
-             */
-            $(".toggle").on("click", function () {
-                if ($(this).hasClass("open")) {
-                    $(this).removeClass("open")
-                    $(this).siblings(".s-opt-container").css("display", "none")
-                } else {
-                    $(this).addClass("open")
-                    $(this).siblings(".s-opt-container").css("display", "block")
-                    //打开网址列表
-                    //关闭标签列表
-                    $(".m-select-category").prev(".s-tab").css("display", "none")
-                    $(".m-select-category").attr("data-status", "off")
-                    $(".m-select-category").find(".toggle").removeClass("open")
+        var oG = new GetData([iR, tR, iC])
+        var url = "../api/search.json"
+        oG.getData(url)
+        // 初始化渲染
+        function InitRender() {
+            this.initRender = function (data) {
+                var data = data.data
+                for (var i = 0; i < 9; i++) {
+                    var dataArr = data[i + 1]
+                    // 当用户设置了这个搜索模块
+                    if (dataArr != undefined) {
+                        // 加载首个搜索
+                        var html_search = `
+                                <li class="form_box" category="${i+1}">
+                                    <form action="${dataArr[0]["action"]}" method="GET" target="_blank" class="s-form">
+                                        <div class="params">
+                                            
+                                            <input class="params-item" type="hidden" name="${dataArr[0]["params"]}" value="${dataArr[0]["value"]}">
+                                            <input type="hidden" name="ie" value="utf-8" style="">
+                                        </div>
+                                        <div class="opt-wr">
+                                            <div class="s-opt-container" category="${i+1}">
+                                            </div>
+                                            <span class="s-opt-logo">
+                                                <a href="${dataArr[0]["home"]}" target="_blank" class="baidu logo-show" style="background-image: url(/upload/${dataArr[0]["img"]});">baidu</a>
+                                            </span>
+                                            <div class="toggle"></div>
+                                        </div>
+                                        <span class="ipt-wr">
+                                            <input type="text" class="keyword" name="${dataArr[0]["ipt"]}" placeholder="${dataArr[0]["placeholder"]}" autocomplete="off" maxlength="100">
+                                        </span>
+                                        <span class="btn-wr">
+                                            <input type="submit" class="search" value="${dataArr[0]["btn"]}">
+                                        </span>
+                                    </form>
+                                </li>
+                        `
+                        $(" .s-panel").append(html_search)
+                        // 插入模块搜索选项
+                        // 取出每一组所有id，图标，web
+                        var len = dataArr.length
+                        for (var j = 0; j < len; j++) {
+                            var dataOpt = dataArr[j]
+                            var opt_html = `
+                                <a class="opt-img baidu" category="${j}" style="background-image: url(/upload/${dataOpt["backgroundImage"]});">${dataOpt["web"]}</a>
+                            `
+                            $(".s-opt-container").each(function () {
+                                if ($(this).attr("category") == i + 1) {
+                                    // console.log(i)
+                                    $(this).append(opt_html)
+                                }
+                            })
+                        }
+                        if (i == 0) {
+                            $(".s-panel .form_box").addClass("active")
+                        }
+                    }
                 }
-            })
-            /**
-             * 移动端
-             * 展开网站标签列表
-             */
-            $(".m-select-category").on("click", function () {
-                var status = $(this).attr("data-status")
-                if (status == "off") {
-                    $(this).prev(".s-tab").css("display", "block")
-                    $(this).attr("data-status", "on")
-                    $(this).find(".toggle").addClass("open")
-                    //打开标签列表
-                    //关闭标签列表
-                    $(".opt-wr").find(".toggle").removeClass("open")
-                    $(".opt-wr").find(".toggle").siblings(".s-opt-container").css("display", "none")
-                    /**
-                     * 移动端
-                     * 选择标签
-                     * 赋值给按钮
-                     */
-                    $(".m-search-container").find(".s-tab li").each(function () {
-                        $(this).on("click", function () {
-                            var tag_val = $(this).text()
-                            /**
-                             * 移动端
-                             * 商品和网页切换
-                             */
-                            if (tag_val == "商品") {
-                                $(".s-tab li[category = goods]").css("display", "none")
-                                $(".s-tab li[category = web]").css("display", "block")
-                            } else if (tag_val == "网页") {
-                                $(".s-tab li[category = goods]").css("display", "block")
-                                $(".s-tab li[category = web]").css("display", "none")
-                            }
-                            $(".m-c-tag").text(tag_val)
-                            //关闭网址列表
-                            $(".m-select-category").prev(".s-tab").css("display", "none")
-                            $(".m-select-category").attr("data-status", "off")
-                            $(".m-select-category").find(".toggle").removeClass("open")
+            }
+        }
+        var iR = new InitRender()
+        // 搜索信息加入缓存
+        function InitCatch() {
+            this.catchData = function (data) {
+                this.LBC_data().add(data)
+            }
+            this.LBC_data = function () {
+                return {
+                    add(value) {
+                        localStorage.setItem("searchArr", JSON.stringify(value))
+                    },
+                    get() {
+                        return JSON.parse(localStorage.getItem("searchArr"))
+                    },
+                    remove() {
+                        localStorage.removeItem("searchArr")
+                    }
+                }
+            }
+        }
+        var iC = new InitCatch()
+        // 选择搜索模块渲染
+        function TagRender() {
+            // 选择模块
+            this.selcet = function () {
+                $(".s-tab li").each(function () {
+                    $(this).on("click", function () {
+                        var id = $(this).attr("category")
+                        $(".s-tab li").removeClass("active")
+                        $(".s-tab li[category=" + id + "]").each(function () {
+                            $(this).addClass("active")
+                        })
+                        $(".s-panel li").removeClass("active")
+                        $(".s-panel li[category=" + id + "]").each(function () {
+                            $(this).addClass("active")
                         })
                     })
-                } else {
-                    $(this).prev(".s-tab").css("display", "none")
-                    $(this).attr("data-status", "off")
-                    $(this).find(".toggle").removeClass("open")
-                }
-            })
+                })
+                sR.showSelect()
+            }
         }
+        var tR = new TagRender();
+        // 选择搜索项渲染
+        function SelRender() {
+            this.showSelect = function () {
+                // 展开选项
+                $(".toggle").on("click", function () {
+                    if ($(this).hasClass("open")) {
+                        console.log(1234)
+                        $(this).removeClass("open")
+                        $(this).siblings(".s-opt-container").css("display", "none")
+                    } else {
+                        console.log(77979)
+                        $(this).addClass("open")
+                        $(this).siblings(".s-opt-container").css("display", "block")
+                        //打开网址列表
+                        //关闭标签列表
+                        $(".m-select-category").prev(".s-tab").css("display", "none")
+                        $(".m-select-category").attr("data-status", "off")
+                        $(".m-select-category").find(".toggle").removeClass("open")
+                    }
+                })
+                this.selSearch()
+            }
+            this.selSearch = function () {
+                // 获取被选择搜索项mid,页面id
+                var mid
+                var id
+                $(".opt-img").each(function () {
+                    $(this).on("click", function () {
+                        // 模块id
+                        mid = $(this).parents(".form_box").attr("category")
+                        // 搜索项id
+                        id = $(this).attr("category")
+                        sR.selRender(mid, id)
+                        $(".toggle").removeClass("open")
+                        $(".toggle").siblings(".s-opt-container").css("display", "none")
+                    })
+                })
+            }
+            this.selRender = function (catagoryId, id) {
+                // 获取缓存
+                var selected
+                var searchArr = iC.LBC_data().get()
+                // 根据id渲染搜索
+                var mid = catagoryId
+                var id = id
+                $(searchArr.data).each(function (index, item) {
+                    selected = item[mid][id]
+                    console.log(selected)
+                    // 渲染到当天显示页面
+                    $(".form_box").each(function () {
+                        if ($(this).hasClass("active")) {
+                            console.log(selected["value"])
+                            console.log($(this).find(".params .params-item"))
+                            $(this).find(".s-form").attr("action", selected["action"])
+                            $(this).find(".params .params-item").attr("name", selected["params"]).attr("value", selected["value"])
+                            $(this).find(".keyword").attr("name", selected["ipt"]).attr("placeholder", selected["placeholder"])
+                            $(this).find(".search").attr("value", selected["btn"])
+                        }
+                    })
+                })
+            }
+        }
+        var sR = new SelRender()
+        /**
+         * 移动端
+         * 搜索切换
+         */
+        function MobSearch() {
+            this.mobSearch = function () {
+                /**
+                 * 移动端 
+                 * 动态赋值搜索标签宽度
+                 */
+                var holyW = $(".m-search-container").find(".m-select-category").width() + $(".m-search-container").find(".opt-wr").width() + $(".m-search-container").find(".ipt-wr").width() + $(".m-search-container").find(".btn-wr").width() + 5
+                // console.log($(".m-search-container").find(".opt-wr").width())
+                // 赋值
+                $(".m-search-container .s-tab").css("width", holyW)
+                /**
+                 * 移动端
+                 * 展开网站标签列表
+                 */
+                $(".m-select-category").on("click", function () {
+                    var status = $(this).attr("data-status")
+                    if (status == "off") {
+                        $(this).prev(".s-tab").css("display", "block")
+                        $(this).attr("data-status", "on")
+                        $(this).find(".toggle").addClass("open")
+                        //打开标签列表
+                        //关闭标签列表
+                        $(".opt-wr").find(".toggle").removeClass("open")
+                        $(".opt-wr").find(".toggle").siblings(".s-opt-container").css("display", "none")
+                        /**
+                         * 移动端
+                         * 选择标签
+                         * 赋值给按钮
+                         */
+                        $(".m-search-container").find(".s-tab li").each(function () {
+                            var tag1_text
+                            var tag2_text
+                            if ($(this).attr("category") == "1") {
+                                tag1_text = $(this).text()
+                            } else if ($(this).attr("category") == "2") {
+                                tag2_text = $(this).text()
+                            }
+                            $(this).on("click", function () {
+                                var tag_val = $(this).attr("category")
+                                /**
+                                 * 移动端
+                                 * 商品和网页切换
+                                 */
+                                if (tag_val == "2") {
+                                    $(".s-tab li[category = 2]").css("display", "none")
+                                    $(".s-tab li[category = 1]").css("display", "block")
+                                    $(".m-c-tag").text(tag2_text)
+                                } else if (tag_val == "1") {
+                                    $(".s-tab li[category = 2]").css("display", "block")
+                                    $(".s-tab li[category = 1]").css("display", "none")
+                                    $(".m-c-tag").text(tag1_text)
+                                }
+                                //关闭网址列表
+                                $(".m-select-category").prev(".s-tab").css("display", "none")
+                                $(".m-select-category").attr("data-status", "off")
+                                $(".m-select-category").find(".toggle").removeClass("open")
+                            })
+                        })
+                    } else {
+                        $(this).prev(".s-tab").css("display", "none")
+                        $(this).attr("data-status", "off")
+                        $(this).find(".toggle").removeClass("open")
+                    }
+                })
+            }
+        }
+        var mS = new MobSearch()
     })();
      /**
      * 左侧固定栏
@@ -752,48 +738,6 @@ $(document).ready(function () {
                         $(".sheding_p").css("display", "block");
                         break;
                 }
-            })
-        })
-    })();
-    /**
-     * 音乐
-     * 切换
-     */
-    (function () {
-        $(".music-tag-item").each(function () {
-            $(this).on("click", function () {
-                var music_tag = $(this).attr("data-tag")
-                if ($(this).hasClass("music-cur")) {
-                    $(this).removeClass("music-cur")
-                    $("#all_js").css("display", "block")
-                    $("#op_js").css("display", "none")
-                    $("#ost_js").css("display", "none")
-                    $("#other_js").css("display", "none")
-                } else {
-                    $(".music-tag-item").removeClass("music-cur")
-                    $(this).addClass("music-cur")
-                    switch (music_tag) {
-                        case "op_ed":
-                            $("#op_js").css("display", "block")
-                            $("#ost_js").css("display", "none")
-                            $("#other_js").css("display", "none")
-                            $("#all_js").css("display", "none")
-                            break;
-                        case "ost":
-                            $("#op_js").css("display", "none")
-                            $("#ost_js").css("display", "block")
-                            $("#other_js").css("display", "none")
-                            $("#all_js").css("display", "none")
-                            break;
-                        case "other":
-                            $("#op_js").css("display", "none")
-                            $("#ost_js").css("display", "none")
-                            $("#other_js").css("display", "block")
-                            $("#all_js").css("display", "none")
-                            break;
-                    }
-                }
-
             })
         })
     })();

@@ -143,38 +143,7 @@
   }
   .left-fix-bar .fix-bar-panel .top-weather-box {
     padding-top: 100px;
-  }
-  .left-fix-bar .fix-bar-panel .top-weather-box .weather-show .weather-list {
-    font-size: 0;
-  }
-  .left-fix-bar .fix-bar-panel .top-weather-box .weather-show .weather-list .weather-item {
-    display: block;
-    margin-left: 10px;
-  }
-  .left-fix-bar .fix-bar-panel .top-weather-box .weather-show .weather-list .weather-item .weather-pic {
-    display: inline-block;
-    width: 60px;
-    height: 50px;
-    margin-right: 10px;
-    vertical-align: middle;
-  }
-  .left-fix-bar .fix-bar-panel .top-weather-box .weather-show .weather-list .weather-item .weather-detail {
-    display: inline-block;
-    line-height: 50px;
-    vertical-align: middle;
-  }
-  .left-fix-bar .fix-bar-panel .top-weather-box .weather-show .weather-list .weather-item .weather-detail .weather-des {
-    display: block;
-    font-size: 14px;
-    line-height: 1;
-    color: #333;
-  }
-  .left-fix-bar .fix-bar-panel .top-weather-box .weather-show .weather-list .weather-item .weather-detail .weather-tem {
-    display: block;
-    padding-top: 5px;
-    font-size: 14px;
-    line-height: 1;
-    color: #333;
+    text-align: center;
   }
   .left-fix-bar .fix-bar-panel .top-weather-box .city-bar {
     margin: 16px 10px 0;
@@ -613,8 +582,7 @@
     border: solid 1px #666666;
     border-right: none;
     box-sizing: border-box;
-    opacity: 0.8;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   #indexWrap .search-header .s-inner .top-panel .right-search-container .s-panel > li .s-form .opt-wr .s-opt-logo > a {
     display: inline-block;
@@ -941,8 +909,7 @@
     vertical-align: middle;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    opacity: 0.8;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   #indexWrap .s-inner .top-panel .right-search-container .s-panel > li .s-form .opt-wr .s-opt-logo > a {
     display: inline-block;
@@ -1181,6 +1148,10 @@
     color: #333;
     cursor: pointer;
   }
+  #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .tag-item > a {
+    text-decoration: none;
+    color: #333;
+  }
   #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .active {
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -1320,7 +1291,7 @@
     display: inline-block;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     word-break: break-all;
     color: #333;
   }
@@ -1677,6 +1648,11 @@
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
+    transition: all 300ms ease;
+  }
+  #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-tubang .tubang-swiper .swiper-container-tubang .swiper-wrapper .swiper-slide .tubang-link .tubang-show:hover {
+    margin-top: -6px;
+    padding-top: 6px;
   }
   #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-tubang .tubang-swiper .swiper-container-tubang .tubang-next {
     position: absolute;
@@ -1976,6 +1952,7 @@
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list {
     position: relative;
+    padding-bottom: 30px;
     font-size: 0;
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list .webs-item {
@@ -2579,6 +2556,7 @@
   #indexWrap .container-fluid .music-screen-box .music-screen-con .music-cur {
     background-color: #2abaca;
     border: solid 1px #2abaca !important;
+    color: #fff;
   }
   #indexWrap .container-fluid .music-screen-box .music-screen-con .music-list {
     padding-top: 30px;
@@ -2919,6 +2897,7 @@
   }
   #indexWrap .zb-detail-wrp .zb-detail-box .zb-right-detail .zb-r-box .zb-list-bottom .zb-bot-list .zb-bot-item {
     display: inline-block;
+    width: 100%;
     text-decoration: none;
     margin-bottom: 18px;
   }
@@ -3026,6 +3005,12 @@
     font-size: 18px;
     text-indent: 2em;
     line-height: 1.5;
+  }
+  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-text > p > img {
+    margin: 4px 0 ;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-img {
     display: block;
@@ -3164,8 +3149,7 @@
     border: solid 1px #666666;
     border-right: none;
     box-sizing: border-box;
-    opacity: 0.8;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   #mhWrap .search-header .s-inner .top-panel .right-search-container .s-panel > li .s-form .opt-wr .s-opt-logo > a {
     display: inline-block;
@@ -3499,8 +3483,7 @@
     border: solid 1px #666666;
     border-right: none;
     box-sizing: border-box;
-    opacity: 0.8;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   #indexWrap .search-header .s-inner .top-panel .right-search-container .s-panel > li .s-form .opt-wr .s-opt-logo > a {
     display: inline-block;
@@ -3828,8 +3811,7 @@
     vertical-align: middle;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    opacity: 0.8;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   #indexWrap .s-inner .top-panel .right-search-container .s-panel > li .s-form .opt-wr .s-opt-logo > a {
     display: inline-block;
@@ -3998,8 +3980,7 @@
     vertical-align: middle;
     border-top-left-radius: 3px;
     border-bottom-left-radius: 3px;
-    opacity: 0.8;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
   }
   #indexWrap .m-search .m-search-container .s-panel > li .s-form .opt-wr .s-opt-logo > a {
     display: inline-block;
@@ -4243,6 +4224,9 @@
     color: #333;
     cursor: pointer;
   }
+  #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .tag-item > a {
+    color: #333;
+  }
   #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .active {
     position: relative;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -4395,7 +4379,7 @@
     display: inline-block;
     font-size: 20px;
     line-height: 1.5;
-    margin-bottom: 70px;
+    margin-bottom: 20px;
     word-break: break-all;
     color: #333;
   }
@@ -4752,6 +4736,11 @@
     background-size: cover;
     background-position: 50% 0;
     background-repeat: no-repeat;
+    transition: all 300ms ease;
+  }
+  #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-tubang .tubang-swiper .swiper-container-tubang .swiper-wrapper .swiper-slide .tubang-link .tubang-show:hover {
+    margin-top: -6px;
+    padding-top: 6px;
   }
   #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-tubang .tubang-swiper .swiper-container-tubang .tubang-next {
     position: absolute;
@@ -5050,6 +5039,7 @@
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list {
     position: relative;
+    padding-bottom: 30px;
     font-size: 0;
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list .webs-item {
@@ -5651,6 +5641,7 @@
   #indexWrap .container-fluid .music-screen-box .music-screen-con .music-cur {
     background-color: #2abaca;
     border: solid 1px #2abaca !important;
+    color: #fff;
   }
   #indexWrap .container-fluid .music-screen-box .music-screen-con .music-list {
     padding-top: 30px;
@@ -5990,6 +5981,7 @@
   }
   #indexWrap .zb-detail-wrp .zb-detail-box .zb-right-detail .zb-r-box .zb-list-bottom .zb-bot-list .zb-bot-item {
     display: inline-block;
+    width: 100%;
     text-decoration: none;
     margin-bottom: 18px;
   }
@@ -6097,6 +6089,12 @@
     font-size: 18px;
     text-indent: 2em;
     line-height: 1.5;
+  }
+  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-text > p > img {
+    margin: 4px 0 ;
+    max-width: 100%;
+    display: block;
+    vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-img {
     display: block;

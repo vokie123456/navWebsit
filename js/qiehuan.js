@@ -39,7 +39,7 @@ $(document).ready(function () {
             $(".tag-list .tag-item").removeClass("active")
             $(this).addClass("active")
             var tag_text = $(this).text()
-            // console.log(tag_text)
+            console.log(tag_text)
             switch (tag_text) {
                 case "导航":
                     $("#fst_p").css("display", "block")
