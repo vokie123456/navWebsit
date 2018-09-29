@@ -2808,8 +2808,14 @@ body {
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text {
     color: #999;
   }
-  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text {
-    color: #999;
+  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text:nth-of-type(2) {
+    width: 70%;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-headline {
     margin: 0 20px;
@@ -2849,7 +2855,7 @@ body {
     margin: 10px 0;
     max-width: 100% !important;
     height: auto !important;
-    display: block;
+    display: inline-block;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-img {
     display: block;

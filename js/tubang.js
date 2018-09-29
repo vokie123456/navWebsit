@@ -35,7 +35,6 @@
             if (getClient().height + getScrollTop() >= items[items.length - 1].offsetTop) {
                 if (cache.length > loadNum) {
                     cache.splice(0, loadNum)
-                    console.log(cache)
                     initLoad(loadNum, cache)
                 }
             }

@@ -2970,8 +2970,14 @@
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text {
     color: #999;
   }
-  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text {
-    color: #999;
+  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text:nth-of-type(2) {
+    width: 70%;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-headline {
     margin: 0 20px;
@@ -3009,7 +3015,7 @@
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-text > p > img {
     margin: 4px 0 ;
     max-width: 100%;
-    display: block;
+    display: inline-block;
     vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-img {
@@ -4225,6 +4231,7 @@
     cursor: pointer;
   }
   #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .tag-item > a {
+    text-decoration: none;
     color: #333;
   }
   #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .active {
@@ -6054,8 +6061,14 @@
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text {
     color: #999;
   }
-  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text {
-    color: #999;
+  #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-title .z-link .z-link-text:nth-of-type(2) {
+    width: 70%;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-headline {
     margin: 0 20px;
@@ -6093,7 +6106,7 @@
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-text > p > img {
     margin: 4px 0 ;
     max-width: 100%;
-    display: block;
+    display: inline-block;
     vertical-align: middle;
   }
   #indexWrap .zx-detail-wrp .zx-detail-box .zx-detail .zx-main-con .zx-main-box .zx-main-img {

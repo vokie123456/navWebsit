@@ -315,6 +315,8 @@ $(document).ready(function () {
             }
         }
         var mS = new MobSearch()
+
+
     })();
     /**
      * 网页大全
@@ -790,13 +792,6 @@ $(document).ready(function () {
          * 屏幕小于1300 大于768
          * 收起
          */
-        if (this.pageW > 768) {
-            // $(".fix-bar-btn .bar-btn-img").attr("src", "./img/web/jiantou6.png")
-            //  $(".fix-bar-btn .iconfont").text("&#xf0344;")
-            // $("#fixOff").css("display", "inline-block")
-            // $("#fixOpen").css("display", "none")
-            // $("fix-bar-btn").attr("data-status", "off")
-        }
         if (LBC_leftFix.get()) {
             if (LBC_leftFix.get().status == "open") {
                 var eleTog = $(".fix-bar-btn")
@@ -1202,8 +1197,8 @@ $(document).ready(function () {
             this.single = function (status, dataId) {
                 if (!status) {
                     $(".music-screen-con .music-list").css("display", "none")
-                    $(".music-screen-con .music-list").each (function () {
-                        if($(this).attr("data-id") == dataId){
+                    $(".music-screen-con .music-list").each(function () {
+                        if ($(this).attr("data-id") == dataId) {
                             $(this).css("display", "block")
                         }
                     })

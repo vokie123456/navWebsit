@@ -2957,8 +2957,14 @@ body {
                             .z-link-text {
                                 color: #999;
                             }
-                            .z-link-text {
-                                color: #999;
+                            .z-link-text:nth-of-type(2){
+                                width: 70%;
+                                display: inline-block;
+                                line-height: 1;
+                                white-space: nowrap;
+                                text-overflow: ellipsis;
+                                overflow: hidden;
+                                vertical-align: middle;
                             }
                         }
                     }
@@ -3000,7 +3006,7 @@ body {
                                         margin: 10px 0;
                                         max-width: 100% !important;
                                         height: auto !important;
-                                        display: block;
+                                        display: inline-block;
                                     }
                                 }
                             }
