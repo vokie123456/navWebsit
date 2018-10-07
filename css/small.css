@@ -805,6 +805,11 @@
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item:nth-of-type(4) {
     display: none;
   }
+  #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-right {
+    padding-top: 5px;
+    margin: 0 5px;
+    background-color: #fff;
+  }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-right .zixun-r-top {
     overflow: hidden;
   }

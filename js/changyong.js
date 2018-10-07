@@ -99,10 +99,6 @@
             var name = item["name"]
             var link = item["link"]
             var des = item["des"]
-            // $(".hid-list .hid-item").each(function () {
-            //     if ($(this).attr("data-id") == dataId) {
-            //     }
-            // })
             var html = `
                     <li class="hid-item col-lg-3 col-md-4 col-sm-6 col-xs-6" data-id="${dataId}">
                         <a href=${link} target="_blank" class="hid-web-link">${name}</a>

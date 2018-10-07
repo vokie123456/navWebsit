@@ -765,4 +765,16 @@ $(document).ready(function () {
             }
         })
     })();
+        /**
+     * 开启天气
+     */
+    $("#night_show").on("click", function() {
+        $(this).css("display","none")
+        $(".iframe_2").css("display","inline-block")
+    })
+    $("#day_show").on("click", function() {
+        console.log(213213213)
+        $(this).css("display","none")
+        $(".iframe_1").css("display","inline-block")
+    })
 })

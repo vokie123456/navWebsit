@@ -52,7 +52,7 @@ body {
     .title-text {
         position: relative;
         padding-left: 12px;
-        font-size: 20px;
+        font-size: 28px;
         font-weight: bold;
         line-height: 1;
         letter-spacing: 0px;
@@ -63,8 +63,8 @@ body {
         position: absolute;
         top: 0;
         left: 0;
-        width: 6px;
-        height: 20px;
+        width: 8px;
+        height: 30px;
         background-color: #2abaca;
     }
 }
@@ -193,12 +193,7 @@ body {
             background-color: #f5f5f5;
             border: 1px solid #e1e1e1;
             border-left: none;
-            cursor: pointer; // .bar-btn-img {
-            //     display: inline-block;
-            //     width: 20px;
-            //     height: 20px;
-            //     vertical-align: middle;
-            // }
+            cursor: pointer; 
         }
         .fix-bar-btn:hover {
             .bar-btn-img {
@@ -208,7 +203,7 @@ body {
         .fix-bar-panel {
             // display: none;
             .top-weather-box {
-                padding-top: 100px;
+                padding-top: 60px;
                 text-align: center;
                 .wtname {
                     color: #333;
@@ -326,6 +321,29 @@ body {
                         }
                     }
                 }
+            }
+            .show-weather{
+                width: 100%;
+                text-align: center;
+                border: none;
+                background-color: transparent;
+                outline: none;
+                cursor: pointer;
+                img{
+                    display: inline-block;
+                    width: 40px;
+                    height: auto;
+                }
+            }
+            .check-weather{
+                text-align: center;
+                line-height: 2;
+            }
+            .weather-back{
+                text-align: center;
+                line-height: 2;
+                display: none;
+                cursor: pointer;
             }
             .left-list-box {
                 padding-top: 68px;
@@ -476,7 +494,7 @@ body {
         }
         .fix-bar-bottom {
             position: absolute;
-            bottom: 50px;
+            bottom: 160px;
             left: 50%;
             transform: translateX(-50%); // display: none;
             .gonggao-box {
@@ -488,15 +506,15 @@ body {
                     height: 92px;
                 }
                 .gonggao-code {
-                    display: inline-block;
-                    margin-left: 16px;
-                    line-height: 1;
-                    width: 70px;
-                    height: 70px;
+                    // display: inline-block;
+                    // margin-right: 16px;
+                    // line-height: 1;
+                    // width: 140px;
+                    // height: 140px;
                 }
                 .gonggao-des {
-                    margin-left: 16px;
-                    line-height: 1;
+                    // margin-left: 16px;
+                    // line-height: 1;
                 }
             }
         }
@@ -525,7 +543,8 @@ body {
                 top: 50%;
                 margin-top: -32px;
                 left: 50%;
-                transform: translateX(-50%);
+                margin-left: -650px;
+                // transform: translateX(-50%);
                 .top-panel {
                     width: 100%;
                     .left-logo {
@@ -861,7 +880,8 @@ body {
             z-index: 99999;
             top: 218px;
             left: 50%;
-            transform: translateX(-50%);
+            margin-left: -650px;
+            // transform: translateX(-50%);
             .top-panel {
                 width: 100%;
                 height: 100px;
@@ -1184,6 +1204,9 @@ body {
                                 color: #333;
                                 cursor: pointer;
                                 >a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 100%;
                                     text-decoration: none;
                                     color: #333;
                                 }
@@ -1292,7 +1315,7 @@ body {
                                 .zx-l-item {
                                     display: inline-block;
                                     width: 48%;
-                                    margin-right: 18px;
+                                    margin-right: 16px;
                                     margin-bottom: 18px;
                                     background-color: #ffffff; // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
                                     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
@@ -1330,6 +1353,7 @@ body {
                                             width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
+                                                max-height: 88px;
                                                 font-size: 20px;
                                                 line-height: 1.5;
                                                 margin-bottom: 20px;
@@ -1385,6 +1409,9 @@ body {
                             }
                         }
                         .zixun-right {
+                            background-color: #fff;
+                            padding-left: 10px;
+                            padding-top: 10px;
                             .zixun-r-top {
                                 overflow: hidden;
                                 .swiper-container-zixun {
@@ -1471,7 +1498,7 @@ body {
                                         font-size: 0;
                                         .r-bot-item {
                                             cursor: pointer;
-                                            margin-top: 18px;
+                                            margin-top: 15px;
                                             .r-bot-link {
                                                 display: block;
                                                 line-height: 16px;
@@ -2020,7 +2047,7 @@ body {
                                     padding-bottom: 30px;
                                     font-size: 0;
                                     .webs-item {
-                                        padding-right: 25px;
+                                        padding-right: 5px;
                                         height: 80px;
                                         line-height: 80px;
                                         margin-top: 5px;
@@ -2030,7 +2057,7 @@ body {
                                             position: relative;
                                             width: 100%;
                                             height: 100%;
-                                            padding-left: 50px;
+                                            padding-left: 74px;
                                             border-radius: 2px;
                                             border: solid 1px #eee;
                                             background-color: #fff;
@@ -3288,7 +3315,8 @@ body {
                 top: 50%;
                 margin-top: -32px;
                 left: 50%;
-                transform: translateX(-50%);
+                margin-left: -650px;
+                // transform: translateX(-50%);
                 .top-panel {
                     width: 100%;
                     .left-logo {

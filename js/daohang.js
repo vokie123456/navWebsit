@@ -6,10 +6,12 @@
   /**
    * 主页获取缓存的导航
    */
+        
+
   (function () {
       // 定义获取的导航
       var navItem
-
+      console.log("123导航js！！")
       function add_navItem() {
           var push_item = {
               id: 0,
@@ -174,8 +176,8 @@
                   $("#six_p").css("display", "none")
                   $("#sev_p").css("display", "none")
                   $("#mbackBtn").css("display", "inline-block")
-                  document.getElementsByClassName("tag-item")[4].classList.add("active")
-                  document.getElementsByClassName("hid-item-link")[4].classList.add("hid-item-cur")
+                  document.getElementsByClassName("tag-item")[5].classList.add("active")
+                  document.getElementsByClassName("hid-item-link")[5].classList.add("hid-item-cur")
                   break;
               case "周边":
                   $("#fst_p").css("display", "none")
@@ -198,8 +200,8 @@
                   $("#six_p").css("display", "block")
                   $("#sev_p").css("display", "none")
                   $("#mbackBtn").css("display", "inline-block")
-                  document.getElementsByClassName("tag-item")[5].classList.add("active")
-                  document.getElementsByClassName("hid-item-link")[5].classList.add("hid-item-cur")
+                  document.getElementsByClassName("tag-item")[4].classList.add("active")
+                  document.getElementsByClassName("hid-item-link")[4].classList.add("hid-item-cur")
                   break;
               case "新番列表":
                   $("#fst_p").css("display", "none")

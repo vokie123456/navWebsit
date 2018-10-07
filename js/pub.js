@@ -365,9 +365,9 @@ $(document).ready(function () {
                         $(this).children(".webs-item-btn").addClass("click")
                         hids = document.getElementsByClassName("webs-item-hid")
                         if (index < 4) {
-                            var marginW = -($(".webs-item").width() + 25) * index
+                            var marginW = -($(".webs-item").width() + 5) * index
                         } else {
-                            var marginW = -($(".webs-item").width() + 25) * (index % 4)
+                            var marginW = -($(".webs-item").width() + 5) * (index % 4)
                         }
                         for (var i = 0; i < hids.length; i++) {
                             (function (j) {
@@ -450,9 +450,9 @@ $(document).ready(function () {
                         $(this).children(".webs-item-btn").addClass("click")
                         hids = document.getElementsByClassName("webs-item-hid")
                         if (index < 3) {
-                            var marginW = -($(".webs-item").width() + 25) * index
+                            var marginW = -($(".webs-item").width() + 5) * index
                         } else {
-                            var marginW = -($(".webs-item").width() + 25) * (index % 3)
+                            var marginW = -($(".webs-item").width() + 5) * (index % 3)
                         }
                         for (var i = 0; i < hids.length; i++) {
                             (function (j) {
@@ -545,9 +545,9 @@ $(document).ready(function () {
                         $(this).children(".webs-item-btn").addClass("click")
                         hids = document.getElementsByClassName("webs-item-hid")
                         if (index < 2) {
-                            var marginW = -($(".webs-item").width() + 25) * index
+                            var marginW = -($(".webs-item").width() + 5) * index
                         } else {
-                            var marginW = -($(".webs-item").width() + 25) * (index % 2)
+                            var marginW = -($(".webs-item").width() + 5) * (index % 2)
                         }
                         for (var i = 0; i < hids.length; i++) {
                             (function (j) {
@@ -1251,4 +1251,18 @@ $(document).ready(function () {
             }
         })
     })();
+
+    /**
+     * 开启天气
+     */
+    $("#night_show").on("click", function() {
+        $(this).css("display","none")
+        $(".iframe_2").css("display","inline-block")
+    })
+    $("#day_show").on("click", function() {
+        console.log(213213213)
+        $(this).css("display","none")
+        $(".iframe_1").css("display","inline-block")
+    })
+
 })

@@ -42,7 +42,7 @@ body {
 .small-screen-title .title-text {
   position: relative;
   padding-left: 12px;
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   line-height: 1;
   letter-spacing: 0px;
@@ -53,8 +53,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 6px;
-  height: 20px;
+  width: 8px;
+  height: 30px;
   background-color: #2abaca;
 }
 /* 页脚 */
@@ -180,7 +180,7 @@ body {
     color: #2abaca !important;
   }
   .left-fix-bar .fix-bar-panel .top-weather-box {
-    padding-top: 100px;
+    padding-top: 60px;
     text-align: center;
   }
   .left-fix-bar .fix-bar-panel .top-weather-box .wtname {
@@ -294,6 +294,29 @@ body {
   }
   .left-fix-bar .fix-bar-panel .top-weather-box .select-city-bar .city-setting fieldset .weather-done:hover {
     color: #2abaca;
+  }
+  .left-fix-bar .fix-bar-panel .show-weather {
+    width: 100%;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+  }
+  .left-fix-bar .fix-bar-panel .show-weather img {
+    display: inline-block;
+    width: 40px;
+    height: auto;
+  }
+  .left-fix-bar .fix-bar-panel .check-weather {
+    text-align: center;
+    line-height: 2;
+  }
+  .left-fix-bar .fix-bar-panel .weather-back {
+    text-align: center;
+    line-height: 2;
+    display: none;
+    cursor: pointer;
   }
   .left-fix-bar .fix-bar-panel .left-list-box {
     padding-top: 68px;
@@ -439,7 +462,7 @@ body {
   }
   .left-fix-bar .fix-bar-bottom {
     position: absolute;
-    bottom: 50px;
+    bottom: 160px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -451,17 +474,6 @@ body {
     line-height: 1;
     width: 92px;
     height: 92px;
-  }
-  .left-fix-bar .fix-bar-bottom .gonggao-box .gonggao-code {
-    display: inline-block;
-    margin-left: 16px;
-    line-height: 1;
-    width: 70px;
-    height: 70px;
-  }
-  .left-fix-bar .fix-bar-bottom .gonggao-box .gonggao-des {
-    margin-left: 16px;
-    line-height: 1;
   }
 }
 /* 屏幕宽度大于1300px */
@@ -487,7 +499,7 @@ body {
     top: 50%;
     margin-top: -32px;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -650px;
   }
   #indexWrap .search-header .s-inner .top-panel {
     width: 100%;
@@ -815,7 +827,7 @@ body {
     z-index: 99999;
     top: 218px;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -650px;
   }
   #indexWrap .s-inner .top-panel {
     width: 100%;
@@ -1140,6 +1152,9 @@ body {
     cursor: pointer;
   }
   #indexWrap .nav-icon-wrap .icon-box .icon-tag-panel .left-tag .tag-list .tag-item > a {
+    display: block;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
     color: #333;
   }
@@ -1240,7 +1255,7 @@ body {
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item {
     display: inline-block;
     width: 48%;
-    margin-right: 18px;
+    margin-right: 16px;
     margin-bottom: 18px;
     background-color: #ffffff;
     box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
@@ -1281,6 +1296,7 @@ body {
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item .l-item-box .zx-r-content .r-c-title {
     display: inline-block;
+    max-height: 88px;
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -1327,6 +1343,11 @@ body {
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item:hover {
     box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.15);
+  }
+  #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-right {
+    background-color: #fff;
+    padding-left: 10px;
+    padding-top: 10px;
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-right .zixun-r-top {
     overflow: hidden;
@@ -1411,7 +1432,7 @@ body {
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-right .zixun-r-bot .r-bot-box .r-bot-list .r-bot-item {
     cursor: pointer;
-    margin-top: 18px;
+    margin-top: 15px;
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-right .zixun-r-bot .r-bot-box .r-bot-list .r-bot-item .r-bot-link {
     display: block;
@@ -1920,7 +1941,7 @@ body {
     font-size: 0;
   }
   #indexWrap .container-fluid .main-screen-box .main-webs .web-all .web-all-box .webs-list-wrp .webs-list .webs-item {
-    padding-right: 25px;
+    padding-right: 5px;
     height: 80px;
     line-height: 80px;
     margin-top: 5px;
@@ -1931,7 +1952,7 @@ body {
     position: relative;
     width: 100%;
     height: 100%;
-    padding-left: 50px;
+    padding-left: 74px;
     border-radius: 2px;
     border: solid 1px #eee;
     background-color: #fff;
@@ -3118,7 +3139,7 @@ body {
     top: 50%;
     margin-top: -32px;
     left: 50%;
-    transform: translateX(-50%);
+    margin-left: -650px;
   }
   #mhWrap .search-header .s-inner .top-panel {
     width: 100%;
