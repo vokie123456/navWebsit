@@ -153,7 +153,7 @@
             background-color: #f5f5f5;
             border: 1px solid #e1e1e1;
             border-left: none;
-            cursor: pointer; 
+            cursor: pointer;
         }
         .fix-bar-btn:hover {
             .bar-btn-img {
@@ -243,24 +243,24 @@
                     }
                 }
             }
-            .show-weather{
+            .show-weather {
                 width: 100%;
                 text-align: center;
                 border: none;
                 outline: none;
                 background-color: transparent;
                 cursor: pointer;
-                img{
+                img {
                     display: inline-block;
                     width: 40px;
                     height: auto;
                 }
             }
-            .check-weather{
+            .check-weather {
                 text-align: center;
                 line-height: 2;
             }
-            .weather-back{
+            .weather-back {
                 text-align: center;
                 line-height: 2;
                 display: none;
@@ -430,6 +430,7 @@
                     display: inline-block;
                     line-height: 1;
                     margin-right: 0px;
+                    margin-top: 10px;
                     width: 150px;
                     height: 150px;
                 }
@@ -540,7 +541,7 @@
             display: none;
             .s-inner {
                 position: absolute;
-                width: 100vw;
+                width: 98vw;
                 z-index: 99999;
                 top: 50%;
                 margin-top: -32px;
@@ -844,9 +845,12 @@
                                     background-size: 100% 100%;
                                     background-repeat: no-repeat;
                                 }
-                            } // .h-arrow-panel:hover {
-                            //     opacity: 1;
-                            // }
+                            }
+                        }
+                        .head-bg:hover {
+                            .h-arrow-panel {
+                                display: block;
+                            }
                         }
                     }
                 }
@@ -878,7 +882,7 @@
         }
         .s-inner {
             position: absolute;
-            width: 100vw;
+            width: 98vw;
             z-index: 999999;
             top: 213px;
             left: 50%;
@@ -1210,7 +1214,7 @@
                                 background-color: #fcfcfc;
                                 color: #333;
                                 cursor: pointer;
-                                >a{
+                                >a {
                                     display: block;
                                     height: 100%;
                                     width: 100%;
@@ -1419,7 +1423,7 @@
                         .zixun-right {
                             padding-top: 10px;
                             padding-left: 10px;
-                            background-color:#fff;
+                            background-color: #fff;
                             .zixun-r-top {
                                 overflow: hidden;
                                 .swiper-container-zixun {
@@ -1502,7 +1506,7 @@
                                 .r-bot-box {
                                     margin-top: 6px;
                                     .r-bot-list {
-                                        margin-top:-18px;
+                                        margin-top: -18px;
                                         font-size: 0;
                                         .r-bot-item {
                                             cursor: pointer;
@@ -2154,9 +2158,9 @@
                                                         line-height: 1;
                                                         color: #666;
                                                     }
-                                                     .m-web-des{
-                                                         display: none;
-                                                     }
+                                                    .m-web-des {
+                                                        display: none;
+                                                    }
                                                     .web-link-des {
                                                         display: inline-block;
                                                         position: absolute;
@@ -2212,109 +2216,125 @@
                         padding-right: 10px;
                         .zx-l-box {
                             .zx-det-list {
-                                font-size: 0;
-                                .zx-l-item {
-                                    margin-bottom: 30px;
-                                    vertical-align: middle;
-                                    border-radius: 5px;
-                                    background-color: #fff; // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
-                                    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
-                                    transition: all 200ms ease;
-                                    .zx-l-link {
-                                        position: relative;
-                                        display: inline-block;
-                                        text-decoration: none;
-                                        color: #333;
-                                        .l-des {
+                                .zx-det-box {
+                                    font-size: 0;
+                                    .zx-l-item {
+                                        margin-bottom: 30px;
+                                        vertical-align: middle;
+                                        border-radius: 5px;
+                                        background-color: #fff; // box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.1);
+                                        box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.15), 0px 2px 4px 0px rgba(0, 0, 0, 0.10);
+                                        transition: all 200ms ease;
+                                        .zx-l-link {
                                             position: relative;
-                                            height: 180px;
-                                            float: left;
-                                            width: 68%;
-                                            padding: 15px 0 15px 15px;
-                                            .des-title {
-                                                width: 770px;
-                                                .title-icon {
-                                                    width: 20px;
-                                                    height: 20px;
-                                                    display: inline-block;
-                                                    vertical-align: middle;
-                                                }
-                                                .title-text {
-                                                    width: 80%;
-                                                    padding-left: 10px;
-                                                    display: inline-block;
-                                                    font-size: 20px;
-                                                    vertical-align: middle;
-                                                    margin: 0;
-                                                    line-height: 1;
-                                                }
-                                                .title-text:hover {
-                                                    color: #2abaca;
-                                                }
-                                            }
-                                            .des-text {
-                                                height: 85px;
-                                                padding-top: 15px;
-                                                font-size: 16px;
-                                                line-height: 1.5;
-                                                color: #666;
-                                            }
-                                            .line-ellipsis {
-                                                -webkit-line-clamp: 3;
-                                            }
-                                            .des-bot {
-                                                position: absolute;
-                                                bottom: 15px;
-                                                left: 15px;
-                                                right: 0;
-                                                .bot-left {
-                                                    float: left;
-                                                    font-size: 14px;
-                                                    line-height: 1;
-                                                    color: #999;
-                                                }
-                                                .bot-right {
-                                                    float: right;
-                                                    .icon-time {
+                                            display: inline-block;
+                                            text-decoration: none;
+                                            color: #333;
+                                            .l-des {
+                                                position: relative;
+                                                height: 180px;
+                                                float: left;
+                                                width: 68%;
+                                                padding: 15px 0 15px 15px;
+                                                .des-title {
+                                                    width: 770px;
+                                                    .title-icon {
+                                                        width: 20px;
+                                                        height: 20px;
                                                         display: inline-block;
-                                                        width: 16px;
-                                                        height: 16px;
-                                                        margin-right: 10px;
                                                         vertical-align: middle;
                                                     }
-                                                    .time-desc {
+                                                    .title-text {
+                                                        width: 80%;
+                                                        padding-left: 10px;
+                                                        display: inline-block;
+                                                        font-size: 20px;
                                                         vertical-align: middle;
+                                                        margin: 0;
+                                                        line-height: 1;
+                                                    }
+                                                    .title-text:hover {
+                                                        color: #2abaca;
+                                                    }
+                                                }
+                                                .des-text {
+                                                    height: 85px;
+                                                    padding-top: 15px;
+                                                    font-size: 16px;
+                                                    line-height: 1.5;
+                                                    color: #666;
+                                                }
+                                                .line-ellipsis {
+                                                    -webkit-line-clamp: 3;
+                                                }
+                                                .des-bot {
+                                                    position: absolute;
+                                                    bottom: 15px;
+                                                    left: 15px;
+                                                    right: 0;
+                                                    .bot-left {
+                                                        float: left;
                                                         font-size: 14px;
                                                         line-height: 1;
                                                         color: #999;
                                                     }
+                                                    .bot-right {
+                                                        float: right;
+                                                        .icon-time {
+                                                            display: inline-block;
+                                                            width: 16px;
+                                                            height: 16px;
+                                                            margin-right: 10px;
+                                                            vertical-align: middle;
+                                                        }
+                                                        .time-desc {
+                                                            vertical-align: middle;
+                                                            font-size: 14px;
+                                                            line-height: 1;
+                                                            color: #999;
+                                                        }
+                                                    }
                                                 }
                                             }
-                                        }
-                                        .l-img {
-                                            float: right;
-                                            padding: 10px 14px;
-                                            vertical-align: middle;
-                                            .img-box {
-                                                position: relative;
-                                                width: 200px;
-                                                height: 160px;
-                                                .zixun-img-show {
-                                                    position: absolute;
-                                                    width: 100%;
-                                                    height: 100%;
-                                                    background-size: cover;
-                                                    background-position: 50%;
-                                                    background-repeat: no-repeat;
-                                                    background-color: #ccc;
+                                            .l-img {
+                                                float: right;
+                                                padding: 10px 14px;
+                                                vertical-align: middle;
+                                                .img-box {
+                                                    position: relative;
+                                                    width: 200px;
+                                                    height: 160px;
+                                                    .zixun-img-show {
+                                                        position: absolute;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        background-size: cover;
+                                                        background-position: 50%;
+                                                        background-repeat: no-repeat;
+                                                        background-color: #ccc;
+                                                    }
                                                 }
                                             }
                                         }
                                     }
+                                    .zx-l-item:hover {
+                                        // box-shadow: 3px 0px 24px 0px rgba(0, 0, 0, 0.2);
+                                        box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.15);
+                                    }
                                 }
-                                .zx-l-item:hover {
-                                    // box-shadow: 3px 0px 24px 0px rgba(0, 0, 0, 0.2);
-                                    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.15);
+                                .zx-loadMore{
+                                    padding: 10px 20px;
+                                    max-width: 200px;
+                                    text-align: center;
+                                    position: relative;
+                                    margin: 0 auto;
+                                    font-size: 16px;
+                                    border-radius: 30px;
+                                    display: block;
+                                    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+                                    border: 1px solid #dadada;
+                                    background: #fafafa;
+                                    cursor: pointer;
                                 }
                             }
                         }
@@ -2724,7 +2744,7 @@
                     .music-cur {
                         background-color: #2abaca;
                         border: solid 1px #2abaca !important;
-                        color:#fff;
+                        color: #fff;
                     }
                     .music-list {
                         padding-top: 30px;
@@ -3157,7 +3177,7 @@
                             .z-link-text {
                                 color: #999;
                             }
-                            .z-link-text:nth-of-type(2){
+                            .z-link-text:nth-of-type(2) {
                                 width: 70%;
                                 display: inline-block;
                                 line-height: 1;
@@ -3200,9 +3220,9 @@
                                 font-size: 18px;
                                 text-indent: 2em;
                                 line-height: 1.5;
-                                 >p{
-                                    >img{
-                                        margin: 4px 0 ;
+                                >p {
+                                    >img {
+                                        margin: 4px 0;
                                         max-width: 100%;
                                         display: inline-block;
                                         vertical-align: middle;
@@ -3258,7 +3278,7 @@
             background-color: #fff;
             .s-inner {
                 position: absolute;
-                width: 100vw;
+                width: 98vw;
                 z-index: 99999;
                 top: 50%;
                 margin-top: -32px;
@@ -3599,8 +3619,7 @@
                 top: 50%;
                 margin-top: -40px;
                 left: 50%;
-                margin-left: -650px;
-                // transform: translateX(-50%);
+                margin-left: -650px; // transform: translateX(-50%);
                 .top-panel {
                     width: 100%;
                     text-align: center;
@@ -3932,7 +3951,7 @@
         }
         .s-inner {
             position: absolute;
-            width: 100vw;
+            width: 98vw;
             z-index: 999999;
             top: 210px;
             left: 50%;
@@ -4437,9 +4456,9 @@
                                 background-color: #fcfcfc;
                                 color: #333;
                                 cursor: pointer;
-                                >a{
+                                >a {
                                     text-decoration: none;
-                                    color:#333;
+                                    color: #333;
                                 }
                             }
                             .active {
@@ -4596,7 +4615,7 @@
                                             width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
-                                                  max-height: 88px;
+                                                max-height: 88px;
                                                 font-size: 20px;
                                                 line-height: 1.5;
                                                 margin-bottom: 20px;
@@ -4645,7 +4664,7 @@
                                             }
                                         }
                                     }
-                                } 
+                                }
                                 .zx-l-item:hover {
                                     .l-item-box {
                                         box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.15);
@@ -4656,7 +4675,7 @@
                         .zixun-right {
                             padding-top: 10px;
                             padding-left: 10px;
-                            background-color:#fff;
+                            background-color: #fff;
                             .zixun-r-top {
                                 overflow: hidden;
                                 .swiper-container-zixun {
@@ -5389,7 +5408,7 @@
                                                         line-height: 1;
                                                         color: #666;
                                                     }
-                                                    .m-web-des{
+                                                    .m-web-des {
                                                         display: none;
                                                     }
                                                     .web-link-des {
@@ -5978,7 +5997,7 @@
                     .music-cur {
                         background-color: #2abaca;
                         border: solid 1px #2abaca !important;
-                        color:#fff;
+                        color: #fff;
                     }
                     .music-list {
                         padding-top: 30px;
@@ -6411,7 +6430,7 @@
                             .z-link-text {
                                 color: #999;
                             }
-                               .z-link-text:nth-of-type(2){
+                            .z-link-text:nth-of-type(2) {
                                 width: 70%;
                                 display: inline-block;
                                 line-height: 1;
@@ -6454,9 +6473,9 @@
                                 font-size: 18px;
                                 text-indent: 2em;
                                 line-height: 1.5;
-                                 >p{
-                                    >img{
-                                        margin: 4px 0 ;
+                                >p {
+                                    >img {
+                                        margin: 4px 0;
                                         max-width: 100%;
                                         display: inline-block;
                                         vertical-align: middle;
@@ -6512,7 +6531,7 @@
             background-color: #fff;
             .s-inner {
                 position: absolute;
-                width: 100vw;
+                width: 98vw;
                 z-index: 99999;
                 top: 50%;
                 margin-top: -32px;
