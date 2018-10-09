@@ -1255,14 +1255,31 @@ $(document).ready(function () {
     /**
      * 开启天气
      */
-    $("#night_show").on("click", function() {
-        $(this).css("display","none")
-        $(".iframe_2").css("display","inline-block")
+    $("#night_show").on("click", function () {
+        $(this).css("display", "none")
+        $(".iframe_2").css("display", "inline-block")
     })
-    $("#day_show").on("click", function() {
+    $("#day_show").on("click", function () {
         console.log(213213213)
-        $(this).css("display","none")
-        $(".iframe_1").css("display","inline-block")
+        $(this).css("display", "none")
+        $(".iframe_1").css("display", "inline-block")
     })
+
+    // /**
+    //  * 设为主页
+    //  */ 
+
+    // function SetHome(url) {
+    //     if (document.all) {
+    //         document.body.style.behavior = 'url(#default#homepage)';
+    //         document.body.setHomePage(url);
+    //     } else {
+    //         alert("您好,您的浏览器不支持自动设置页面为首页功能,请您手动在浏览器里设置该页面为首页!");
+    //     }
+    // }
+    // $("#setHome").on("click",function(){
+    //     console.log(123214)
+    //     SetHome("http://daohang.zanhf.com")
+    // })
 
 })

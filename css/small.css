@@ -1625,7 +1625,7 @@
     position: relative;
     height: 127px;
     float: left;
-    padding: 8px 0 0px 8px;
+    padding: 8px;
     vertical-align: middle;
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-det-list .zx-det-box .zx-l-item .zx-l-link .l-des .des-title {
@@ -1661,7 +1661,7 @@
     bottom: 6px;
     left: 15px;
     right: 0;
-    width: 124%;
+    width: 88%;
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-det-list .zx-det-box .zx-l-item .zx-l-link .l-des .des-bot .bot-left {
     float: left;

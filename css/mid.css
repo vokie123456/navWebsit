@@ -1319,7 +1319,7 @@
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item .l-item-box .zx-r-content .r-c-title {
     display: inline-block;
-    max-height: 88px;
+    height: 88px;
     font-size: 20px;
     line-height: 1.5;
     margin-bottom: 20px;
@@ -2120,7 +2120,7 @@
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-det-list .zx-det-box .zx-l-item .zx-l-link {
     position: relative;
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     color: #333;
   }
@@ -2128,8 +2128,8 @@
     position: relative;
     height: 180px;
     float: left;
-    width: 68%;
     padding: 15px 0 15px 15px;
+    margin-right: 15px;
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-det-list .zx-det-box .zx-l-item .zx-l-link .l-des .des-title {
     width: 770px;
@@ -2192,7 +2192,7 @@
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-det-list .zx-det-box .zx-l-item .zx-l-link .l-img {
     float: right;
-    padding: 10px 14px;
+    padding: 10px 14px 10px 0;
     vertical-align: middle;
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-det-list .zx-det-box .zx-l-item .zx-l-link .l-img .img-box {
@@ -3449,7 +3449,6 @@
     top: 50%;
     margin-top: -40px;
     left: 50%;
-    margin-left: -650px;
   }
   #indexWrap .search-header .s-inner .top-panel {
     width: 100%;
@@ -3460,7 +3459,6 @@
     display: block;
     width: 170px;
     line-height: 76.5px;
-    display: none !important;
   }
   #indexWrap .search-header .s-inner .top-panel .left-logo .logo-img {
     display: inline-block;
@@ -3787,7 +3785,7 @@
   }
   #indexWrap .s-inner .top-panel .left-logo {
     float: left;
-    margin-left: 12px;
+    margin-left: 0px;
     display: block;
     width: 170px;
     line-height: 76.5px;
@@ -5231,7 +5229,7 @@
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-l-item .zx-l-link {
     position: relative;
-    display: inline-block;
+    display: flex;
     text-decoration: none;
     color: #333;
   }
@@ -5239,8 +5237,8 @@
     position: relative;
     height: 180px;
     float: left;
-    width: 68%;
     padding: 15px 0 15px 15px;
+    margin-right: 15px;
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-l-item .zx-l-link .l-des .des-title {
     width: 770px;
@@ -5303,7 +5301,7 @@
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-l-item .zx-l-link .l-img {
     float: right;
-    padding: 10px 14px;
+    padding: 10px 14px 10px 0;
     vertical-align: middle;
   }
   #indexWrap .container-fluid .zixun-screen-box .zx-screen-con .left-part .zx-l-box .zx-l-item .zx-l-link .l-img .img-box {

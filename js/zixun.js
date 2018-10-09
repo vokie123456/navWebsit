@@ -5,10 +5,10 @@
 (function () {
     // 获取6组数据
     // ajax
-    function getDate(url, page, sucFn, errorFn, beforeFn) {
+    function getDate(url, [typeid, page], sucFn, errorFn, beforeFn) {
         $.ajax({
-            url: url,
-            data: page,
+            url: url + "?typeid="+ typeid +" &page="+ page ,
+            data: typeid,page,
             type: "GET",
             dataType: "json",
             beforeSend: beforeFn,
@@ -19,6 +19,7 @@
             //成功执行方法  
         })
 
+        console.log(url + "?typeid="+ typeid +" &page="+ page )
     }
 
     // 全部咨询
@@ -92,7 +93,7 @@
                 var btnEq = $(this).index()
                 var page = $(this).attr("page")
                 console.log(page)
-                getDate(urlAll, page, allDate, error)
+                getDate(urlAll, [btnEq, page], allDate, error)
                 page++
                 $(this).attr("page", page)
                 console.log(page)
@@ -114,7 +115,7 @@
     // 调用
     // 初始化
     var urlAll = './api/zixun.json'
-    getDate(urlAll, 1, allDate, error)
+    getDate(urlAll, [1,1], allDate, error)
     bindClick()
 
 
