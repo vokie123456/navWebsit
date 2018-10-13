@@ -1,0 +1,248 @@
+/**
+ * 获取咨询
+ * ajax
+ */
+(function () {
+    /**
+     * 资讯列表切换
+     */
+    $(".zx-r-item").each(function () {
+        $(this).on("click", function () {
+            var zx_index = $(this).attr("data-id")
+            $(".zx-det-list").css("display", "none")
+            $(".zx-r-item").removeClass("zx_r_active")
+            $(".zx-det-list").each(function () {
+                var dataId = $(this).attr("data-id")
+                if (dataId == zx_index) {
+                    $(this).css("display", "block")
+                }
+            })
+            // document.getElementsByClassName("zx-det-list")[index].style.display = "block"
+            $(this).addClass("zx_r_active")
+        })
+    });
+    // 获取6组数据
+    // ajax
+    function getDate(url, [typeid, page], sucFn, errorFn, beforeFn) {
+        $.ajax({
+            url: url + "?typeid=" + typeid + "&page=" + page,
+            type: "GET",
+            dataType: "json",
+            beforeSend: beforeFn,
+            //加载执行方法  
+            erro: errorFn,
+            //错误执行方法  
+            success: sucFn,
+            //成功执行方法  
+        })
+    }
+    // 全部咨询
+    function initFn(data) {
+        var from
+        var time
+        var content
+        var img
+        var intro
+        var title
+        var id = data.cate
+        var url
+        var icon
+        var lastPage = data.data.last_page
+        var curPge = data.data.current_page
+        var zxArr = data.data.data
+        // console.log(data)
+        $.each(zxArr, function (index, ele) {
+            init(ele, id)
+        })
+
+        if (lastPage == curPge) {
+            $(".zx-det-list").eq(id).find(".zx-loadMore").text("加载完毕")
+        }
+    }
+
+    function error() {
+        alert("连接失败，请重试！")
+    }
+
+    function init(ele, id) {
+        from = ele.news_from
+        time = ele.create_time
+        contetnt = ele.content
+        img = ele.img
+        intro = ele.intro
+        title = ele.title
+        url = ele.url
+        icon = ele.icon
+        typeid = ele.typeid
+        time = timestampToTime(time)
+        if (typeid == 1) {
+            urlId = ele.id
+            url = "http://daohang.zanhf.com/portal/zixun_detail.html?id=" + urlId
+        }
+        if (typeid != 1) {
+            // 图片无法抓取
+            if (typeid == 4 || typeid == 9 || typeid == 8 || typeid == 11) {
+                var htmlAll = `
+                <li class="zx-l-item" typeid = ${id}>
+                    <a target="_blank" href="${url}" class="zx-l-link">
+                        <div class="l-des l-des-null">
+                            <div class="des-title">
+                                <img src="/upload/${icon}" class="title-icon">
+                                <h3 class="title-text text-ellipsis">${title}</h3>
+                            </div>
+                            <span class="des-text line-ellipsis">
+                                ${intro}
+                            </span>
+                            <div class="des-bot">
+                                <span class="bot-left text-ellipsis">作者：${from}</span>
+                                <span class="bot-right">
+                                    <img src="/themes/simpleboot3/public/assets/img/web/shijian1.png" class="icon-time">
+                                    <span class="time-desc text-ellipsis">${time}</span>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            `
+                $(".zx-det-box").eq(id).append(htmlAll)
+
+            } else {
+                // 图片可以抓取
+                var htmlAll = `
+                <li class="zx-l-item" typeid = ${id}>
+                    <a target="_blank" href="${url}" class="zx-l-link">
+                        <div class="l-des">
+                            <div class="des-title">
+                                <img src="/upload/${icon}" class="title-icon">
+                                <h3 class="title-text text-ellipsis">${title}</h3>
+                            </div>
+                            <span class="des-text line-ellipsis">
+                                ${intro}
+                            </span>
+                            <div class="des-bot">
+                                <span class="bot-left text-ellipsis">作者：${from}</span>
+                                <span class="bot-right">
+                                    <img src="/themes/simpleboot3/public/assets/img/web/shijian1.png" class="icon-time">
+                                    <span class="time-desc text-ellipsis">${time}</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="l-img">
+                            <div class="img-box">
+                                <div class="zixun-img-show" style="background-image: url(${img});"></div>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            `
+
+                $(".zx-det-box").eq(id).append(htmlAll)
+            }
+
+        } else {
+            var htmlAll = `
+            <li class="zx-l-item" typeid = ${id}>
+                <a target="_blank" href="${url}" class="zx-l-link">
+                    <div class="l-des">
+                        <div class="des-title">
+                            <img src="/upload/${icon}" class="title-icon">
+                            <h3 class="title-text text-ellipsis">${title}</h3>
+                        </div>
+                        <span class="des-text line-ellipsis">
+                            ${intro}
+                        </span>
+                        <div class="des-bot">
+                            <span class="bot-left text-ellipsis">作者：${from}</span>
+                            <span class="bot-right">
+                                <img src="/themes/simpleboot3/public/assets/img/web/shijian1.png" class="icon-time">
+                                <span class="time-desc text-ellipsis">${time}</span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="l-img">
+                        <div class="img-box">
+                            <div class="zixun-img-show" style="background-image: url(/upload/${img});"></div>
+                        </div>
+                    </div>
+                </a>
+            </li>
+        `
+            $(".zx-det-box").eq(id).append(htmlAll)
+        }
+
+
+    }
+    // 对应模块懒加载
+    function bindClick() {
+        $(".zx-loadMore").each(function () {
+            $(this).on("click", function () {
+                var btnEq = $(this).attr("data-id")
+                var page = $(this).attr("page")
+                getDate(urlAll, [btnEq, page], initFn, error)
+                page++
+                $(this).attr("page", page)
+            })
+        })
+    }
+
+
+    // 时间戳转换
+    function timestampToTime(timestamp) {
+        var date = new Date(timestamp * 1000); //时间戳为10位需*1000，时间戳为13位的话不需乘1000
+        var Y = date.getFullYear() + '-';
+        var M = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+        var D = date.getDate() + ' ';
+        // var h = date.getHours() + ':';
+        // var m = date.getMinutes() + ':';
+        // var s = date.getSeconds();
+        return Y + M + D;
+    }
+    // // 调用
+    // // 初始化
+    var urlAll = "http://daohang.zanhf.com/portal/index/getNews"
+    // // 展示对应模块
+    function showZixun() {
+        $(".zx-r-list .zx-r-item").each(function () {
+            var typeid = $(this).attr("data-id")
+            getDate(urlAll, [typeid, 1], initFn, error)
+        })
+        bindClick()
+    }
+
+
+    // pc
+    // 在资讯页面，加载资讯
+    var navText = $(".tag-list .tag-item").eq(1)
+    if (navText.hasClass("active")) {
+        urlAll = "http://daohang.zanhf.com/portal/index/getNews"
+        showZixun()
+    }
+    // 点击到资讯页面，加载资讯
+    navText.on("click", function () {
+        urlAll = "http://daohang.zanhf.com/portal/index/getNews"
+        if ($(this).text() == "资讯") {
+            showZixun()
+        }
+    })
+    // 移动
+    // 在资讯页面，加载资讯
+    var mnavText = $(".m-hid-item .hid-item-link").eq(1)
+    if (mnavText.hasClass("hid-item-cur")) {
+        urlAll = "http://daohang.zanhf.com/portal/index/getNews"
+        showZixun()
+    }
+    // 点击到资讯页面，加载资讯
+    mnavText.on("click", function () {
+        urlAll = "http://daohang.zanhf.com/portal/index/getNews"
+        if ($(this).text() == "资讯") {
+            showZixun()
+        }
+    })
+    // 点击更多按钮
+    $("#zixunMore").on("click",function(){
+        showZixun()
+    })
+
+
+
+}())

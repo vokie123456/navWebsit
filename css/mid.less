@@ -11,22 +11,76 @@
     .footer {
         margin-top: 50px;
         background-color: #fff;
+        .youshang-panel {
+            display: block;
+            margin: 0 15px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #333;
+            .youshang-title {
+                >span {
+                    display: inline-block;
+                }
+                span:nth-of-type(1) {
+                    font-size: 15px;
+                    display: block;
+                    float: left;
+                    font-weight: bold;
+                    height: 35px;
+                    line-height: 35px;
+                    color: #333;
+                }
+                span:nth-of-type(2) {
+                    margin-left: 4px;
+                    font-size: 12px;
+                    color: #cacaca;
+                }
+            }
+            .youshang-link {
+                .ys-link {
+                    display: inline-block;
+                    text-decoration: none;
+                    img {
+                        display: inline-block;
+                        width: 150px;
+                        height: auto;
+                        opacity: .6;
+                        transition: .5s opacity;
+                    }
+                    .subtitle {
+                        letter-spacing: 1px;
+                        display: block;
+                        height: 20px;
+                        line-height: 20px;
+                        font-size: 11px;
+                        text-align: center;
+                        color: #6a6a6a;
+                    }
+                }
+            }
+        }
         .footer-list-box {
             width: 100%;
             margin: 0 auto;
-            padding: 70px 0;
+            padding-bottom: 20px;
             .footer-list {
                 font-size: 0;
+                margin-left: 15px;
                 .footer-item {
+                    display: inline-block;
                     .footer-link {
                         display: inline-block;
-                        padding-left: 145px;
+                        padding: 0 6px;
+                        border-right: 1px solid #999;
                         text-align: left;
                         font-size: 16px;
                         line-height: 1.625;
                         text-decoration: none;
-                        color: #333;
+                        color: #888;
                     }
+                }
+                .footer-item:last-of-type{
+                    .footer-link { border: none;}
                 }
             }
         }
@@ -37,21 +91,75 @@
     .footer {
         margin-top: 50px;
         background-color: #fff;
+        .youshang-panel {
+            display: block;
+            margin: 0 15px;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px dashed #333;
+            .youshang-title {
+                >span {
+                    display: inline-block;
+                }
+                span:nth-of-type(1) {
+                    font-size: 15px;
+                    display: block;
+                    float: left;
+                    font-weight: bold;
+                    height: 35px;
+                    line-height: 35px;
+                    color: #333;
+                }
+                span:nth-of-type(2) {
+                    margin-left: 4px;
+                    font-size: 12px;
+                    color: #cacaca;
+                }
+            }
+            .youshang-link {
+                .ys-link {
+                    display: inline-block;
+                    text-decoration: none;
+                    img {
+                        display: inline-block;
+                        width: 150px;
+                        height: auto;
+                        opacity: .6;
+                        transition: .5s opacity;
+                    }
+                    .subtitle {
+                        letter-spacing: 1px;
+                        display: block;
+                        height: 20px;
+                        line-height: 20px;
+                        font-size: 11px;
+                        text-align: center;
+                        color: #6a6a6a;
+                    }
+                }
+            }
+        }
         .footer-list-box {
             margin: 0 auto;
-            padding: 70px 0;
+            padding-bottom: 20px;
             .footer-list {
                 font-size: 0;
+                margin-left: 15px;
                 .footer-item {
+                    display: inline-block;
                     .footer-link {
                         display: inline-block;
-                        padding-left: 74px;
+                        padding: 0 6px;
+                        border-right: 1px solid #999;
                         text-align: left;
                         font-size: 16px;
                         line-height: 1.625;
                         text-decoration: none;
-                        color: #333;
+                        color: #888;
                     }
+                }
+                .footer-item:last-of-type{
+                    .footer-link { border: none;}
                 }
             }
         }
@@ -276,6 +384,10 @@
                         height: 40px;
                         line-height: 40px;
                         cursor: pointer;
+                        >a {
+                            text-decoration: none;
+                            color: #333;
+                        }
                     }
                     .fix-select {
                         background-color: #f0f0f0;
@@ -520,6 +632,78 @@
                     background-color: rgba(0, 0, 0, 0.1);
                 }
             }
+        }
+    }
+}
+
+@media (max-width:1400px) and (min-width:767px) {
+    .webs-item-hid {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 80px;
+        .hid-list {
+            font-size: 0;
+            .hid-item {
+                padding-right: 25px;
+                margin-top: 30px;
+                text-align: center;
+                .m-web-des {
+                    position: absolute;
+                    right: 14px;
+                    top: 4px;
+                    z-index: 8888;
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    background-color: #ccc;
+                }
+                .show {
+                    background-color: #2abaca;
+                }
+                .hid-web-link {
+                    display: block;
+                    text-decoration: none;
+                    font-size: 20px;
+                    line-height: 1;
+                    color: #666;
+                }
+                .web-link-des {
+                    display: inline-block;
+                    position: absolute;
+                    bottom: -55px;
+                    left: 59%;
+                    transform: translateX(-50%);
+                    z-index: 44444;
+                    padding: 0 10px;
+                    line-height: 2;
+                    border-radius: 8px;
+                    background-color: #000;
+                    display: none;
+                    .des-text {
+                        white-space: nowrap;
+                        font-size: 20px;
+                        color: #fff;
+                    }
+                }
+                .web-link-des:before {
+                    content: '';
+                    position: absolute;
+                    top: -17px;
+                    left: 13px;
+                    border-style: solid;
+                    border-color: transparent transparent #000 transparent;
+                    border-width: 10px;
+                }
+            } // .hid-item:hover {
+            //     .hid-web-link {
+            //         color: #2abaca;
+            //     }
+            //     .web-link-des {
+            //         display: block;
+            //     }
+            // }
         }
     }
 }
@@ -1103,7 +1287,7 @@
                             float: left;
                             display: block;
                             position: relative;
-                            margin-top: 30px;
+                            margin-top: 22px;
                             margin-bottom: 45px;
                             padding-left: 20px;
                             padding-right: 20px;
@@ -1207,8 +1391,8 @@
                                 width: 124px;
                                 height: 40px;
                                 line-height: 40px;
-                                text-align: center;
-                                margin-right: 2px;
+                                text-align: center; // margin-right: 2px;
+                                border-right: 1px solid #ddd;
                                 margin-top: 10px;
                                 text-decoration: none;
                                 background-color: #fcfcfc;
@@ -1359,8 +1543,7 @@
                                             }
                                         }
                                         .zx-r-content {
-                                            float: left;
-                                            width: 60.30%;
+                                            float: left; // width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
                                                 height: 88px;
@@ -1383,16 +1566,14 @@
                                             .bot-item {
                                                 .zx-author {
                                                     float: left;
-                                                    display: block;
-                                                    width: 50%;
+                                                    display: block; // width: 50%;
                                                     font-size: 16px;
                                                     line-height: 1;
                                                     color: #999;
                                                 }
                                                 .zx-time {
                                                     float: right;
-                                                    display: block;
-                                                    width: 50%;
+                                                    display: block; // width: 50%;
                                                     .icon-time {
                                                         width: 16px;
                                                         height: 16px;
@@ -2138,67 +2319,63 @@
                                             right: 0;
                                             z-index: 99;
                                             background-color: #2abaca;
-                                        }
-                                        .webs-item-hid {
-                                            display: none;
-                                            position: absolute;
-                                            left: 0;
-                                            right: 0;
-                                            top: 80px;
-                                            .hid-list {
-                                                font-size: 0;
-                                                .hid-item {
-                                                    padding-right: 25px;
-                                                    margin-top: 30px;
-                                                    text-align: center;
-                                                    .hid-web-link {
-                                                        display: block;
-                                                        text-decoration: none;
-                                                        font-size: 20px;
-                                                        line-height: 1;
-                                                        color: #666;
-                                                    }
-                                                    .m-web-des {
-                                                        display: none;
-                                                    }
-                                                    .web-link-des {
-                                                        display: inline-block;
-                                                        position: absolute;
-                                                        bottom: -55px;
-                                                        left: 59%;
-                                                        transform: translateX(-50%);
-                                                        z-index: 44444;
-                                                        padding: 0 10px;
-                                                        line-height: 2;
-                                                        border-radius: 8px;
-                                                        background-color: #000;
-                                                        display: none;
-                                                        .des-text {
-                                                            white-space: nowrap;
-                                                            font-size: 20px;
-                                                            color: #fff;
-                                                        }
-                                                    }
-                                                    .web-link-des:before {
-                                                        content: '';
-                                                        position: absolute;
-                                                        top: -17px;
-                                                        left: 13px;
-                                                        border-style: solid;
-                                                        border-color: transparent transparent #000 transparent;
-                                                        border-width: 10px;
-                                                    }
-                                                }
-                                                .hid-item:hover {
-                                                    .hid-web-link {
-                                                        color: #2abaca;
-                                                    }
-                                                    .web-link-des {
-                                                        display: block;
-                                                    }
-                                                }
-                                            }
-                                        }
+                                        } // .webs-item-hid {
+                                        //     display: none;
+                                        //     position: absolute;
+                                        //     left: 0;
+                                        //     right: 0;
+                                        //     top: 80px;
+                                        //     .hid-list {
+                                        //         font-size: 0;
+                                        //         .hid-item {
+                                        //             padding-right: 25px;
+                                        //             margin-top: 30px;
+                                        //             text-align: center;
+                                        //             .hid-web-link {
+                                        //                 display: block;
+                                        //                 text-decoration: none;
+                                        //                 font-size: 20px;
+                                        //                 line-height: 1;
+                                        //                 color: #666;
+                                        //             }
+                                        //             .web-link-des {
+                                        //                 display: inline-block;
+                                        //                 position: absolute;
+                                        //                 bottom: -55px;
+                                        //                 left: 59%;
+                                        //                 transform: translateX(-50%);
+                                        //                 z-index: 44444;
+                                        //                 padding: 0 10px;
+                                        //                 line-height: 2;
+                                        //                 border-radius: 8px;
+                                        //                 background-color: #000;
+                                        //                 display: none;
+                                        //                 .des-text {
+                                        //                     white-space: nowrap;
+                                        //                     font-size: 20px;
+                                        //                     color: #fff;
+                                        //                 }
+                                        //             }
+                                        //             .web-link-des:before {
+                                        //                 content: '';
+                                        //                 position: absolute;
+                                        //                 top: -17px;
+                                        //                 left: 13px;
+                                        //                 border-style: solid;
+                                        //                 border-color: transparent transparent #000 transparent;
+                                        //                 border-width: 10px;
+                                        //             }
+                                        //         }
+                                        //         // .hid-item:hover {
+                                        //         //     .hid-web-link {
+                                        //         //         color: #2abaca;
+                                        //         //     }
+                                        //         //     .web-link-des {
+                                        //         //         display: block;
+                                        //         //     }
+                                        //         // }
+                                        //     }
+                                        // }
                                     }
                                 }
                             }
@@ -2234,11 +2411,11 @@
                                                 position: relative;
                                                 height: 180px;
                                                 float: left;
-                                                // width: 68%;
+                                                width: 74%;
                                                 padding: 15px 0 15px 15px;
                                                 margin-right: 15px;
                                                 .des-title {
-                                                    width: 770px;
+                                                    // width: 770px;
                                                     .title-icon {
                                                         width: 20px;
                                                         height: 20px;
@@ -2285,7 +2462,7 @@
                                                             display: inline-block;
                                                             width: 16px;
                                                             height: 16px;
-                                                            margin-right: 10px;
+                                                            margin-right: 4px;
                                                             vertical-align: middle;
                                                         }
                                                         .time-desc {
@@ -2296,6 +2473,9 @@
                                                         }
                                                     }
                                                 }
+                                            }
+                                            .l-des-null {
+                                                width: 100%;
                                             }
                                             .l-img {
                                                 float: right;
@@ -2323,7 +2503,7 @@
                                         box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.15);
                                     }
                                 }
-                                .zx-loadMore{
+                                .zx-loadMore {
                                     padding: 10px 20px;
                                     max-width: 200px;
                                     text-align: center;
@@ -2395,6 +2575,7 @@
                         float: left;
                         width: 20%;
                         .tubang-item {
+                            position: relative;
                             padding-right: 22px;
                             margin-bottom: 8px;
                             float: left;
@@ -2443,6 +2624,30 @@
                                         color: #2abaca;
                                     }
                                 }
+                            }
+                            .img-down {
+                                position: absolute;
+                                top: -5px;
+                                z-index: 10;
+                                right: 26px;
+                                font-size: 12px;
+                                height: 25px;
+                                line-height: 25px;
+                                padding-right: 6px;
+                                padding-left: 22px;
+                                color: white;
+                                display: block;
+                                text-decoration: none;
+                                opacity: 0;
+                                background: rgba(0, 0, 0, 0.5) url(../img/web//xiazai.png) 4px 4px no-repeat;
+                                background-size: 16px;
+                                transition: all .4s;
+                            }
+                        }
+                        .tubang-item:hover {
+                            .img-down {
+                                top: 5px;
+                                opacity: 1;
                             }
                         }
                         .tubang-item:hover {
@@ -2667,7 +2872,7 @@
                             float: left;
                             width: 33.33%;
                             padding-right: 20px;
-                            margin-top: 20px;
+                            padding-bottom: 20px;
                             .zb-link {
                                 display: inline-block;
                                 width: 100%;
@@ -3265,8 +3470,7 @@
         }
     }
     #mhWrap {
-        position: relative;
-        min-height: 100vh;
+        position: relative; // min-height: 100vh;
         background-color: #f5f5f5;
         .search-header {
             position: fixed;
@@ -3593,6 +3797,23 @@
                         }
                     }
                 }
+                .footer-det-container {
+                    text-align: center;
+                    .footer-img-show {
+                        display: inline-block;
+                        width: 600px;
+                    }
+                    .footer-det-text {
+                        margin: 20px auto;
+                        max-width: 1200px;
+                        p {
+                            text-indent: 2em;
+                            text-align: left;
+                            padding: 10px 20px;
+                            line-height: 1.5;
+                        }
+                    }
+                }
             }
         }
     }
@@ -3619,8 +3840,7 @@
                 z-index: 99999;
                 top: 50%;
                 margin-top: -40px;
-                left: 50%;
-                // margin-left: -650px; // transform: translateX(-50%);
+                left: 50%; // margin-left: -650px; // transform: translateX(-50%);
                 .top-panel {
                     width: 100%;
                     text-align: center;
@@ -3628,8 +3848,7 @@
                         float: left;
                         display: block;
                         width: 170px;
-                        line-height: 76.5px;
-                        // display: none !important;
+                        line-height: 76.5px; // display: none !important;
                         .logo-img {
                             display: inline-block;
                             width: 100%;
@@ -4345,7 +4564,7 @@
                         .icon-item {
                             display: block;
                             position: relative;
-                            margin-top: 30px;
+                            margin-top: 22px;
                             margin-bottom: 45px;
                             padding-left: 20px;
                             padding-right: 20px;
@@ -4450,8 +4669,8 @@
                                 width: 90px;
                                 height: 40px;
                                 line-height: 40px;
-                                text-align: center;
-                                margin-right: 2px;
+                                text-align: center; // margin-right: 2px;
+                                border-right: 1px solid #ddd;
                                 margin-top: 10px;
                                 text-decoration: none;
                                 background-color: #fcfcfc;
@@ -4612,8 +4831,7 @@
                                             }
                                         }
                                         .zx-r-content {
-                                            float: left;
-                                            width: 60.30%;
+                                            float: left; // width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
                                                 max-height: 88px;
@@ -4636,16 +4854,14 @@
                                             .bot-item {
                                                 .zx-author {
                                                     float: left;
-                                                    display: block;
-                                                    width: 50%;
+                                                    display: block; // width: 50%;
                                                     font-size: 16px;
                                                     line-height: 1;
                                                     color: #999;
                                                 }
                                                 .zx-time {
                                                     float: right;
-                                                    display: block;
-                                                    width: 50%;
+                                                    display: block; // width: 50%;
                                                     .icon-time {
                                                         display: inline-block;
                                                         width: 16px;
@@ -4670,6 +4886,20 @@
                                     .l-item-box {
                                         box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.12), 0px 6px 16px 0px rgba(0, 0, 0, 0.15);
                                     }
+                                }
+                                .zx-loadMore {
+                                    padding: 10px 20px;
+                                    max-width: 200px;
+                                    text-align: center;
+                                    position: relative;
+                                    margin: 0 auto;
+                                    font-size: 16px;
+                                    border-radius: 30px;
+                                    display: block;
+                                    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+                                    border: 1px solid #dadada;
+                                    background: #fafafa;
+                                    cursor: pointer;
                                 }
                             }
                         }
@@ -5408,10 +5638,7 @@
                                                         font-size: 20px;
                                                         line-height: 1;
                                                         color: #666;
-                                                    }
-                                                    .m-web-des {
-                                                        display: none;
-                                                    }
+                                                    } 
                                                     .web-link-des {
                                                         display: inline-block;
                                                         position: absolute;
@@ -5482,11 +5709,11 @@
                                         position: relative;
                                         height: 180px;
                                         float: left;
-                                        // width: 68%;
+                                        width: 68%;
                                         padding: 15px 0 15px 15px;
                                         margin-right: 15px;
                                         .des-title {
-                                            width: 770px;
+                                            // width: 770px;
                                             .title-icon {
                                                 width: 20px;
                                                 height: 20px;
@@ -5533,7 +5760,7 @@
                                                     display: inline-block;
                                                     width: 16px;
                                                     height: 16px;
-                                                    margin-right: 10px;
+                                                    margin-right: 4px;
                                                     vertical-align: middle;
                                                 }
                                                 .time-desc {
@@ -5544,6 +5771,9 @@
                                                 }
                                             }
                                         }
+                                    }
+                                    .l-des-null {
+                                        width: 100%;
                                     }
                                     .l-img {
                                         float: right;
@@ -5627,6 +5857,7 @@
                         float: left;
                         width: 20%;
                         .tubang-item {
+                            position: relative;
                             padding-right: 22px;
                             margin-bottom: 8px;
                             float: left;
@@ -5676,33 +5907,36 @@
                                     }
                                 }
                             }
+                            .img-down {
+                                position: absolute;
+                                top: -5px;
+                                z-index: 10;
+                                right: 26px;
+                                font-size: 12px;
+                                height: 25px;
+                                line-height: 25px;
+                                padding-right: 6px;
+                                padding-left: 22px;
+                                color: white;
+                                display: block;
+                                text-decoration: none;
+                                opacity: 0;
+                                background: rgba(0, 0, 0, 0.5) url(../img/web//xiazai.png) 4px 4px no-repeat;
+                                background-size: 16px;
+                                transition: all .4s;
+                            }
+                        }
+                        .tubang-item:hover {
+                            .img-down {
+                                top: 5px;
+                                opacity: 1;
+                            }
                         }
                         .tubang-item:hover {
                             .tubang-link {
                                 box-shadow: 7px 0px 16px 0px rgba(0, 0, 0, 0.2);
                             }
-                        } // .tubang-item:nth-of-type(2n) {
-                        //     .tb-top-img {
-                        //         height: 300px;
-                        //     }
-                        // }
-                        // .tubang-item:nth-of-type(3n) {
-                        //     .tb-top-img {
-                        //         height: 320px;
-                        //     }
-                        // }
-                        // .tubang-item:nth-of-type(7n) {
-                        //     margin-top: -60px;
-                        //     .tb-top-img {
-                        //         height: 340px;
-                        //     }
-                        // }
-                        // .tubang-item:nth-of-type(8n) {
-                        //     margin-top: -40px;
-                        // }
-                        // .tubang-item:nth-of-type(9n) {
-                        //     margin-top: -60px;
-                        // }
+                        }
                     }
                 }
             }
@@ -5921,7 +6155,7 @@
                             float: left;
                             width: 33.33%;
                             padding-right: 20px;
-                            margin-top: 20px;
+                            padding-bottom: 20px;
                             .zb-link {
                                 display: inline-block;
                                 width: 100%;
@@ -6519,8 +6753,7 @@
         }
     }
     #mhWrap {
-        position: relative;
-        min-height: 100vh;
+        position: relative; // min-height: 100vh;
         background-color: #f5f5f5;
         .search-header {
             position: fixed;
@@ -6847,6 +7080,23 @@
                             background-color: #2abaca;
                             border: solid 1px #2abaca;
                             color: #fff;
+                        }
+                    }
+                }
+                .footer-det-container {
+                    text-align: center;
+                    .footer-img-show {
+                        display: inline-block;
+                        width: 600px;
+                    }
+                    .footer-det-text {
+                        margin: 0px auto;
+                        max-width: 1200px;
+                        p {
+                            text-indent: 2em;
+                            text-align: left;
+                            padding: 10px 20px;
+                            line-height: 1.5;
                         }
                     }
                 }

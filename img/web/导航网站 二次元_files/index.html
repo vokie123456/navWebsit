@@ -1,0 +1,93 @@
+
+<!-- saved from url=(0069)http://i.tianqi.com/index.php?c=code&id=4&icon=1&wind=1&num=1&site=12 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>合肥天气预报代码调用</title>
+    <link href="./mobile.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="./jquery.min.js.下载"></script>
+    <!--[if IE 6]>
+    <script type="text/javascript" mce_src="DD_belatedPNG.js" src="//img.tianqijun.com/static/js/DD_belatedPNG.js"></script>
+    <script type="text/javascript">DD_belatedPNG.fix(".pngtqico");</script>
+    <![endif]-->
+    <script type="text/javascript">
+        var color = bgcolor = bdcolor = site = icon = "";
+        var wind = 0;
+        $(document).ready(function(){
+            if (typeof(icon) != 'undefined' && icon != '') {
+                $("img.pngtqico").each(function(i){
+                    this.src = this.src.replace("images/tianqi", "images/" + icon);
+                });
+            }
+            if (typeof(bgcolor) != 'undefined' && bgcolor != '') {
+                $("#mobile7").css('background-color', bgcolor);
+                $(".wtbg").css('background-color', bgcolor);
+            }
+            if (typeof(bdcolor) != 'undefined' && bdcolor != '') {
+                $("#mobile7").css('border', '1px solid ' + bdcolor);
+            }
+            if (typeof(color) != 'undefined' && color != '') {
+                $("#mobile7 a").css('color', color);
+                $("#mobile7 div.wtname").css('color', color);
+            }
+            if (typeof(wind) != 'undefined' && wind == 0) {
+                $("#mobile7 div.wtwind").remove();
+            }
+
+            $("#mobile7 .wtbg font").attr('color', color);
+        });
+
+    </script>
+</head>
+<body marginwidth="0" marginheight="0" style="background-color:transparent;">
+<div id="mobile7">
+    <a target="_blank" href="http://hefei.tianqi.com/?tq" title="合肥天气预报,点击查看合肥未来七天天气预报 ">
+        <div class="wtname">合肥天气预报</div>
+        <div class="wt">
+            <div class="wtbg">今天天气</div>
+            <div class="wtpic"><div class="centertwo"><div class="img"><img class="pngtqico" align="absmiddle" src="./b0.png" style="border:0;width:20px;height:20px"></div><div class="img"><img class="pngtqico" align="absmiddle" src="./b0.png" style="border:0;width:20px;height:20px"></div></div></div>
+            <div class="wtwt">晴</div>
+            <div class="wtwind">东风 2级 </div>
+            <div class="wttemp"><font color="#4899be">22℃</font>～<font color="#f00">9℃</font></div>
+        </div>
+        <div class="wt">
+            <div class="wtbg">明天天气</div>
+            <div class="wtpic"><div class="centertwo"><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div></div></div>
+            <div class="wtwt">多云</div>
+            <div class="wtwind"> 东风 1-2级 </div>
+            <div class="wttemp"><font color="#f00">24℃</font>～<font color="#4899be">14℃</font></div>
+        </div>
+        <div class="wt">
+            <div class="wtbg">后天天气</div>
+            <div class="wtpic"><div class="centertwo"><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div></div></div>
+            <div class="wtwt">多云</div>
+            <div class="wtwind"> 东风 1-2级 </div>
+            <div class="wttemp"><font color="#f00">23℃</font>～<font color="#4899be">14℃</font></div>
+        </div>
+        <div class="wt">
+            <div class="wtbg">星期一天气</div>
+            <div class="wtpic"><div class="centertwo"><div class="img"><img class="pngtqico" align="absmiddle" src="./b2.png" style="border:0;width:20px;height:20px"></div><div class="img"><img class="pngtqico" align="absmiddle" src="./b2.png" style="border:0;width:20px;height:20px"></div></div></div>
+            <div class="wtwt">阴</div>
+            <div class="wtwind"> 东风 1-2级 </div>
+            <div class="wttemp"><font color="#f00">19℃</font>～<font color="#4899be">13℃</font></div>
+        </div>
+        <div class="wt">
+            <div class="wtbg">星期二天气</div>
+            <div class="wtpic"><div class="centertwo"><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div></div></div>
+            <div class="wtwt">多云</div>
+            <div class="wtwind"> 东风 1-2级 </div>
+            <div class="wttemp"><font color="#f00">20℃</font>～<font color="#4899be">13℃</font></div>
+        </div>
+        <div class="wt">
+            <div class="wtbg">星期三天气</div>
+            <div class="wtpic"><div class="centertwo"><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div><div class="img"><img class="pngtqico" align="absmiddle" src="./b1.png" style="border:0;width:20px;height:20px"></div></div></div>
+            <div class="wtwt">多云</div>
+            <div class="wtwind"> 东风 1-2级 </div>
+            <div class="wttemp"><font color="#f00">24℃</font>～<font color="#4899be">14℃</font></div>
+        </div>
+    </a>
+</div>
+<div style="display:none"><script type="text/javascript">
+        var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+        document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F86f43783acc56b0c8abb5bb039edc763' type='text/javascript'%3E%3C/script%3E"));
+    </script><script src="./h.js.下载" type="text/javascript"></script><a href="http://tongji.baidu.com/hm-web/welcome/ico?s=86f43783acc56b0c8abb5bb039edc763" target="_blank"><img border="0" src="./21.gif" width="20" height="20"></a></div>
+<script type="text/javascript">num=1;site="12";icon="tqicon1";wind=1;temp=0;</script></body></html>

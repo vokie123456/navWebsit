@@ -43,13 +43,13 @@
 
     function initLoad(loadNum, cache) {
         // 一次加载5张图片
-        for (var i = 0; i <= loadNum; i++) {
+        for (var i = 0; i < loadNum; i++) {
             (function (i) {
                 var img = new Image()
                 var index = i
                 // console.log(index)
                 if (cache[index]) {
-                    img.src = cache[index]["url"]
+                    img.src = "http://daohang.zanhf.com/upload/" + cache[index]["url"]
                     var name = cache[index]["name"]
                     var link = cache[index]["link"]
                     var from = cache[index]["from"]
@@ -63,29 +63,15 @@
     }
 
     // 懒加载
-    function lazyLoad(index, imgDom,data) {
+    function lazyLoad(index, imgDom, data) {
         var index = (index % 5)
         var name = data[0]
         var link = data[1]
         var from = data[2]
-        var src = data[3]
+        var src = "http://daohang.zanhf.com/upload/" + data[3]
         var i = 0
-        var htmlTb =
-            ` <li class="tubang-item">
-                <a href="${link}" target="_blank" class="tubang-link">
-                    <div class="tb-top-img">
-                    </div>
-                    <div class="tb-bot-des">
-                        <span class="tb-des-text line-ellipsis">${name}</span>
-                        <div class="tb-illus-text">
-                            <span class="illus-tag">lllus by</span>
-                            <strong class="illus-strong">${from}</strong>
-                        </div>
-                    </div>
-                </a>
-                <a class="img-down" href="${src}" target="_blank">保存</a>
-            </li>
-            `
+        var htmlTb = " <li class=\"tubang-item\">\n                <a href=\"" + link + "\" target=\"_blank\" class=\"tubang-link\">\n                    <div class=\"tb-top-img\">\n                    </div>\n                    <div class=\"tb-bot-des\">\n                        <span class=\"tb-des-text line-ellipsis\">" + name + "</span>\n                        <div class=\"tb-illus-text\">\n                            <span class=\"illus-tag\">lllus by</span>\n                            <strong class=\"illus-strong\">" + from + "</strong>\n                        </div>\n                    </div>\n                </a>\n                <a class=\"img-down\" href=" + src + " target=\"_blank\">\u4FDD\u5B58</a>\n            </li>\n            ";
+
         $(".tb-screen-list").each(function () {
             if (i == index) {
                 $(this).append(htmlTb)
@@ -93,6 +79,7 @@
             }
             i++
         })
+        // document.getElementsByClassName("tb-screen-list")[index].appendChild(htmlTb)
     }
 
     tubang.prototype = {
@@ -112,7 +99,6 @@
     function getScrollTop() {
         return window.pageYOffset || document.documentElement.scrollTop;
     }
-
     root.tubang = tubang
     root.preLoad = preLoad
     root.lazyLoad = lazyLoad
@@ -125,9 +111,33 @@ var root = window.tubang
 var tubang = new root.tubang
 var preLoad = root.preLoad
 var lazyLoad = root.lazyLoad
-var url = "../api/imgs.json"
 
 /**
+ * 切换到图榜页面
  * 调用变量
  */
-tubang.getDate(url, preLoad)
+var url = "http://daohang.zanhf.com/portal/index/getTubang"
+// pc端
+var navText = $(".tag-list .tag-item").eq(2)
+if (navText.hasClass("active")) {
+    url = "http://daohang.zanhf.com/portal/index/getTubang"
+    tubang.getDate(url, preLoad)
+}
+navText.on("click", function () {
+    url = "http://daohang.zanhf.com/portal/index/getTubang"
+    if ($(this).text() == "图榜") {
+        tubang.getDate(url, preLoad)
+    }
+})
+// 移动端
+var mnavText = $(".m-hid-item .hid-item-link").eq(2)
+if (mnavText.hasClass("hid-item-cur")) {
+    url = "http://daohang.zanhf.com/portal/index/getTubang"
+    tubang.getDate(url, preLoad)
+}
+mnavText.on("click", function () {
+    url = "http://daohang.zanhf.com/portal/index/getTubang"
+    if ($(this).text() == "图榜") {
+        tubang.getDate(url, preLoad)
+    }
+})

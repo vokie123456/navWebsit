@@ -7,8 +7,9 @@
     // ajax
     function getDate(url, [typeid, page], sucFn, errorFn, beforeFn) {
         $.ajax({
-            url: url + "?typeid="+ typeid +" &page="+ page ,
-            data: typeid,page,
+            url: url + "?typeid=" + typeid + " &page=" + page,
+            data: typeid,
+            page,
             type: "GET",
             dataType: "json",
             beforeSend: beforeFn,
@@ -19,7 +20,7 @@
             //成功执行方法  
         })
 
-        console.log(url + "?typeid="+ typeid +" &page="+ page )
+        console.log(url + "?typeid=" + typeid + " &page=" + page)
     }
 
     // 全部咨询
@@ -33,7 +34,7 @@
         var typeid
         var url
 
-    
+
         var zxArr = data.data
         $.each(zxArr, function (index, ele) {
             if (index < 5) {
@@ -114,10 +115,9 @@
     }
     // 调用
     // 初始化
+
     var urlAll = './api/zixun.json'
-    getDate(urlAll, [1,1], allDate, error)
+    getDate(urlAll, [1, 1], allDate, error)
     bindClick()
-
-
 
 }())
