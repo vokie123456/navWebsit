@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </a>
-                <a class="img-down" href="${src}" target="_blank">保存</a>
+                <a class="img-down" href="${src}" target="_blank"></a>
             </li>
             `
         $(".tb-screen-list").each(function () {

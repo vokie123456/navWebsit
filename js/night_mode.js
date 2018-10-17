@@ -85,4 +85,24 @@
         night_mode(LBC_night.get().nightMode)
     }
 
+    // 展开天气
+
+    if ($("#night_mode").attr("data-status") == "day") {
+        $("#tianqiBtn").hover(function () {
+            $(".iframe_1").css("display", "inline-block")
+        }, function () {
+            $(".iframe_1").css("display", "none")
+        })
+
+    } else {
+        $("#tianqiBtn").hover(function () {
+            $(".iframe_2").css("display", "inline-block")
+        }, function () {
+            $(".iframe_2").css("display", "none")
+        })
+        $(".list-show .list-item").eq(0).find(".icon-img").attr("src", "./img/web/showtianqi2.png")
+        $(".list-show .list-item").eq(1).find(".icon-img").attr("src", "./img/web/tvicon2.png")
+        $(".list-show .list-item").eq(2).find(".icon-img").attr("src", "./img/web/mianzeicon2.png")
+    }
+
 })();

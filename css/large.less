@@ -143,8 +143,10 @@ body {
                         color: #888;
                     }
                 }
-                .footer-item:last-of-type{
-                    .footer-link { border: none;}
+                .footer-item:last-of-type {
+                    .footer-link {
+                        border: none;
+                    }
                 }
             }
         }
@@ -400,7 +402,11 @@ body {
                 cursor: pointer;
             }
             .left-list-box {
-                padding-top: 68px;
+                position: absolute;
+                top: 280px;
+                left: 0;
+                right: 0;
+                text-align: center;
                 .list-show {
                     .list-item {
                         position: relative;
@@ -409,9 +415,25 @@ body {
                         height: 40px;
                         line-height: 40px;
                         cursor: pointer;
+                        .icon-img{
+                            display: inline-block;
+                            width: 30px;
+                            height: auto;
+                            vertical-align: middle;
+                        }
                         >a {
                             text-decoration: none;
                             color: #333;
+                        }
+                    }
+                    .list-item:nth-of-type(1){
+                        .icon-img{
+                            margin-bottom: 7px;
+                        }
+                    }
+                    .list-item:nth-of-type(2){
+                        .icon-img{
+                            margin-bottom: 7px;
                         }
                     }
                     .fix-select {
@@ -829,13 +851,13 @@ body {
                             background-repeat: no-repeat;
                             .h-arrow-panel {
                                 position: absolute;
-                                top: 46px;
+                                top: 12px;
                                 left: 50%;
                                 z-index: 999;
                                 margin-left: -200px;
                                 width: 400px;
-                                height: 40px;
-                                line-height: 40px;
+                                height: 30px;
+                                line-height: 30px;
                                 background-color: #000000;
                                 border-radius: 20px;
                                 opacity: 0.5;
@@ -850,7 +872,7 @@ body {
                                     .bg-des {
                                         display: inline-block;
                                         font-size: 16px;
-                                        line-height: 40px;
+                                        line-height: 30px;
                                         vertical-align: middle;
                                         text-decoration: none;
                                         color: #fff;
@@ -864,14 +886,14 @@ body {
                                     .suo-box {
                                         display: inline-block;
                                         margin-left: 10px;
-                                        width: 40px;
-                                        height: 40px;
-                                        line-height: 40px;
+                                        width: 30px;
+                                        height: 30px;
+                                        line-height: 30px;
                                         vertical-align: middle;
                                         .icon-suo {
                                             margin: 0 auto;
                                             display: inline-block;
-                                            line-height: 40px;
+                                            line-height: 30px;
                                             width: 18px;
                                             height: 18px;
                                         }
@@ -881,9 +903,9 @@ body {
                                     display: inline-block;
                                     right: 8px;
                                     top: 50%;
-                                    margin-top: -15px;
-                                    width: 30px;
-                                    height: 30px;
+                                    margin-top: -12px;
+                                    width: 25px;
+                                    height: 25px;
                                     background-image: url(../img/web/right.png);
                                     background-size: 100% 100%;
                                     background-repeat: no-repeat;
@@ -892,16 +914,14 @@ body {
                                     display: inline-block;
                                     left: 8px;
                                     top: 50%;
-                                    margin-top: -15px;
-                                    width: 30px;
-                                    height: 30px;
+                                    margin-top: -12px;
+                                    width: 25px;
+                                    height: 25px;
                                     background-image: url(../img/web/left.png);
                                     background-size: 100% 100%;
                                     background-repeat: no-repeat;
                                 }
-                            } // .h-arrow-panel:hover {
-                            //     opacity: 1;
-                            // }
+                            } 
                         }
                     }
                 }
@@ -1244,6 +1264,7 @@ body {
                     transition: all 200ms ease-out;
                     .left-tag {
                         .tag-list {
+                            border-top: 1px solid #ddd;
                             font-size: 0;
                             .tag-item {
                                 display: inline-block;
@@ -1254,7 +1275,6 @@ body {
                                 line-height: 40px;
                                 text-align: center; // margin-right: 2px;
                                 border-right: 1px solid #ddd;
-                                margin-top: 10px;
                                 text-decoration: none;
                                 background-color: #fcfcfc;
                                 color: #333;
@@ -1405,7 +1425,8 @@ body {
                                             }
                                         }
                                         .zx-r-content {
-                                            float: left; // width: 60.30%;
+                                            float: left; 
+                                            width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
                                                 height: 88px;
@@ -1603,7 +1624,7 @@ body {
                                 .banner-link {
                                     display: block;
                                     width: 100%;
-                                    height: 180px;
+                                    height: 144px;
                                     .banner-img {
                                         width: 100%;
                                         height: 100%;
@@ -1619,7 +1640,7 @@ body {
                             width: 5%;
                             top: 0;
                             right: 0;
-                            height: 180px;
+                            height: 144px;
                             line-height: 136px;
                             z-index: 99;
                             background-color: rgba(0, 0, 0, 0.4);
@@ -1642,7 +1663,7 @@ body {
                             width: 5%;
                             top: 0;
                             left: 0;
-                            height: 180px;
+                            height: 144px;
                             line-height: 136px;
                             z-index: 99;
                             background-color: rgba(0, 0, 0, 0.4);
@@ -1682,7 +1703,7 @@ body {
                                 .banner-link {
                                     display: block;
                                     width: 100%;
-                                    height: 180px;
+                                    height: 144px;
                                     .banner-img {
                                         width: 100%;
                                         height: 100%;
@@ -1698,7 +1719,7 @@ body {
                             width: 5%;
                             top: 0;
                             right: 0;
-                            height: 180px;
+                            height: 144px;
                             line-height: 136px;
                             z-index: 99;
                             background-color: rgba(0, 0, 0, 0.4);
@@ -1721,7 +1742,7 @@ body {
                             width: 5%;
                             top: 0;
                             left: 0;
-                            height: 180px;
+                            height: 144px;
                             line-height: 136px;
                             z-index: 99;
                             background-color: rgba(0, 0, 0, 0.4);
@@ -1977,12 +1998,13 @@ body {
                                             display: inline-block;
                                             max-width: 43%;
                                             .des-title {
-                                                font-size: 16px;
-                                                line-height: 1; // text-overflow: inherit;
+                                                font-size: 14px;
+                                                line-height: 1.3;
+                                                white-space: pre-wrap;
                                                 color: #333;
                                             }
                                             .des-time {
-                                                margin-top: 40px;
+                                                margin-top: 32px;
                                                 font-size: 14px;
                                                 line-height: 1; // text-overflow: inherit;
                                                 color: #666;
@@ -2057,8 +2079,8 @@ body {
                                             top: 50%;
                                             transform: translateY(-50%);
                                             .des-name {
-                                                font-size: 16px;
-                                                line-height: 1; // text-overflow: inherit;
+                                                font-size: 14px;
+                                                line-height: 1.3; // text-overflow: inherit;
                                                 color: #333;
                                             }
                                             .des-singer {
@@ -2263,8 +2285,8 @@ body {
                                         top: 50%;
                                         transform: translateY(-50%);
                                         .des-name {
-                                            font-size: 16px;
-                                            line-height: 1; // text-overflow: inherit;
+                                            font-size: 14px;
+                                            line-height: 1.3; // text-overflow: inherit;
                                             color: #333;
                                         }
                                         .des-singer {
@@ -2544,16 +2566,16 @@ body {
                             z-index: 10;
                             right: 26px;
                             font-size: 12px;
-                            height: 25px;
-                            line-height: 25px;
-                            padding-right: 6px;
-                            padding-left: 22px;
+                            border-radius: 50%;
+                            height: 35px;
+                            line-height: 35px;
+                            width: 35px;
                             color: white;
                             display: block;
                             text-decoration: none;
                             opacity: 0;
-                            background: rgba(0, 0, 0, 0.5) url(../img/web//xiazai.png) 4px 4px no-repeat;
-                            background-size: 16px;
+                            background: rgba(0, 0, 0, 0.5) url(../img/web//xiazai.png) 3px 3px no-repeat;
+                            background-size: 28px;
                             transition: all .4s;
                         }
                     }
@@ -2574,7 +2596,7 @@ body {
                             float: left;
                             padding: 0 30px;
                             margin: 30px 0;
-                            width: 160px;
+                            width: 385px;
                             height: 240px;
                             box-sizing: content-box;
                             vertical-align: middle;
@@ -2589,6 +2611,7 @@ body {
                         }
                         .mh-h-info {
                             float: left;
+                            width: 65%;
                             height: 220px;
                             padding: 30px 0;
                             vertical-align: middle;
@@ -2621,7 +2644,6 @@ body {
                                 }
                             }
                             .h-info-detail {
-                                width: 1064px;
                                 max-height: 84px;
                                 margin: 7px 0;
                                 padding-right: 25px;
@@ -2805,6 +2827,7 @@ body {
                                     position: relative;
                                     padding: 10px 0;
                                     .zb-des-title {
+                                        height: 44px;
                                         margin: 0 10px;
                                     }
                                     .text-ellipsis {
@@ -3160,16 +3183,24 @@ body {
         .setting-screnn-box {
             .setting-screen-con {
                 .zidingyi-web-wrp {
+                    .title-text {
+                        float: left;
+                    }
                     .main-screen-title {
                         position: relative;
                         margin-top: 50px;
-                        .zd-icon-close {
-                            position: absolute;
-                            width: 20px;
-                            height: 20px;
-                            right: 0px;
-                            top: 50%;
-                            margin-top: -10px;
+                        #zdClose {
+                            float: right;
+                            text-align: center;
+                            width: 60px;
+                            height: 30px;
+                            line-height: 28px;
+                            background-color: #fff;
+                            border-radius: 3px;
+                            border: solid 1px #dfdfdf;
+                            font-size: 16px;
+                            text-decoration: none;
+                            color: #999;
                             cursor: pointer;
                         }
                     }
@@ -3242,6 +3273,7 @@ body {
                                         }
                                     }
                                     .zdy-f-lab {
+                                        width: 50%;
                                         margin-left: 4px;
                                         margin-bottom: 0;
                                         font-size: 18px;
@@ -3811,12 +3843,16 @@ body {
             color: #80878d !important;
         }
         .tag-item {
-            background-color: #1a1f32 !important;
+            background-color: #1d2429 !important;
             border-right: 1px solid #333 !important;
             color: #80878d !important;
             >a {
                 color: #80878d !important;
             }
+        }
+        .tag-list {
+            background-color: #1d2429 !important;
+            border-top: 1px solid #333 !important;
         }
         .active {
             // background-color: #1b1b1b !important;
@@ -3959,5 +3995,8 @@ body {
     .zixun-more,
     .tubang-more {
         border-color: #80878d !important;
+    }
+    .list-item >a {
+        color:#80878d !important;
     }
 }

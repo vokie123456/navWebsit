@@ -285,6 +285,7 @@ $(document).ready(function () {
                             }
                             $(this).on("click", function () {
                                 var tag_val = $(this).attr("category")
+                                console.log(tag_val)
                                 /**
                                  * 移动端
                                  * 商品和网页切换
@@ -910,7 +911,7 @@ $(document).ready(function () {
                 // 隐藏二三级列表
                 hid_list();
                 $(this).addClass("fix-select");
-                var index_main = $(this).index();
+                var index_main = $(this).index() - 1;
                 //展开对应的二级列表
                 show_detail(index_main);
             })
@@ -1255,15 +1256,14 @@ $(document).ready(function () {
     /**
      * 开启天气
      */
-    $("#night_show").on("click", function () {
-        $(this).css("display", "none")
-        $(".iframe_2").css("display", "inline-block")
-    })
-    $("#day_show").on("click", function () {
-        console.log(213213213)
-        $(this).css("display", "none")
-        $(".iframe_1").css("display", "inline-block")
-    })
+    // $("#night_show").on("click", function () {
+    //     $(this).css("display", "none")
+    //     $(".iframe_2").css("display", "inline-block")
+    // })
+    // $("#day_show").on("click", function () {
+    //     $(this).css("display", "none")
+    //     $(".iframe_1").css("display", "inline-block")
+    // })
 
     // /**
     //  * 设为主页

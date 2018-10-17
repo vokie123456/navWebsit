@@ -806,6 +806,7 @@
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item .l-item-box .zx-r-content {
     float: left;
+    width: 60.30%;
   }
   #indexWrap .container-fluid .main-screen-box .m-s-zixun .zixun-box .zixun-left .zx-l-list .zx-l-item .l-item-box .zx-r-content .r-c-title {
     display: inline-block;
@@ -1335,6 +1336,7 @@
   #indexWrap .container-fluid .main-screen-box .main-section .m-r-box .m-s-fashou .fashou-list .fashou-item .fashou-link .fashou-des .des-title {
     font-size: 16px;
     line-height: 1;
+    white-space: pre-wrap;
     color: #333;
   }
   #indexWrap .container-fluid .main-screen-box .main-section .m-r-box .m-s-fashou .fashou-list .fashou-item .fashou-link .fashou-des .des-time {
@@ -1896,15 +1898,14 @@
     right: 11px;
     font-size: 12px;
     height: 25px;
-    line-height: 25px;
-    padding-right: 6px;
-    padding-left: 22px;
+    width: 25px;
+    border-radius: 50%;
     color: white;
     display: block;
     text-decoration: none;
     opacity: 1;
-    background: rgba(0, 0, 0, 0.5) url(../img/web//xiazai.png) 4px 4px no-repeat;
-    background-size: 16px;
+    background: rgba(0, 0, 0, 0.5) url(../img/web//xiazai.png) 3px 3px no-repeat;
+    background-size: 19px;
     transition: all .4s;
   }
   #indexWrap .container-fluid .tubang-screen-box .tb-screen-con .tb-screen-list:nth-of-type(4) {
@@ -2244,7 +2245,12 @@
     font-size: 12px;
     color: #999;
   }
+  #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .title-text {
+    float: left;
+  }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .main-screen-title {
+    position: relative;
+    margin-top: 50px;
     margin-top: 25px;
   }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .main-screen-title .title-text {
@@ -2252,20 +2258,25 @@
     line-height: 26px;
     font-size: 18px;
   }
+  #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .main-screen-title #zdClose {
+    float: right;
+    text-align: center;
+    width: 50px;
+    height: 26px;
+    padding: 6px 0;
+    margin-right: 8px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: solid 1px #dfdfdf;
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+  }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .main-screen-title .title-text::before {
     height: 18px;
     left: 8px;
     width: 4px;
     top: 5px;
-  }
-  #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .main-screen-title .zd-icon-close {
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    right: 8px;
-    top: 50%;
-    margin-top: -9px;
-    cursor: pointer;
   }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .zdy-web-panel {
     padding-top: 25px;
@@ -2338,6 +2349,7 @@
     height: 100%;
   }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .zdy-web-panel .zdy-form-box .zdy-form .zdy-f-item .zdy-f-lab {
+    width: 50%;
     margin-bottom: 0;
     font-size: 12px;
     vertical-align: middle;
