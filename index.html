@@ -1099,9 +1099,9 @@
 						<div class="m-s-shipin">
 							<div class="main-screen-title clear">
 								<div class="title-text">热门视频</div>
-								<!-- <a id="shipinMore" class="zixun-more">
+								<a id="shipinMore" class="shipin-more">
 									更多
-								</a> -->
+								</a>
 							</div>
 							<div class="shipin-list">
 								<div class="shipin-item">
@@ -2392,9 +2392,6 @@
 							</div>
 							<span class="h-info-detail line-ellipsis">讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。讲述了外面是贤淑高贵，但回到家后立即变成宅在家中喜欢ACGN的干物女小埋和照顾她生活的哥哥，与好友们间日常生活喜剧故事。
 							</span>
-							<div class="h-info-btn">
-								<a href="#" target="_blank" class="h-info-link">从头阅读</a>
-							</div>
 						</div>
 					</div>
 					<div class="tag-list">
@@ -2408,6 +2405,9 @@
 							<li class="mh-tag-item">
 								<span class="mh-tag" data-tag="资料设定">资料设定</span>
 							</li>
+							<div class="h-info-btn">
+								<a target="_blank" class="h-info-link">倒序</a>
+							</div>
 						</ul>
 					</div>
 					<ul class="mh-screen-list zhuxian_p" style="display: block;">
@@ -2499,29 +2499,59 @@
 			<!-- 周边 -->
 			<div class="zhoubian-screen-box" id="fif_p" style="display: none;">
 				<div class="zb-screen-con">
-					<ul class="zb-list">
-						<li class="zb-item">
-							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
-								<div class="zb-img-box">
-									<div class="zb-img-show" style="background-image: url(./img/mob/shouban1.jpg);"></div>
-								</div>
-								<div class="zb-link-des">
-									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
-									<dd class="zb-des-time">2018-08-30</dd>
-								</div>
-							</a>
-						</li>
-						<li class="zb-item">
-							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
-								<div class="zb-img-box">
-									<div class="zb-img-show" style="background-image: url(./img/mob/shouban2.jpg);"></div>
-								</div>
-								<div class="zb-link-des">
-									<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
-									<dd class="zb-des-time">2018-08-30</dd>
-								</div>
-							</a>
-						</li>
+					<div class="zb-top-tag">
+						<span class="zb-tag-item" data-id="1">分类1</span>
+						<span class="zb-tag-item" data-id="2">分类2</span>
+						<span class="zb-tag-item" data-id="3">分类3</span>
+					</div>
+					<!-- 全部周边 -->
+					<div class="zb-b" data-id="0">
+						<ul class="zb-list">
+							<li class="zb-item">
+								<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+									<div class="zb-img-box">
+										<div class="zb-img-show" style="background-image: url(./img/mob/shouban1.jpg);"></div>
+									</div>
+									<div class="zb-link-des">
+										<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+										<dd class="zb-des-time">2018-08-30</dd>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="zb-loadMore" page="2">加载更多</div>
+					</div>
+
+					<!-- 分类 -->
+					<div class="zb-b" style="display: none;" data-id="1">
+						<ul class="zb-list">
+							<li class="zb-item">
+								<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+									<div class="zb-img-box">
+										<div class="zb-img-show" style="background-image: url(./img/mob/shouban1.jpg);"></div>
+									</div>
+									<div class="zb-link-des">
+										<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+										<dd class="zb-des-time">2018-08-30</dd>
+									</div>
+								</a>
+							</li>
+							<li class="zb-item">
+								<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
+									<div class="zb-img-box">
+										<div class="zb-img-show" style="background-image: url(./img/mob/shouban2.jpg);"></div>
+									</div>
+									<div class="zb-link-des">
+										<dt class="zb-des-title text-ellipsis">MegaHouse 天女兽 神圣之箭MegaHouse 天女兽 神圣之箭</dt>
+										<dd class="zb-des-time">2018-08-30</dd>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<div class="zb-loadMore" page="2">加载更多</div>
+					</div>
+
+					<!-- <ul class="zb-list" style="display: none;" data-id="2">
 						<li class="zb-item">
 							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
 								<div class="zb-img-box">
@@ -2544,6 +2574,8 @@
 								</div>
 							</a>
 						</li>
+					</ul>
+					<ul class="zb-list" style="display: none;" data-id="3">
 						<li class="zb-item">
 							<a href="./zhoubian_detail.html" target="_blank" class="zb-link">
 								<div class="zb-img-box">
@@ -2555,7 +2587,7 @@
 								</div>
 							</a>
 						</li>
-					</ul>
+					</ul> -->
 				</div>
 			</div>
 			<!-- 音乐 -->
@@ -3011,7 +3043,7 @@
 
 					<div class="left-list-box">
 						<ul class="list-show">
-							<li class="list-item " id="tianqiBtn" >
+							<li class="list-item " id="tianqiBtn">
 								<img class="icon-img" src="./img/web/showtianqi1.png" alt="" class="icon-fix-left">
 								今日天气</li>
 							<li class="list-item">
@@ -3021,7 +3053,7 @@
 								<img class="icon-img" src="./img/web/mianzeicon.png" alt="" class="icon-fix-left">
 								免责声明</li>
 						</ul>
-						<ul class="list-detail list_xinfan">
+						<ul class="list-detail list_xinfan" style="display:block">
 							<li class="detail-item xinfan_item xq-active">星期一</li>
 							<li class="detail-item xinfan_item">星期二</li>
 							<li class="detail-item xinfan_item">星期三</li>
@@ -3029,11 +3061,6 @@
 							<li class="detail-item xinfan_item">星期五</li>
 							<li class="detail-item xinfan_item">星期六</li>
 							<li class="detail-item xinfan_item">星期日</li>
-						</ul>
-						<ul class="list-detail list_mianze">
-							<li class="detail-item xq-active">免责声明</li>
-							<li class="detail-item ">免责声明</li>
-							<li class="detail-item">免责声明</li>
 						</ul>
 						<ul class="list-main xinfan_show xf_mon" data-week="mon">
 							<li class="xinfan-item f-l-active">
@@ -3121,7 +3148,7 @@
 								</div>
 							</li>
 						</ul>
-						<ul class="list-main xinfan_show xf_thur" data-week="thur">
+						<ul class="list-main xinfan_show xf_thur" data-week="thur" style="display:block">
 							<li class="xinfan-item f-l-active">
 								<div class="xinfan-item-box clear">
 									<a href="#" target="_blank" class="play-img">
@@ -3138,6 +3165,167 @@
 									</div>
 								</div>
 							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+							<li class="xinfan-item f-l-active">
+								<div class="xinfan-item-box clear">
+									<a href="#" target="_blank" class="play-img">
+										<div class="xinfan-img" style="background-image: url(./img/web/tuimg3.png);"></div>
+									</a>
+									<div class="right-des">
+										<span class="des-text line-ellipsis">周四</span>
+										<span class="left-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">百科</a>
+										</span>
+										<span class="right-tag-tieba">
+											<a href="#" target="_blank" class="tag-tieba">贴吧</a>
+										</span>
+									</div>
+								</div>
+							</li>
+
 						</ul>
 						<ul class="list-main xinfan_show xf_fri" data-week="fri">
 							<li class="xinfan-item f-l-active">
@@ -3292,6 +3480,8 @@
 				</div>
 			</footer>
 		</div>
+		<!-- 周边选择 -->
+		<script src="./js/zhoubian.js" type="text/javascript"></script>
 		<!-- 渲染图榜 -->
 		<script src="./js/tubang.js" type="text/javascript"></script>
 		<!-- 轮播组件 -->

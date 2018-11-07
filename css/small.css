@@ -1208,6 +1208,34 @@
     padding-top: 35px;
     padding-bottom: 10px;
   }
+  #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-shipin .main-screen-title .title-text {
+    float: left;
+    line-height: 26px;
+    font-size: 18px;
+  }
+  #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-shipin .main-screen-title .title-text::before {
+    height: 18px;
+    left: 8px;
+    width: 4px;
+    top: 5px;
+  }
+  #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-shipin .main-screen-title .shipin-more {
+    float: right;
+    text-align: center;
+    width: 50px;
+    height: 26px;
+    padding: 6px 0;
+    margin-right: 8px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: solid 1px #dfdfdf;
+    font-size: 12px;
+    text-decoration: none;
+    color: #999;
+  }
+  #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-shipin .main-screen-title .main-screen-title {
+    padding-bottom: 28px;
+  }
   #indexWrap .container-fluid .main-screen-box .main-section .m-section-left .m-s-shipin .shipin-list {
     width: 100%;
     font-size: 0;
@@ -1334,8 +1362,9 @@
     margin-top: 8px;
   }
   #indexWrap .container-fluid .main-screen-box .main-section .m-r-box .m-s-fashou .fashou-list .fashou-item .fashou-link .fashou-des .des-title {
-    font-size: 16px;
-    line-height: 1;
+    height: 30px;
+    font-size: 14px;
+    line-height: 1.1;
     white-space: pre-wrap;
     color: #333;
   }
@@ -2116,22 +2145,46 @@
     line-height: 1.5;
   }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con {
-    margin-top: 10px;
-    margin-left: 5px;
-    overflow: hidden;
+    margin-top: 30px;
+    background-color: #fff;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-top-tag {
+    padding-left: 10px;
+    border-bottom: 1px solid #eee;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-top-tag .zb-tag-item {
+    display: inline-block;
+    width: 60px;
+    height: 25px;
+    border-radius: 12px;
+    text-align: center;
+    line-height: 23px;
+    margin: 13px 10px 13px 0;
+    font-size: 16px;
+    border: solid 1px #cccccc;
+    cursor: pointer;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-top-tag .zb-cur {
+    background-color: #2abaca;
+    border: solid 1px #2abaca !important;
+    color: #fff;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single {
     display: flex;
     flex-wrap: wrap;
+    padding: 0 10px;
     margin-right: -5px;
     margin-bottom: 15px;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item {
     width: 50%;
     margin-top: 10px;
     padding-right: 10px;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link {
     display: inline-block;
     width: 100%;
     text-decoration: none;
@@ -2140,12 +2193,14 @@
     background-color: #fff;
     color: #333;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-img-box {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-img-box,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link .zb-img-box {
     position: relative;
     height: 180px;
     width: 100%;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-img-box .zb-img-show {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-img-box .zb-img-show,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link .zb-img-box .zb-img-show {
     width: 100%;
     height: 100%;
     background-size: cover;
@@ -2153,18 +2208,22 @@
     background-repeat: no-repeat;
     background-color: #ccc;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link .zb-link-des {
     position: relative;
     padding: 10px 0;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des .zb-des-title {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des .zb-des-title,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link .zb-link-des .zb-des-title {
     margin: 0 10px;
     font-size: 12px;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des .text-ellipsis {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des .text-ellipsis,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link .zb-link-des .text-ellipsis {
     width: 150px;
   }
-  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des .zb-des-time {
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list .zb-item .zb-link .zb-link-des .zb-des-time,
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single .zb-item .zb-link .zb-link-des .zb-des-time {
     padding-top: 4px;
     margin: 0 10px;
     font-size: 12px;
@@ -2689,12 +2748,25 @@
     box-sizing: content-box;
     background-color: #f5f5f5;
   }
+  #xfWrap .m-xf-choice {
+    height: 44px;
+    padding: 0 12px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  #xfWrap .m-xf-choice .choice-list {
+    display: flex;
+    justify-content: space-around;
+  }
+  #xfWrap .m-xf-choice .choice-list .choice-item {
+    padding: 0 10px;
+    line-height: 20px;
+    margin: 12px 0;
+  }
+  #xfWrap .m-xf-choice .choice-list .cur-tag {
+    color: #2abaca;
+  }
   #xfWrap .m-xf-wrp .m-xf-week {
-    position: fixed;
-    top: 44px;
-    left: 0;
-    right: 0;
-    z-index: 9999;
     height: 44px;
     padding: 0 12px;
     background-color: #fff;
@@ -2727,11 +2799,8 @@
     height: 2px;
     background-color: #2abaca;
   }
-  #xfWrap .m-xf-wrp .m-xf-main {
-    padding-top: 44px;
-  }
   #xfWrap .m-xf-wrp .m-xf-main .xf-main-list {
-    margin-top: 15px;
+    margin-top: 8px;
     margin-left: 10px;
     margin-right: 5px;
     margin-bottom: 9px;
@@ -2741,7 +2810,7 @@
     float: left;
     width: 33.33%;
     padding-right: 5px;
-    padding-bottom: 16px;
+    padding-bottom: 8px;
   }
   #xfWrap .m-xf-wrp .m-xf-main .xf-main-list .xf-main-item .xf-main-box {
     padding-bottom: 10px;

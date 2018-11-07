@@ -29,6 +29,7 @@ body {
     position: relative;
     .title-text {
         position: relative;
+        float: left;
         padding-left: 20px;
         font-size: 28px;
         font-weight: bold;
@@ -415,24 +416,26 @@ body {
                         height: 40px;
                         line-height: 40px;
                         cursor: pointer;
-                        .icon-img{
+                        .icon-img {
                             display: inline-block;
                             width: 30px;
                             height: auto;
                             vertical-align: middle;
                         }
                         >a {
+                            width: 75px;
+                            display: inline-block;
                             text-decoration: none;
                             color: #333;
                         }
                     }
-                    .list-item:nth-of-type(1){
-                        .icon-img{
+                    .list-item:nth-of-type(1) {
+                        .icon-img {
                             margin-bottom: 7px;
                         }
                     }
-                    .list-item:nth-of-type(2){
-                        .icon-img{
+                    .list-item:nth-of-type(2) {
+                        .icon-img {
                             margin-bottom: 7px;
                         }
                     }
@@ -456,7 +459,7 @@ body {
                     margin-left: -1px;
                     z-index: 9999;
                     left: 170px;
-                    margin-top: -80px;
+                    margin-top: -162px;
                     border: 1px solid #e1e1e1;
                     border-left: none;
                     background-color: #fff;
@@ -468,8 +471,8 @@ body {
                         padding-left: 1px;
                         margin-left: -1px;
                         text-align: center;
-                        height: 40px;
-                        line-height: 40px;
+                        height: 50px;
+                        line-height: 50px;
                         width: 100px;
                         cursor: pointer;
                         padding-right: 1px;
@@ -482,18 +485,37 @@ body {
                         color: #2abaca;
                     }
                 }
+                .list-main::-webkit-scrollbar {
+                    /*滚动条整体样式*/
+                    width: 6px;
+                    border-radius: 10px;
+                    /*高宽分别对应横竖滚动条的尺寸*/
+                    height: 1px;
+                }
+                .list-main::-webkit-scrollbar-thumb {
+                    /*滚动条里面小方块*/
+                    border-radius: 10px;
+                    background: #63ccd8;
+                }
+                .list-main::-webkit-scrollbar-track {
+                    /*滚动条里面轨道*/
+                    border-radius: 10px;
+                    background: #fff;
+                }
                 .list-main {
                     position: absolute;
                     left: 270px;
                     z-index: 1000;
-                    margin-top: -80px;
+                    max-height: 400px;
+                    overflow-y: auto;
+                    margin-top: -162px;
                     padding-left: 1px;
                     margin-left: -2px;
                     border: 1px solid #e1e1e1; // border-left: 0;
                     background-color: #fff;
                     display: none;
                     .xinfan-item {
-                        width: 251px;
+                        width: 280px;
                         cursor: pointer;
                         .xinfan-item-box {
                             .play-img {
@@ -501,8 +523,9 @@ body {
                                 display: block;
                                 margin: 10px;
                                 .xinfan-img {
-                                    width: 80px;
+                                    width: 110px;
                                     height: 80px;
+                                    border-radius: 8px;
                                     background-size: cover;
                                     background-position: 50%;
                                     background-repeat: no-repeat;
@@ -565,9 +588,12 @@ body {
                             }
                         }
                     }
+                    .xinfan-item:hover {
+                        background-color: #f5f5f5;
+                    }
                     .f-l-active {
                         color: #2abaca;
-                        background-color: #f0f0f0;
+                        background-color: #fff;
                     }
                 }
             }
@@ -921,7 +947,7 @@ body {
                                     background-size: 100% 100%;
                                     background-repeat: no-repeat;
                                 }
-                            } 
+                            }
                         }
                     }
                 }
@@ -1425,7 +1451,7 @@ body {
                                             }
                                         }
                                         .zx-r-content {
-                                            float: left; 
+                                            float: left;
                                             width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
@@ -1876,6 +1902,26 @@ body {
                             .main-screen-title {
                                 padding-top: 60px;
                                 padding-bottom: 28px; // .title-text {}
+                                .title-text {
+                                    float: left;
+                                }
+                                .shipin-more {
+                                    float: right;
+                                    text-align: center;
+                                    width: 60px;
+                                    height: 30px;
+                                    line-height: 28px;
+                                    background-color: #fff;
+                                    border-radius: 3px;
+                                    border: solid 1px #dfdfdf;
+                                    font-size: 16px;
+                                    text-decoration: none;
+                                    color: #999;
+                                    cursor: pointer;
+                                }
+                                .main-screen-title {
+                                    padding-bottom: 28px;
+                                }
                             }
                             .shipin-list {
                                 width: 100%;
@@ -2654,20 +2700,6 @@ body {
                             .line-ellipsis {
                                 -webkit-line-clamp: 3;
                             }
-                            .h-info-btn {
-                                width: 100px;
-                                height: 34px;
-                                margin-top: 9px;
-                                line-height: 34px;
-                                border-radius: 17px;
-                                text-align: center;
-                                background-color: #2abaca;
-                                .h-info-link {
-                                    display: inline-block;
-                                    text-decoration: none;
-                                    color: #fff;
-                                }
-                            }
                         }
                     }
                     .tag-list {
@@ -2675,6 +2707,22 @@ body {
                             padding: 20px 0;
                             margin: 0 30px;
                             font-size: 0;
+                            .h-info-btn {
+                                width: 100px;
+                                float: right;
+                                height: 38px;
+                                line-height: 38px;
+                                border-radius: 19px;
+                                font-size: 20px;
+                                text-align: center;
+                                background-color: #2abaca;
+                                cursor: pointer;
+                                .h-info-link {
+                                    display: inline-block;
+                                    text-decoration: none;
+                                    color: #fff;
+                                }
+                            }
                             .mh-tag-item {
                                 float: left;
                                 width: 200px;
@@ -2794,10 +2842,57 @@ body {
             }
             .zhoubian-screen-box {
                 .zb-screen-con {
-                    margin-top: 10px;
-                    .zb-list {
+                    margin-top: 30px;
+                    background-color: #fff;
+                    .zb-top-tag {
+                        padding-left: 20px;
+                        border-bottom: 1px solid #eee;
+                        .zb-tag-item {
+                            display: inline-block;
+                            width: 80px;
+                            height: 34px;
+                            border-radius: 17px;
+                            text-align: center;
+                            line-height: 32px;
+                            margin: 11px 20px 11px 0;
+                            font-size: 16px;
+                            border: solid 1px #cccccc;
+                            cursor: pointer;
+                        }
+                        .zb-cur {
+                            background-color: #2abaca;
+                            border: solid 1px #2abaca !important;
+                            color: #fff;
+                        }
+                    }
+                    .zb-b{
+                        padding-bottom: 20px;
+                    }
+                   
+                    .zb-list,
+                    .zb-list-single {
+                        position: relative;
                         overflow: hidden;
-                        margin-right: -20px;
+                        margin-top: 20px;
+                        padding-left: 14px;
+                        padding-bottom: 48px;
+                        .zb-loadMore{
+                            position: absolute;
+                            bottom: 10px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            padding: 10px 20px;
+                            max-width: 200px;
+                            text-align: center;
+                            margin: 0 auto;
+                            font-size: 16px;
+                            border-radius: 30px;
+                            display: block;
+                            transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+                            border: 1px solid #dadada;
+                            background: #fafafa;
+                            cursor: pointer;
+                        }
                         .zb-item {
                             float: left;
                             width: 25%;
@@ -2987,12 +3082,20 @@ body {
                     .zb-r-box {
                         margin: 0 30px;
                         .zb-list-top {
-                            .small-screen-title {
-                                .title-text {}
+                            background-color: #fff;
+                            .title-special {
+                                position: relative;
+                                padding-left: 12px;
+                                font-size: 20px;
+                                font-weight: bold;
+                                line-height: 2;
+                                letter-spacing: 0px;
+                                color: #333333;
                             }
                             .zb-list {
+                                overflow: hidden;
                                 margin: 0 10px;
-                                padding: 24px 0;
+                                padding: 18px 0;
                                 .zb-item {
                                     float: left;
                                     width: 33.33%;
@@ -3011,10 +3114,20 @@ body {
                             }
                         }
                         .zb-list-bottom {
-                            padding-top: 36px;
+                            margin-top: 36px;
+                            background-color: #fff;
                             .small-screen-title {
-                                padding-bottom: 24px;
-                                .title-text {}
+                                margin: 0 10px 10px;
+                                border-bottom: 1px solid #eee;
+                            }
+                            .title-special {
+                                position: relative;
+                                padding-left: 12px;
+                                font-size: 20px;
+                                font-weight: bold;
+                                line-height: 2;
+                                letter-spacing: 0px;
+                                color: #333333;
                             }
                             .zb-bot-list {
                                 .zb-bot-item {
@@ -3022,6 +3135,7 @@ body {
                                     width: 100%;
                                     text-decoration: none;
                                     margin-bottom: 18px;
+                                    margin-left: 15px;
                                     .zb-bot-link {
                                         line-height: 100px;
                                         vertical-align: middle;
@@ -3045,7 +3159,7 @@ body {
                                             float: left;
                                             width: 60%;
                                             padding-top: 25px;
-                                            margin-left: 18px;
+                                            padding-left: 18px;
                                             max-width: 100%;
                                             line-height: 1.5;
                                             vertical-align: middle;
@@ -3832,7 +3946,8 @@ body {
     .head-bg .swiper-container::after {
         background: linear-gradient(0, #1a1e24, #1a1e24 5%, transparent) !important;
     }
-    .search-header {
+    .search-header,
+    .zb-screen-con {
         background-color: #1d2429 !important;
     }
     .nav-icon-wrap {
@@ -3877,6 +3992,16 @@ body {
         background-color: #1d2429 !important;
     }
     .list-main {
+        background-color: #1d2429 !important;
+    }
+    .list-main::-webkit-scrollbar-thumb {
+        /*滚动条里面小方块*/
+        border-radius: 10px;
+        background: #636060 !important;
+    }
+    .list-main::-webkit-scrollbar-track {
+        /*滚动条里面轨道*/
+        border-radius: 10px;
         background-color: #1d2429 !important;
     }
     .f-l-active {
@@ -3996,7 +4121,7 @@ body {
     .tubang-more {
         border-color: #80878d !important;
     }
-    .list-item >a {
-        color:#80878d !important;
+    .list-item>a {
+        color: #80878d !important;
     }
 }

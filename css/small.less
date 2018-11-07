@@ -837,7 +837,7 @@
                                             }
                                         }
                                         .zx-r-content {
-                                            float: left; 
+                                            float: left;
                                             width: 60.30%;
                                             .r-c-title {
                                                 display: inline-block;
@@ -1260,6 +1260,34 @@
                             .main-screen-title {
                                 padding-top: 35px;
                                 padding-bottom: 10px; // .title-text {}
+                                .title-text {
+                                    float: left;
+                                    line-height: 26px;
+                                    font-size: 18px;
+                                }
+                                .title-text::before {
+                                    height: 18px;
+                                    left: 8px;
+                                    width: 4px;
+                                    top: 5px;
+                                }
+                                .shipin-more {
+                                    float: right;
+                                    text-align: center;
+                                    width: 50px;
+                                    height: 26px;
+                                    padding: 6px 0;
+                                    margin-right: 8px;
+                                    background-color: #fff;
+                                    border-radius: 3px;
+                                    border: solid 1px #dfdfdf;
+                                    font-size: 12px;
+                                    text-decoration: none;
+                                    color: #999;
+                                }
+                                .main-screen-title {
+                                    padding-bottom: 28px;
+                                }
                             }
                             .shipin-list {
                                 width: 100%;
@@ -1385,10 +1413,10 @@
                                             max-width: 120px;
                                             margin-top: 8px;
                                             .des-title {
-                                                font-size: 16px;
-                                                line-height: 1;
-                                                white-space: pre-wrap;
-                                                 // text-overflow: inherit;
+                                                height: 30px;
+                                                font-size: 14px;
+                                                line-height: 1.1;
+                                                white-space: pre-wrap; // text-overflow: inherit;
                                                 color: #333;
                                             }
                                             .des-time {
@@ -2205,12 +2233,34 @@
             }
             .zhoubian-screen-box {
                 .zb-screen-con {
-                    margin-top: 10px;
-                    margin-left: 5px;
-                    overflow: hidden;
-                    .zb-list {
+                    margin-top: 30px;
+                    background-color: #fff;
+                    .zb-top-tag {
+                        padding-left: 10px;
+                        border-bottom: 1px solid #eee;
+                        .zb-tag-item {
+                            display: inline-block;
+                            width: 60px;
+                            height: 25px;
+                            border-radius: 12px;
+                            text-align: center;
+                            line-height: 23px;
+                            margin: 13px 10px 13px 0;
+                            font-size: 16px;
+                            border: solid 1px #cccccc;
+                            cursor: pointer;
+                        }
+                        .zb-cur {
+                            background-color: #2abaca;
+                            border: solid 1px #2abaca !important;
+                            color: #fff;
+                        }
+                    }
+                    .zb-list,
+                    .zb-list-single {
                         display: flex;
                         flex-wrap: wrap;
+                        padding: 0 10px;
                         margin-right: -5px;
                         margin-bottom: 15px;
                         .zb-item {
@@ -2373,7 +2423,7 @@
                                 width: 4px;
                                 top: 5px;
                             }
-                        } 
+                        }
                         .zdy-web-panel {
                             padding-top: 25px;
                             .zdy-form-box {
@@ -2813,13 +2863,33 @@
         min-height: 100vh;
         box-sizing: content-box;
         background-color: #f5f5f5;
+        .m-xf-choice {
+            height: 44px;
+            padding: 0 12px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+            .choice-list {
+                display: flex;
+                justify-content: space-around;
+                .choice-item {
+                    padding: 0 10px;
+                    line-height: 20px;
+                    margin:12px 0;
+                    // border-left: 1px solid #ddd;
+                    // border-right:1px solid #ddd;
+                }
+                .cur-tag {
+                    color: #2abaca;
+                }
+            }
+        }
         .m-xf-wrp {
             .m-xf-week {
-                position: fixed;
-                top: 44px;
-                left: 0;
-                right: 0;
-                z-index: 9999;
+                // position: fixed;
+                // top: 92px;
+                // left: 0;
+                // right: 0;
+                // z-index: 9999;
                 height: 44px;
                 padding: 0 12px;
                 background-color: #fff;
@@ -2853,9 +2923,9 @@
                 }
             }
             .m-xf-main {
-                padding-top: 44px;
+                // padding-top: 38px;
                 .xf-main-list {
-                    margin-top: 15px;
+                    margin-top: 8px;
                     margin-left: 10px;
                     margin-right: 5px;
                     margin-bottom: 9px;
@@ -2864,7 +2934,7 @@
                         float: left;
                         width: 33.33%;
                         padding-right: 5px;
-                        padding-bottom: 16px;
+                        padding-bottom: 8px;
                         .xf-main-box {
                             padding-bottom: 10px;
                             background-color: #fff;

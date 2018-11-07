@@ -7,7 +7,6 @@
    * 主页获取缓存的导航
    */
         
-
   (function () {
       // 定义获取的导航
       var navItem

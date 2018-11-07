@@ -213,21 +213,6 @@ $(document).ready(function () {
             // 关闭资讯详情
             $("#zixunWrap").css("display", "none")
         });
-        /**
-         * 移动端
-         * 新番列表
-         */
-        (function () {
-            $(".xf-week-item").each(function () {
-                $(this).on("click", function () {
-                    var xf_item = $(this).index()
-                    $(".xf-main-list").css("display", "none")
-                    $(".xf-week-item").removeClass("m-xf-active")
-                    $(this).addClass("m-xf-active")
-                    document.getElementsByClassName("xf-main-list")[xf_item].style.display = "block"
-                })
-            })
-        })();
 
     })();
 })
