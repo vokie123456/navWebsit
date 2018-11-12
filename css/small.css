@@ -2148,18 +2148,35 @@
     margin-top: 30px;
     background-color: #fff;
   }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-p .zb-b {
+    padding-bottom: 10px;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-p .zb-b .zb-loadMore {
+    padding: 5px 10px;
+    max-width: 100px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 14px;
+    border-radius: 15px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
+  }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-top-tag {
-    padding-left: 10px;
+    padding: 10px;
     border-bottom: 1px solid #eee;
   }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-top-tag .zb-tag-item {
     display: inline-block;
-    width: 60px;
     height: 25px;
+    padding: 0 10px;
     border-radius: 12px;
     text-align: center;
     line-height: 23px;
-    margin: 13px 10px 13px 0;
+    margin: 4px;
     font-size: 16px;
     border: solid 1px #cccccc;
     cursor: pointer;
@@ -2234,18 +2251,18 @@
     margin-bottom: 20px;
   }
   #indexWrap .container-fluid .music-screen-box .music-screen-con .music-top-tag {
-    padding-left: 10px;
+    padding: 10px;
     border-bottom: 1px solid #eee;
     background-color: #fff;
   }
   #indexWrap .container-fluid .music-screen-box .music-screen-con .music-top-tag .music-tag-item {
     display: inline-block;
-    width: 60px;
     height: 25px;
     border-radius: 12px;
     text-align: center;
     line-height: 23px;
-    margin: 13px 10px 13px 0;
+    padding: 0 10px;
+    margin: 4px;
     font-size: 16px;
     border: solid 1px #cccccc;
     cursor: pointer;
@@ -2303,6 +2320,24 @@
     width: 130px;
     font-size: 12px;
     color: #999;
+  }
+  #indexWrap .container-fluid .music-screen-box .music-screen-con .music-b {
+    padding-bottom: 10px;
+    background-color: #fff;
+  }
+  #indexWrap .container-fluid .music-screen-box .music-screen-con .music-loadMore {
+    padding: 5px 10px;
+    max-width: 100px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 14px;
+    border-radius: 15px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
   }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .title-text {
     float: left;

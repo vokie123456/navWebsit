@@ -2751,6 +2751,23 @@
     border: solid 1px #2abaca !important;
     color: #fff;
   }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-loadMore {
+    padding: 10px 20px;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-b {
+    padding-bottom: 10px;
+  }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list,
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single {
     overflow: hidden;
@@ -2892,6 +2909,24 @@
     width: 150px;
     font-size: 16px;
     color: #999;
+  }
+  #indexWrap .container-fluid .music-screen-box .music-screen-con .music-b {
+    padding-bottom: 10px;
+    background-color: #fff;
+  }
+  #indexWrap .container-fluid .music-screen-box .music-screen-con .music-loadMore {
+    padding: 10px 20px;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
   }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .title-text {
     float: left;
@@ -5993,6 +6028,23 @@
     border: solid 1px #2abaca !important;
     color: #fff;
   }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-loadMore {
+    padding: 10px 20px;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-b {
+    padding-bottom: 10px;
+  }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list,
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single {
     overflow: hidden;
@@ -6134,6 +6186,24 @@
     width: 150px;
     font-size: 16px;
     color: #999;
+  }
+  #indexWrap .container-fluid .music-screen-box .music-screen-con .music-b {
+    padding-bottom: 10px;
+    background-color: #fff;
+  }
+  #indexWrap .container-fluid .music-screen-box .music-screen-con .music-loadMore {
+    padding: 10px 20px;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
   }
   #indexWrap .container-fluid .setting-screnn-box .setting-screen-con .zidingyi-web-wrp .title-text {
     float: left;

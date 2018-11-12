@@ -455,72 +455,72 @@ $(document).ready(function () {
             })
         }
     })();
-    /**
-     * 音乐
-     * 切换
-     * 单一功能原则
-     */
-    (function () {
-        // 实例化
-        var allMusic = new AllMusic()
-        var singleMusic = new SingleMusic()
-        var eventMusic = new EventMusic()
-        // 触发事件
-        eventMusic.select()
+    // /**
+    //  * 音乐
+    //  * 切换
+    //  * 单一功能原则
+    //  */
+    // (function () {
+    //     // 实例化
+    //     var allMusic = new AllMusic()
+    //     var singleMusic = new SingleMusic()
+    //     var eventMusic = new EventMusic()
+    //     // 触发事件
+    //     eventMusic.select()
 
-        // 展示所有音乐
-        function AllMusic() {
-            this.all = function () {
-                // 如果标签中所有标签都未被选中，显示第一个ul
-                var ifAll = true
-                var dataId
-                $(".music-top-tag .music-tag-item").each(function () {
-                    if ($(this).hasClass("music-cur")) {
-                        ifAll = false
-                        dataId = $(this).attr("data-id")
-                    }
-                })
-                if (ifAll) {
-                    $(".music-screen-con .music-list").css("display", "none")
-                    $(".music-screen-con .music-list:first").css("display", "block")
-                }
-                singleMusic.single(ifAll, dataId)
-            }
-        }
-        // 展示单个模块音乐
-        function SingleMusic() {
-            this.single = function (status, dataId) {
-                if (!status) {
-                    $(".music-screen-con .music-list").css("display", "none")
-                    $(".music-screen-con .music-list").each(function () {
-                        if ($(this).attr("data-id") == dataId) {
-                            $(this).css("display", "block")
-                        }
-                    })
-                }
-            }
-        }
-        // 点击标签触发切换
-        function EventMusic() {
-            this.select = function () {
-                $(".music-top-tag .music-tag-item").each(function () {
-                    $(this).on("click", function () {
-                        if (!$(this).hasClass("music-cur")) {
-                            $(".music-top-tag .music-tag-item").removeClass("music-cur")
-                            $(this).addClass("music-cur")
-                            // 每次点击调用
-                            allMusic.all()
-                        } else {
-                            $(".music-top-tag .music-tag-item").removeClass("music-cur")
-                            // 每次点击调用
-                            allMusic.all()
-                        }
+    //     // 展示所有音乐
+    //     function AllMusic() {
+    //         this.all = function () {
+    //             // 如果标签中所有标签都未被选中，显示第一个ul
+    //             var ifAll = true
+    //             var dataId
+    //             $(".music-top-tag .music-tag-item").each(function () {
+    //                 if ($(this).hasClass("music-cur")) {
+    //                     ifAll = false
+    //                     dataId = $(this).attr("data-id")
+    //                 }
+    //             })
+    //             if (ifAll) {
+    //                 $(".music-screen-con .music-list").css("display", "none")
+    //                 $(".music-screen-con .music-list:first").css("display", "block")
+    //             }
+    //             singleMusic.single(ifAll, dataId)
+    //         }
+    //     }
+    //     // 展示单个模块音乐
+    //     function SingleMusic() {
+    //         this.single = function (status, dataId) {
+    //             if (!status) {
+    //                 $(".music-screen-con .music-b").css("display", "none")
+    //                 $(".music-screen-con .music-b").each(function () {
+    //                     if ($(this).attr("data-id") == dataId) {
+    //                         $(this).css("display", "block")
+    //                     }
+    //                 })
+    //             }
+    //         }
+    //     }
+    //     // 点击标签触发切换
+    //     function EventMusic() {
+    //         this.select = function () {
+    //             $(".music-top-tag .music-tag-item").each(function () {
+    //                 $(this).on("click", function () {
+    //                     if (!$(this).hasClass("music-cur")) {
+    //                         $(".music-top-tag .music-tag-item").removeClass("music-cur")
+    //                         $(this).addClass("music-cur")
+    //                         // 每次点击调用
+    //                         allMusic.all()
+    //                     } else {
+    //                         $(".music-top-tag .music-tag-item").removeClass("music-cur")
+    //                         // 每次点击调用
+    //                         allMusic.all()
+    //                     }
 
-                    })
-                })
-            }
-        }
-    })();
+    //                 })
+    //             })
+    //         }
+    //     }
+    // })();
 
    
     /**

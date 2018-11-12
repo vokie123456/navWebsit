@@ -2677,7 +2677,21 @@ body {
     color: #fff;
   }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-b {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
+  }
+  #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-loadMore {
+    padding: 10px 20px;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
   }
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list,
   #indexWrap .container-fluid .zhoubian-screen-box .zb-screen-con .zb-list-single {
@@ -2795,24 +2809,27 @@ body {
     border: solid 1px #2abaca !important;
     color: #fff;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list {
-    padding-top: 30px;
-    padding-left: 40px;
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b {
+    padding-bottom: 10px;
     background-color: #fff;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list .music-item {
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list {
+    padding-top: 30px;
+    padding-left: 40px;
+  }
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list .music-item {
     float: left;
     width: 20%;
     margin-bottom: 20px;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list .music-item .music-link {
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list .music-item .music-link {
     position: relative;
     display: block;
     height: 200px;
     text-decoration: none;
     color: #333;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list .music-item .music-link .music-img {
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list .music-item .music-link .music-img {
     position: absolute;
     width: 150px;
     height: 150px;
@@ -2821,25 +2838,39 @@ body {
     background-repeat: no-repeat;
     background-color: #ccc;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list .music-item .music-link .music-img-bg {
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list .music-item .music-link .music-img-bg {
     position: absolute;
     width: 176px;
     height: 150px;
     background: url(../img/web/changpian.png) center no-repeat;
     background-size: 100% 100%;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list .music-item .music-link .music-name {
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list .music-item .music-link .music-name {
     position: absolute;
     bottom: 20px;
     width: 150px;
     font-size: 20px;
   }
-  #indexWrap .music-screen-box .music-screen-con .music-list .music-item .music-link .music-singer {
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-list .music-item .music-link .music-singer {
     position: absolute;
     bottom: 0;
     width: 150px;
     font-size: 16px;
     color: #999;
+  }
+  #indexWrap .music-screen-box .music-screen-con .music-p .music-b .music-loadMore {
+    padding: 10px 20px;
+    max-width: 200px;
+    text-align: center;
+    position: relative;
+    margin: 0 auto;
+    font-size: 16px;
+    border-radius: 30px;
+    display: block;
+    transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+    border: 1px solid #dadada;
+    background: #fafafa;
+    cursor: pointer;
   }
   #indexWrap .zb-detail-wrp {
     max-width: 1300px;

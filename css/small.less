@@ -2235,17 +2235,36 @@
                 .zb-screen-con {
                     margin-top: 30px;
                     background-color: #fff;
+                    .zb-p {
+                        .zb-b {
+                            padding-bottom: 10px;
+                            .zb-loadMore {
+                                padding: 5px 10px;
+                                max-width: 100px;
+                                text-align: center;
+                                position: relative;
+                                margin: 0 auto;
+                                font-size: 14px;
+                                border-radius: 15px;
+                                display: block;
+                                transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+                                border: 1px solid #dadada;
+                                background: #fafafa;
+                                cursor: pointer;
+                            }
+                        }
+                    }
                     .zb-top-tag {
-                        padding-left: 10px;
+                        padding: 10px;
                         border-bottom: 1px solid #eee;
                         .zb-tag-item {
                             display: inline-block;
-                            width: 60px;
                             height: 25px;
+                            padding: 0 10px;
                             border-radius: 12px;
                             text-align: center;
                             line-height: 23px;
-                            margin: 13px 10px 13px 0;
+                            margin: 4px;
                             font-size: 16px;
                             border: solid 1px #cccccc;
                             cursor: pointer;
@@ -2315,17 +2334,17 @@
                     margin-top: 15px;
                     margin-bottom: 20px;
                     .music-top-tag {
-                        padding-left: 10px;
+                        padding: 10px;
                         border-bottom: 1px solid #eee;
                         background-color: #fff;
                         .music-tag-item {
                             display: inline-block;
-                            width: 60px;
                             height: 25px;
                             border-radius: 12px;
                             text-align: center;
                             line-height: 23px;
-                            margin: 13px 10px 13px 0;
+                            padding: 0 10px;
+                            margin: 4px;
                             font-size: 16px;
                             border: solid 1px #cccccc;
                             cursor: pointer;
@@ -2385,6 +2404,24 @@
                                 }
                             }
                         }
+                    }
+                      .music-b{
+                        padding-bottom: 10px;
+                        background-color: #fff;
+                    }
+                    .music-loadMore {
+                        padding: 5px 10px;
+                        max-width: 100px;
+                        text-align: center;
+                        position: relative;
+                        margin: 0 auto;
+                        font-size: 14px;
+                        border-radius: 15px;
+                        display: block;
+                        transition: 0.18s background, 0.18s margin ease-out, 0.18s box-shadow ease-out;
+                        border: 1px solid #dadada;
+                        background: #fafafa;
+                        cursor: pointer;
                     }
                 }
             }
@@ -2874,8 +2911,7 @@
                 .choice-item {
                     padding: 0 10px;
                     line-height: 20px;
-                    margin:12px 0;
-                    // border-left: 1px solid #ddd;
+                    margin: 12px 0; // border-left: 1px solid #ddd;
                     // border-right:1px solid #ddd;
                 }
                 .cur-tag {
