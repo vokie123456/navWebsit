@@ -40,7 +40,7 @@ $(document).ready(function () {
         if (this.pageW >= 1300) {
             //上窜
             var marginH = $(".m-section-left").height() - $(".main-section").height() + 60
-            $(".web-all").css("marginTop", marginH)
+            // $(".web-all").css("marginTop", marginH)
             //隐藏菜单
             var webW = $(".webs-list").width()
             $(".webs-item-hid").css("width", webW)
@@ -1393,50 +1393,53 @@ $(document).ready(function () {
         SetHome("http://daohang.zanhf.com")
     })
 
-    (function () {
-        $(".h-info-btn a").on("click", function () {
-            $.ajax({
-                url: 'http://daohang.zanhf.com/portal/index/getCartoon',
-                datatype: 'json',
-                type: "POST",
-                success: sortRender
-            });
-        });
+    
+    // 漫画排序
+    // (function () {
+    //     $(".h-info-btn a").on("click", function () {
+    //         $.ajax({
+    //             url: 'http://daohang.zanhf.com/portal/index/getCartoon',
+    //             datatype: 'json',
+    //             type: "POST",
+    //             success: sortRender
+    //         });
+    //     });
 
-        function sortRender(data) {
-            var data = data["data"];
-            // console.log(data)
-            // 当前模块
-            var index;
-            $(".mh-tag-item").each(function () {
-                if ($(this).hasClass("mh-cur")) {
-                    index = $(this).index();
-                }
-            });
-            // 清空当前模块
-            $(".mh-screen-list").eq(index).empty();
-            // 当前排序
-            var sort = $(".h-info-link").attr("sort");
-            if (sort == "desc") {
-                var arr = data[index];
-                reMhItem(arr, index);
-                $(".h-info-link").text("倒序");
-                $(".h-info-link").attr("sort", "asc");
-            } else {
-                data[index].reverse();
-                reMhItem(data[index], index);
-                $(".h-info-link").text("正序");
-                $(".h-info-link").attr("sort", "desc");
-            }
+    //     function sortRender(data) {
+    //         var data = data["data"];
+            
+    //         console.log(data)
+    //         // 当前模块
+    //         var index;
+    //         $(".mh-tag-item").each(function () {
+    //             if ($(this).hasClass("mh-cur")) {
+    //                 index = $(this).index();
+    //             }
+    //         });
+    //         // 清空当前模块
+    //         $(".mh-screen-list").eq(index).empty();
+    //         // 当前排序
+    //         var sort = $(".h-info-link").attr("sort");
+    //         if (sort == "desc") {
+    //             var arr = data[index];
+    //             reMhItem(arr, index);
+    //             $(".h-info-link").text("倒序");
+    //             $(".h-info-link").attr("sort", "asc");
+    //         } else {
+    //             data[index].reverse();
+    //             reMhItem(data[index], index);
+    //             $(".h-info-link").text("正序");
+    //             $(".h-info-link").attr("sort", "desc");
+    //         }
 
-            function reMhItem(arr, index) {
-                arr.forEach(function (item) {
-                    html = "\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"mh-screen-item\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/portal/manhua_detail.html?id=" + item["id"] + "\" target=\"_blank\" class=\"mh-item-link\"><div class=\"mh-item-img\"><div class=\"item-img-show\" style=\"background-image: url(/upload/" + item["image"] + ");\"></div></div><div class=\"mh-item-right\"><dt class=\"mh-item-title\">" + item["name"] + "</dt><dd class=\"mh-item-des line-ellipsis\">" + item["intro"] + "</dd></div></a></li>\n\t\t\t\t\t\t\t\t\t\t\t";
-                    $(".mh-screen-list").eq(index).append(html);
-                });
-            }
-        }
-    }())
+    //         function reMhItem(arr, index) {
+    //             arr.forEach(function (item) {
+    //                 html = "\n\t\t\t\t\t\t\t\t\t\t\t<li class=\"mh-screen-item\">\n\t\t\t\t\t\t\t\t\t\t\t\t<a href=\"/portal/manhua_detail.html?id=" + item["id"] + "\" target=\"_blank\" class=\"mh-item-link\"><div class=\"mh-item-img\"><div class=\"item-img-show\" style=\"background-image: url(/upload/" + item["image"] + ");\"></div></div><div class=\"mh-item-right\"><dt class=\"mh-item-title\">" + item["name"] + "</dt><dd class=\"mh-item-des line-ellipsis\">" + item["intro"] + "</dd></div></a></li>\n\t\t\t\t\t\t\t\t\t\t\t";
+    //                 $(".mh-screen-list").eq(index).append(html);
+    //             });
+    //         }
+    //     }
+    // }())
 
 
 })
