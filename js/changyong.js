@@ -93,7 +93,7 @@
     function renderItem() {
         $(".hid-list").eq(0).empty()
         itemArr = LBC_webNum().get()
-        console.log(itemArr)
+        // console.log(itemArr)
         itemArr.forEach(function (item) {
             var dataId = item["dataId"]
             var name = item["name"]

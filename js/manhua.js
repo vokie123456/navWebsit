@@ -7,23 +7,27 @@
      */
     // 全局变量
     // 缓存当前分类加载过的漫画数据
+    
     var cacheTrue = {}
     var cacheFalse = {}
-    // var cacheItem = {
-    //     cacheTrue:[],
-    //     cacheFalse:[]
-    // }
     // 请求分页
     var flagMore = true
     // 获取主题漫画data
-    function getData(url, dataid, page) {
-        var url = url + "?dataid=" + dataid + "&page=" + page
-        console.log(url)
+    function getData(url, dataid, page, sort) {
+        var url = url
+        obj = {
+            pid: dataid,
+            page: page,
+            sort: sort
+        }
+        // console.log(url)
         $.ajax({
             url: url,
             type: 'GET',
+            data: obj,
             success: function (data) {
                 var panelId = dataid
+                // console.log(data)
                 renderManhua(data, panelId)
             },
             error: error
@@ -44,13 +48,19 @@
     }
     // 点击获取更多
     function getMoreMh(url) {
-        var url = 'https://www.easy-mock.com/mock/5b9c69299c53ef2876d29227/list/sige_copy_1543897907399'
+        var url = 'http://daohang.zanhf.com/index.php/portal/index/getCartoon'
         $(".mh-screen-list").each(function () {
             var dataid = $(this).data("id")
             $(this).find(".mh-loadMore").unbind()
             $(this).find(".mh-loadMore").on("click", function () {
                 var page = $(this).attr("page")
-                getData(url, dataid, page)
+                if ($(".h-info-btn").attr("data-sort") == "true") {
+                    var sort = "desc"
+                } else {
+                    // 正序
+                    var sort = "asc"
+                }
+                getData(url, dataid, page, sort)
             })
         })
     }
@@ -63,33 +73,40 @@
         $(".h-info-btn").on("click", function () {
             var sort = $(this).attr("data-sort")
             $(".mh-tag-item").each(function () {
-                console.log(123)
-                // if ($(this).hasClass("mh-cur")) {
                 var dataid = $(this).attr("data-id")
                 var selectEle = ".mh-screen-list[data-id=" + dataid + "]"
                 var thisEle = $(selectEle)
-                console.log($(".mh-tag-item"))
-                if (sort === 'true') {
-                    renderMhItem(dataid, cacheFalse[dataid])
-                    $('.h-info-btn').attr("data-sort", false)
-                    $('.h-info-btn').children(".h-info-link").text("倒序")
-                    thisEle.find(".mh_top").show()
-                    thisEle.find(".mh_bot").hide()
-                } else {
-                    console.log(cacheTrue[dataid])
-                    renderMhItem(dataid, cacheTrue[dataid])
-                    $('.h-info-btn').attr("data-sort", true)
-                    $('.h-info-btn').children(".h-info-link").text("正序")
-                    thisEle.find(".mh_top").hide()
-                    thisEle.find(".mh_bot").show()
+                if ($(".mh-loadMore").data('page') == "1") {
+                    thisEle.find(".mh-list-b").css("minHeight", thisEle.find(".mh-list-b").height())
+                    console.log("颠倒顺序")
                 }
-                // }
+                var index = $(this).index() + 1
+                if (sort === 'true') {
+                    // renderMhItem(dataid, cacheFalse[dataid])
+                    $('.h-info-btn').attr("data-sort", false)
+                    $('.h-info-btn').children(".h-info-link").text("正序")
+                    thisEle.find(".mh-list-b").empty()
+                    getData(url, index, 1, 'asc')
+                    thisEle.find(".mh-loadMore").text("加载更多")
+                    thisEle.find(".mh-loadMore").attr("page", 1)
+                    // thisEle.find(".mh_top").show()
+                    // thisEle.find(".mh_bot").hide()
+                } else {
+                    // renderMhItem(dataid, cacheTrue[dataid])
+                    $('.h-info-btn').attr("data-sort", true)
+                    $('.h-info-btn').children(".h-info-link").text("倒序")
+                    thisEle.find(".mh-list-b").empty()
+                    getData(url, index, 1, 'desc')
+                    thisEle.find(".mh-loadMore").text("加载更多")
+                    thisEle.find(".mh-loadMore").attr("page", 1)
+                    // thisEle.find(".mh_top").hide()
+                    // thisEle.find(".mh_bot").show()
+                }
             })
-
-
+            return false
         })
     }
-    var url = 'https://www.easy-mock.com/mock/5b9c69299c53ef2876d29227/list/sige'
+    var url = 'http://daohang.zanhf.com/index.php/portal/index/getCartoon'
     // 初始化
     var initPage = []
 
@@ -123,12 +140,11 @@
             } else {
                 cacheFalse[panelId].unshift(item)
             }
-
-            // cacheFalse.unshift(item)
             clickSort({
                 cacheTrue: cacheTrue,
                 cacheFalse: cacheFalse
             })
+            // console.log(item)
             var manhuaId = item["id"]
             var manhuaImg = "/upload/" + item["image"]
             var manhuaUrl = item["url"]
@@ -136,7 +152,7 @@
             var manhuaName = item["name"]
             var manhuaHtml = `
                 <li class="mh-screen-item" data-id="${manhuaId}">
-                    <a href="${manhuaUrl}" target="_blank" class="mh-item-link">
+                    <a href="/portal/manhua_detail.html?id=${manhuaId}" target="" class="mh-item-link">
                         <div class="mh-item-img">
                             <div class="item-img-show" style="background-image: url(${manhuaImg});"></div>
                         </div>
@@ -150,20 +166,26 @@
             if (sort === "true") {
                 // 正序
                 thisEle.find(".mh-list-b").append(manhuaHtml)
-                thisEle.find(".mh_top").hide()
-                thisEle.find(".mh_bot").show()
+                // thisEle.find(".mh_top").hide()
+                // thisEle.find(".mh_bot").show()
             } else {
                 // 倒序
-                thisEle.find(".mh-list-b").prepend(manhuaHtml)
-                thisEle.find(".mh_top").show()
-                thisEle.find(".mh_bot").hide()
+                thisEle.find(".mh-list-b").append(manhuaHtml)
+                // thisEle.find(".mh-list-b").prepend(manhuaHtml)
+                // thisEle.find(".mh_top").show()
+                // thisEle.find(".mh_bot").hide()
             }
         })
         thisEle.find(".manhua-loadMore").unbind()
-        if (current_page == last_page) {
+        if (current_page >= last_page) {
             thisEle.find(".mh-loadMore").text("加载完毕")
+            var page = Number(thisEle.find(".mh-loadMore").attr("page")) + 1
+            thisEle.find(".mh-loadMore").attr("page", page)
+            thisEle.find(".mh-loadMore").unbind()
         } else {
             thisEle.find(".mh-loadMore").text("加载更多")
+            var page = Number(thisEle.find(".mh-loadMore").attr("page")) + 1
+            thisEle.find(".mh-loadMore").attr("page", page)
             getMoreMh(url)
         }
     }
@@ -186,7 +208,7 @@
             var manhuaName = item["name"]
             var manhuaHtml = `
                 <li class="mh-screen-item" data-id="${manhuaId}">
-                    <a href="${manhuaUrl}" target="_blank" class="mh-item-link">
+                    <a href="/portal/manhua_detail.html?id=${manhuaId}" target="" class="mh-item-link">
                         <div class="mh-item-img">
                             <div class="item-img-show" style="background-image: url(${manhuaImg});"></div>
                         </div>
